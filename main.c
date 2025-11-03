@@ -77,12 +77,12 @@ int main(int argc, char **argv)
     unsigned long long cycles = end_cycles - start_cycles;
 
     // Derived metrics
-    double gflops = 2.0 * N * N * N / (elapsed * 1e9);
+    double gflops = 2.0 * N * N * N / (elapsed * 1e6);
     double sum = checksum(C, N);
     double freq_hz = cycles / elapsed;
     double freq_mhz = freq_hz / 1e6;
 
-    printf("N=%ld, time(s)=%.6f, cycles=%llu, freq(MHz)=%.2f, GFLOPS=%.2f, checksum=%.6f\n",
+    printf("N=%ld, time(s)=%.6f, cycles=%llu, freq(MHz)=%.2f, MFLOPS=%.5f, checksum=%.6f\n",
            (long)N, elapsed, cycles, freq_mhz, gflops, sum);
 
     // Finalize
