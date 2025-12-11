@@ -110,8 +110,8 @@ int main(int argc, char **argv)
     double sum = checksum(C, M, N);
 
     printf("M=%ld K=%ld N=%ld\n", (long)M, (long)K, (long)N);
-    printf("time(s)=%.6f cycles=%llu freq(MHz)=%.2f MFLOPS=%.2f checksum=%.4f\n",
-           elapsed, cycles, freq_mhz, mflops, sum);
+    printf("time(s)=%.6f cycles=%llu freq(MHz)=%.2f MFLOPS=%.2f",
+           elapsed, cycles, freq_mhz, mflops);
 
     /* Cleanup */
     bli_finalize();
