@@ -101,7 +101,7 @@ int main(int argc, char **argv)
     double elapsed = t1 - t0;
     unsigned long long cycles = end_cycles - start_cycles;
 
-    print_matrix("Matrix C", C, M, N);
+    // print_matrix("Matrix C", C, M, N);
 
     /* Performance stats */
     double flops = 2.0 * M * N * K;
