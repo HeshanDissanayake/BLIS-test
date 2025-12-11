@@ -70,8 +70,8 @@ int main(int argc, char **argv)
     for (dim_t i = 0; i < M * N; i++)
         C[i] = 0.0;
 
-    print_matrix("Matrix A", A, M, K);
-    print_matrix("Matrix B", B, K, N);
+    // print_matrix("Matrix A", A, M, K);
+    // print_matrix("Matrix B", B, K, N);
 
     /* Init BLIS */
     bli_init();
