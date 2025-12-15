@@ -5,10 +5,16 @@ PK = /home/heshds/working_dir/riscv-pk_64/build/pk
 CFLAGS = -O2   -static
 LDFLAGS =  -lblis -lpthread -lm
 
+
+# CACHE_PROFILE = MC_16_KC_16_NC_120
+CACHE_PROFILE = MC_320_KC_960_NC_4096
+
+ROOT_LIB_PATH = /opt/dev/blis/$(CACHE_PROFILE)
+
 # BLIS_GENERIC = -I/opt/dev/blis/blis_generic/include/ -L/opt/dev/blis/blis_generic/lib/
-BLIS_4x4 = -I/opt/dev/blis/blis_4x4/include/ -L/opt/dev/blis/blis_4x4/lib/
-BLIS_8x8 = -I/opt/dev/blis/blis_8x8/include/ -L/opt/dev/blis/blis_8x8/lib/
-BLIS_16x16 = -I/opt/dev/blis/blis_16x16/include/ -L/opt/dev/blis/blis_16x16/lib/
+BLIS_4x4   = -I$(ROOT_LIB_PATH)/blis_4x4/include/ -L$(ROOT_LIB_PATH)/blis_4x4/lib/
+BLIS_8x8   = -I$(ROOT_LIB_PATH)/blis_8x8/include/ -L$(ROOT_LIB_PATH)/blis_8x8/lib/
+BLIS_16x16 = -I$(ROOT_LIB_PATH)/blis_16x16/include/ -L$(ROOT_LIB_PATH)/blis_16x16/lib/
 
 # Target
 # TARGET = gemm_blis_4x4 gemm_blis_8x8 
