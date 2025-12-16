@@ -1,43 +1,63 @@
 # Toolchain
-CC =  /opt/dev/riscv_linux_rv64g_regsw/bin/riscv64-unknown-linux-gnu-gcc
+CC = /opt/dev/riscv_linux_rv64g_regsw/bin/riscv64-unknown-linux-gnu-gcc
 SPIKE = /home/heshds/working_dir/cva6-sdk/install64/bin/spike
 PK = /home/heshds/working_dir/riscv-pk_64/build/pk
-CFLAGS = -O2   -static
-LDFLAGS =  -lblis -lpthread -lm
+CFLAGS = -O2 -static
+LDFLAGS = -lblis -lpthread -lm
 
-
-CACHE_PROFILE = MC_16_KC_120_NC_16
+# Cache profile
+CACHE_PROFILE = MC_32_KC_120_NC_32
 # CACHE_PROFILE = MC_320_KC_960_NC_4096
 
 ROOT_LIB_PATH = /opt/dev/blis/$(CACHE_PROFILE)
 
-# BLIS_GENERIC = -I/opt/dev/blis/blis_generic/include/ -L/opt/dev/blis/blis_generic/lib/
-BLIS_4x4   = -I$(ROOT_LIB_PATH)/blis_4x4/include/ -L$(ROOT_LIB_PATH)/blis_4x4/lib/
-BLIS_8x8   = -I$(ROOT_LIB_PATH)/blis_8x8/include/ -L$(ROOT_LIB_PATH)/blis_8x8/lib/
+BLIS_4x4   = -I$(ROOT_LIB_PATH)/blis_4x4/include/   -L$(ROOT_LIB_PATH)/blis_4x4/lib/
+BLIS_8x8   = -I$(ROOT_LIB_PATH)/blis_8x8/include/   -L$(ROOT_LIB_PATH)/blis_8x8/lib/
 BLIS_16x16 = -I$(ROOT_LIB_PATH)/blis_16x16/include/ -L$(ROOT_LIB_PATH)/blis_16x16/lib/
 
-# Target
-# TARGET = gemm_blis_4x4 gemm_blis_8x8 
+# Sources
 SRC = main.c
 
-all: clean gemm_blis_4x4 gemm_blis_8x8 gemm_blis_16x16 print_params
+# Build directory
+BUILD_DIR = build/$(CACHE_PROFILE)
 
-gemm_blis_4x4: $(SRC)
+# Targets
+BIN_4x4   = $(BUILD_DIR)/gemm_blis_4x4
+BIN_8x8   = $(BUILD_DIR)/gemm_blis_8x8
+BIN_16x16 = $(BUILD_DIR)/gemm_blis_16x16
+
+PARAM_4x4   = $(BUILD_DIR)/print_params_4x4
+PARAM_8x8   = $(BUILD_DIR)/print_params_8x8
+PARAM_16x16 = $(BUILD_DIR)/print_params_16x16
+
+all: clean $(BIN_4x4) $(BIN_8x8) $(BIN_16x16) $(PARAM_4x4) $(PARAM_8x8) $(PARAM_16x16)
+
+# Ensure build directory exists
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
+
+$(BIN_4x4): $(SRC) | $(BUILD_DIR)
 	$(CC) $(CFLAGS) $(SRC) $(LDFLAGS) $(BLIS_4x4) -o $@
 
-gemm_blis_8x8: $(SRC)
+$(BIN_8x8): $(SRC) | $(BUILD_DIR)
 	$(CC) $(CFLAGS) $(SRC) $(LDFLAGS) $(BLIS_8x8) -o $@
 
-gemm_blis_16x16: $(SRC)
+$(BIN_16x16): $(SRC) | $(BUILD_DIR)
 	$(CC) $(CFLAGS) $(SRC) $(LDFLAGS) $(BLIS_16x16) -o $@
 
-print_params: print_params.c
-	$(CC) $(CFLAGS) print_params.c $(LDFLAGS) $(BLIS_4x4) -o $@_4x4
-	$(CC) $(CFLAGS) print_params.c $(LDFLAGS) $(BLIS_8x8) -o $@_8x8
-	$(CC) $(CFLAGS) print_params.c $(LDFLAGS) $(BLIS_16x16) -o $@_16x16
+$(PARAM_4x4): print_params.c | $(BUILD_DIR)
+	$(CC) $(CFLAGS) print_params.c $(LDFLAGS) $(BLIS_4x4) -o $@
+
+$(PARAM_8x8): print_params.c | $(BUILD_DIR)
+	$(CC) $(CFLAGS) print_params.c $(LDFLAGS) $(BLIS_8x8) -o $@
+
+$(PARAM_16x16): print_params.c | $(BUILD_DIR)
+	$(CC) $(CFLAGS) print_params.c $(LDFLAGS) $(BLIS_16x16) -o $@
 
 run-spike:
-	$(SPIKE) $(PK) $(TARGET)  8 
+	$(SPIKE) $(PK) $(BIN_4x4) 8
 
 clean:
-	rm -f gemm_blis_* print_params_*
+	rm -rf $(BUILD_DIR)
+
+
