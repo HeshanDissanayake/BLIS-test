@@ -109,9 +109,7 @@ int main(int argc, char **argv)
     double freq_mhz = (double)cycles / elapsed / 1e6;
     double sum = checksum(C, M, N);
 
-    printf("M=%ld K=%ld N=%ld\n", (long)M, (long)K, (long)N);
-    printf("time(s)=%.6f cycles=%llu freq(MHz)=%.2f MFLOPS=%.2f",
-           elapsed, cycles, freq_mhz, mflops);
+    printf("N,%ld,cycles,%llu\n", (long)N, cycles);
 
     /* Cleanup */
     bli_finalize();

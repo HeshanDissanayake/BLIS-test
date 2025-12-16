@@ -6,7 +6,7 @@ CFLAGS = -O2   -static
 LDFLAGS =  -lblis -lpthread -lm
 
 
-CACHE_PROFILE = MC_32_KC_32_NC_32
+CACHE_PROFILE = MC_16_KC_120_NC_16
 # CACHE_PROFILE = MC_320_KC_960_NC_4096
 
 ROOT_LIB_PATH = /opt/dev/blis/$(CACHE_PROFILE)
