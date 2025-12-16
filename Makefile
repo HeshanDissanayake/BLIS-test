@@ -6,7 +6,7 @@ CFLAGS = -O2   -static
 LDFLAGS =  -lblis -lpthread -lm
 
 
-CACHE_PROFILE = MC_16_KC_16_NC_120
+CACHE_PROFILE = MC_32_KC_32_NC_32
 # CACHE_PROFILE = MC_320_KC_960_NC_4096
 
 ROOT_LIB_PATH = /opt/dev/blis/$(CACHE_PROFILE)
@@ -20,7 +20,7 @@ BLIS_16x16 = -I$(ROOT_LIB_PATH)/blis_16x16/include/ -L$(ROOT_LIB_PATH)/blis_16x1
 # TARGET = gemm_blis_4x4 gemm_blis_8x8 
 SRC = main.c
 
-all: clean gemm_blis_4x4 gemm_blis_8x8 gemm_blis_16x16
+all: clean gemm_blis_4x4 gemm_blis_8x8 gemm_blis_16x16 print_params
 
 gemm_blis_4x4: $(SRC)
 	$(CC) $(CFLAGS) $(SRC) $(LDFLAGS) $(BLIS_4x4) -o $@
@@ -31,9 +31,13 @@ gemm_blis_8x8: $(SRC)
 gemm_blis_16x16: $(SRC)
 	$(CC) $(CFLAGS) $(SRC) $(LDFLAGS) $(BLIS_16x16) -o $@
 
+print_params: print_params.c
+	$(CC) $(CFLAGS) print_params.c $(LDFLAGS) $(BLIS_4x4) -o $@_4x4
+	$(CC) $(CFLAGS) print_params.c $(LDFLAGS) $(BLIS_8x8) -o $@_8x8
+	$(CC) $(CFLAGS) print_params.c $(LDFLAGS) $(BLIS_16x16) -o $@_16x16
 
 run-spike:
 	$(SPIKE) $(PK) $(TARGET)  8 
 
 clean:
-	rm -f gemm_blis_4x4 gemm_blis_8x8 gemm_blis_16x16
+	rm -f gemm_blis_* print_params_*
