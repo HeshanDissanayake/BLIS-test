@@ -3,7 +3,7 @@
 # wget http://10.65.196.56:8000/run.sh -O run.sh
 
 HOST_IP=10.65.196.56
-CACHE_PROFILE=MC_32_KC_120_NC_32
+CACHE_PROFILE=MC_64_KC_120_NC_64
 
 # fetch files from the host
 wget http://${HOST_IP}:8000/build/${CACHE_PROFILE}/gemm_blis_4x4 -O gemm_blis_4x4
