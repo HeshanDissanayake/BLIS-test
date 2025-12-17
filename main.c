@@ -32,6 +32,14 @@ static inline unsigned long long read_cycles(void) {
     return cycles;
 }
 
+/* RISC-V inst retire counter */
+static inline uint64_t read_instret(void)
+{
+    uint64_t val;
+    asm volatile ("rdinstret %0" : "=r"(val));
+    return val;
+}
+
 /* Fill arbitrary size matrix */
 void fill_matrix(double *buf, dim_t rows, dim_t cols, unsigned start) {
     for (dim_t i = 0; i < rows * cols; i++)
@@ -92,11 +100,11 @@ int main(int argc, char **argv)
     bli_gemm(&alpha, &a, &b, &beta, &c);
 
     /* Measure */
-    unsigned long long start_cycles = read_cycles();
+    unsigned long long start_cycles = read_instret();
     double t0 = now_seconds();
     bli_gemm(&alpha, &a, &b, &beta, &c);
     double t1 = now_seconds();
-    unsigned long long end_cycles = read_cycles();
+    unsigned long long end_cycles = read_instret();
 
     double elapsed = t1 - t0;
     unsigned long long cycles = end_cycles - start_cycles;
