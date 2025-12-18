@@ -118,7 +118,9 @@ int main(int argc, char **argv)
     
     // double sum = checksum(C, M, N);
 
-    printf("N,%ld,mflops,%.6f\n", (long)N, mflops);
+    // printf("N,%ld,mflops,%.6f\n", (long)N, mflops);
+    printf("%ld,%llu,%.6f,%.6f\n", (long)N, cycles, mflops, time);
+
 
     /* Cleanup */
     bli_finalize();
