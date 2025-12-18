@@ -62,9 +62,9 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    dim_t M = atoi(argv[1]);
-    dim_t K = atoi(argv[2]);
-    dim_t N = atoi(argv[3]);
+    unsigned long long M = atoi(argv[1]);
+    unsigned long long K = atoi(argv[2]);
+    unsigned long long N = atoi(argv[3]);
 
     /* Allocate matrices */
     double *A = aligned_alloc(64, sizeof(double) * M * K);
@@ -101,12 +101,11 @@ int main(int argc, char **argv)
 
     /* Measure */
     unsigned long long start_cycles = read_cycles();
-    double t0 = now_seconds();
+    
     bli_gemm(&alpha, &a, &b, &beta, &c);
-    double t1 = now_seconds();
+    
     unsigned long long end_cycles = read_cycles();
 
-    double elapsed = t1 - t0;
     unsigned long long cycles = end_cycles - start_cycles;
 
     // print_matrix("Matrix C", C, M, N);
