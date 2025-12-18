@@ -113,12 +113,12 @@ int main(int argc, char **argv)
 
     /* Performance stats */
     double flops = 2.0 * M * N * K;
-    double time = cycles / 50; // us
+    double time = cycles / 50.0; // us
     double mflops = flops / time;
     
-    double sum = checksum(C, M, N);
+    // double sum = checksum(C, M, N);
 
-    printf("N,%ld,mflops,%llu\n", (long)N, mflops);
+    printf("N,%ld,mflops,%.6f\n", (long)N, mflops);
 
     /* Cleanup */
     bli_finalize();

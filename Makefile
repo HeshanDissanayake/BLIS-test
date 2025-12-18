@@ -60,4 +60,7 @@ run-spike:
 clean:
 	rm -rf $(BUILD_DIR)
 
+clean_are_you_sure:
+	rm -r build/*
+
 

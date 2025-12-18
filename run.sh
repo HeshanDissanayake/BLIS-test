@@ -8,7 +8,7 @@ run_bench() {
     BENCH=$1
 
     echo " "
-    echo "benchmark: $BENCH"
+    echo "benchmark: $BENCH" $2
 
     N=16
     while [ $N -le 256 ]; do
