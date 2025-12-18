@@ -119,7 +119,7 @@ int main(int argc, char **argv)
     // double sum = checksum(C, M, N);
 
     // printf("N,%ld,mflops,%.6f\n", (long)N, mflops);
-    printf("%ld,%llu,%.6f,%.6f\n", (long)N, cycles, mflops, time);
+    printf("%ld,%.6f,%llu,%.6f,%.6f\n", (long)N, flops, cycles, mflops, time);
 
 
     /* Cleanup */
