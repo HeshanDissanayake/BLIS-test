@@ -3,50 +3,46 @@
 # wget http://10.65.196.56:8000/run.sh -O run.sh
 
 HOST_IP=10.65.196.56
-CACHE_PROFILE=MC_64_KC_120_NC_64
 
-# fetch files from the host
-wget http://${HOST_IP}:8000/build/${CACHE_PROFILE}/gemm_blis_4x4 -O gemm_blis_4x4
-wget http://${HOST_IP}:8000/build/${CACHE_PROFILE}/gemm_blis_8x8 -O gemm_blis_8x8
-wget http://${HOST_IP}:8000/build/${CACHE_PROFILE}/gemm_blis_16x16 -O gemm_blis_16x16
+run_bench() {
+    BENCH=$1
 
-wget http://${HOST_IP}:8000/build/${CACHE_PROFILE}/print_params_4x4 -O print_params_4x4 
-wget http://${HOST_IP}:8000/build/${CACHE_PROFILE}/print_params_8x8 -O print_params_8x8
-wget http://${HOST_IP}:8000/build/${CACHE_PROFILE}/print_params_16x16 -O print_params_16x16
+    echo " "
+    echo "benchmark: $BENCH"
 
-chmod u+x gemm_blis_4x4  
-chmod u+x gemm_blis_8x8 
-chmod u+x gemm_blis_16x16 
+    N=16
+    while [ $N -le 256 ]; do
+        "$BENCH" $N $N $N
+        N=$((N + 16))
+    done
 
-chmod u+x print_params_4x4 
-chmod u+x print_params_8x8
-chmod u+x print_params_16x16
+    "$BENCH" 512 512 512
+}
 
-BENCH=./gemm_blis_4x4
-N=16
-echo " "
-./print_params_4x4
-while [ $N -le 560 ]; do
-    "$BENCH" $N $N $N
-    N=$((N + 16))
+
+MC_VALUES="16 32 64 96 128 256"
+
+for MC in $MC_VALUES; do
+  NC=$MC
+  KC=64
+  while [ $KC -le 640 ]; do
+
+    CACHE_PROFILE=MC_${MC}_KC_${KC}_NC_${NC}
+
+    # fetch files from the host
+    wget http://${HOST_IP}:8000/build/${CACHE_PROFILE}/gemm_blis_4x4 -O gemm_blis_4x4
+    wget http://${HOST_IP}:8000/build/${CACHE_PROFILE}/gemm_blis_8x8 -O gemm_blis_8x8
+    wget http://${HOST_IP}:8000/build/${CACHE_PROFILE}/gemm_blis_16x16 -O gemm_blis_16x16
+
+    chmod u+x gemm_blis_4x4  gemm_blis_8x8 gemm_blis_16x16 
+
+    run_bench ./gemm_blis_4x4 ${CACHE_PROFILE}
+    run_bench ./gemm_blis_8x8 ${CACHE_PROFILE}
+    run_bench ./gemm_blis_16x16 ${CACHE_PROFILE}
+
+    KC=$((KC + 64))
+  done
 done
 
 
-BENCH=./gemm_blis_8x8
-N=16
-echo " "
-./print_params_8x8
-while [ $N -le 560 ]; do
-    "$BENCH" $N $N $N
-    N=$((N + 16))
-done
 
-
-BENCH=./gemm_blis_16x16
-N=16
-echo " "
-./print_params_16x16
-while [ $N -le 560 ]; do
-    "$BENCH" $N $N $N
-    N=$((N + 16))
-done

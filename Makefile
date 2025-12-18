@@ -6,7 +6,7 @@ CFLAGS = -O2 -static
 LDFLAGS = -lblis -lpthread -lm
 
 # Cache profile
-CACHE_PROFILE = MC_64_KC_120_NC_64
+CACHE_PROFILE = None
 # CACHE_PROFILE = MC_320_KC_960_NC_4096
 
 ROOT_LIB_PATH = /opt/dev/blis/$(CACHE_PROFILE)
@@ -30,7 +30,7 @@ PARAM_4x4   = $(BUILD_DIR)/print_params_4x4
 PARAM_8x8   = $(BUILD_DIR)/print_params_8x8
 PARAM_16x16 = $(BUILD_DIR)/print_params_16x16
 
-all: clean $(BIN_4x4) $(BIN_8x8) $(BIN_16x16) $(PARAM_4x4) $(PARAM_8x8) $(PARAM_16x16)
+all: clean $(BIN_4x4) $(BIN_8x8) $(BIN_16x16) 
 
 # Ensure build directory exists
 $(BUILD_DIR):

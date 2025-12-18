@@ -100,11 +100,11 @@ int main(int argc, char **argv)
     bli_gemm(&alpha, &a, &b, &beta, &c);
 
     /* Measure */
-    unsigned long long start_cycles = read_instret();
+    unsigned long long start_cycles = read_cycles();
     double t0 = now_seconds();
     bli_gemm(&alpha, &a, &b, &beta, &c);
     double t1 = now_seconds();
-    unsigned long long end_cycles = read_instret();
+    unsigned long long end_cycles = read_cycles();
 
     double elapsed = t1 - t0;
     unsigned long long cycles = end_cycles - start_cycles;
@@ -113,11 +113,12 @@ int main(int argc, char **argv)
 
     /* Performance stats */
     double flops = 2.0 * M * N * K;
-    double mflops = flops / (elapsed * 1e6);
-    double freq_mhz = (double)cycles / elapsed / 1e6;
+    double time = cycles / 50; // us
+    double mflops = flops / time;
+    
     double sum = checksum(C, M, N);
 
-    printf("N,%ld,cycles,%llu\n", (long)N, cycles);
+    printf("N,%ld,mflops,%llu\n", (long)N, mflops);
 
     /* Cleanup */
     bli_finalize();
