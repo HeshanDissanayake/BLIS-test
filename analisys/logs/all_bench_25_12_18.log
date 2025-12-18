@@ -1,0 +1,3971 @@
+
+# 
+# ./run.sh [J
+# wget http://10.65.196.56:8000/run.sh -O run.sh[J
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'run.sh'
+'run.sh' saved
+# 
+# wget http://10.65.196.56:8000/run.sh -O run.sh[J
+# ./run.sh [J
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_16_KC_64_NC_16
+N,16,cycles,129276
+N,32,cycles,499487
+N,48,cycles,1461458
+N,64,cycles,3114950
+N,80,cycles,6464797
+N,96,cycles,11663817
+N,112,cycles,16576084
+N,128,cycles,24519307
+N,144,cycles,36329102
+N,160,cycles,48379129
+N,176,cycles,62887535
+N,192,cycles,81579229
+N,208,cycles,105991398
+N,224,cycles,131058218
+N,240,cycles,159160895
+N,256,cycles,182356189
+N,512,cycles,1438080431
+ 
+benchmark: ./gemm_blis_8x8 MC_16_KC_64_NC_16
+N,16,cycles,123173
+N,32,cycles,471253
+N,48,cycles,1325952
+N,64,cycles,3069048
+N,80,cycles,7079747
+N,96,cycles,10370424
+N,112,cycles,16703866
+N,128,cycles,23603501
+N,144,cycles,33938361
+N,160,cycles,46473889
+N,176,cycles,60592057
+N,192,cycles,78096067
+N,208,cycles,101669969
+N,224,cycles,124497591
+N,240,cycles,152900602
+N,256,cycles,179829107
+N,512,cycles,1419423727
+ 
+benchmark: ./gemm_blis_16x16 MC_16_KC_64_NC_16
+N,16,cycles,116014
+N,32,cycles,443875
+N,48,cycles,1282414
+N,64,cycles,2884415
+N,80,cycles,5769129
+N,96,cycles,9457493
+N,112,cycles,14731089
+N,128,cycles,21733258
+N,144,cycles,32553513
+N,160,cycles,42275081
+N,176,cycles,56819275
+N,192,cycles,74773919
+N,208,cycles,95199013
+N,224,cycles,116993023
+N,240,cycles,143401001
+N,256,cycles,172801864
+N,512,cycles,1491119960
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_16_KC_128_NC_16
+N,16,cycles,133520
+N,32,cycles,497976
+N,48,cycles,1417950
+N,64,cycles,3116932
+N,80,cycles,6920421
+N,96,cycles,10548199
+N,112,cycles,16875841
+N,128,cycles,26024019
+N,144,cycles,37745618
+N,160,cycles,50093347
+N,176,cycles,65241621
+N,192,cycles,84541651
+N,208,cycles,106723342
+N,224,cycles,133579727
+N,240,cycles,164510829
+N,256,cycles,196182822
+N,512,cycles,1530474177
+ 
+benchmark: ./gemm_blis_8x8 MC_16_KC_128_NC_16
+N,16,cycles,123415
+N,32,cycles,474174
+N,48,cycles,1369203
+N,64,cycles,3006980
+N,80,cycles,6004168
+N,96,cycles,9937086
+N,112,cycles,15992269
+N,128,cycles,24149576
+N,144,cycles,36032899
+N,160,cycles,47767261
+N,176,cycles,62467233
+N,192,cycles,81067265
+N,208,cycles,102376557
+N,224,cycles,128198138
+N,240,cycles,157899973
+N,256,cycles,191101267
+N,512,cycles,1505758514
+ 
+benchmark: ./gemm_blis_16x16 MC_16_KC_128_NC_16
+N,16,cycles,117815
+N,32,cycles,406542
+N,48,cycles,1354143
+N,64,cycles,2887983
+N,80,cycles,6416560
+N,96,cycles,9659480
+N,112,cycles,15806133
+N,128,cycles,23477467
+N,144,cycles,32175900
+N,160,cycles,43917815
+N,176,cycles,57506961
+N,192,cycles,75191990
+N,208,cycles,93590821
+N,224,cycles,117307219
+N,240,cycles,144891903
+N,256,cycles,179390491
+N,512,cycles,1543241866
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_16_KC_192_NC_16
+N,16,cycles,130582
+N,32,cycles,494773
+N,48,cycles,1422052
+N,64,cycles,3113333
+N,80,cycles,7001705
+N,96,cycles,10384685
+N,112,cycles,16666074
+N,128,cycles,25103350
+N,144,cycles,37510650
+N,160,cycles,51864805
+N,176,cycles,71024216
+N,192,cycles,91477660
+N,208,cycles,119325742
+N,224,cycles,145966505
+N,240,cycles,176249465
+N,256,cycles,210997431
+N,512,cycles,1679732437
+ 
+benchmark: ./gemm_blis_8x8 MC_16_KC_192_NC_16
+N,16,cycles,126499
+N,32,cycles,473840
+N,48,cycles,1324627
+N,64,cycles,3203631
+N,80,cycles,5810782
+N,96,cycles,10813142
+N,112,cycles,15898407
+N,128,cycles,23975989
+N,144,cycles,35676621
+N,160,cycles,48588528
+N,176,cycles,65467179
+N,192,cycles,85251066
+N,208,cycles,110387010
+N,224,cycles,134949438
+N,240,cycles,163430119
+N,256,cycles,197213419
+N,512,cycles,1596154130
+ 
+benchmark: ./gemm_blis_16x16 MC_16_KC_192_NC_16
+N,16,cycles,160725
+N,32,cycles,445132
+N,48,cycles,1292854
+N,64,cycles,3060785
+N,80,cycles,5553025
+N,96,cycles,9270979
+N,112,cycles,15065530
+N,128,cycles,23636787
+N,144,cycles,31221536
+N,160,cycles,43414212
+N,176,cycles,58734957
+N,192,cycles,75791965
+N,208,cycles,97004749
+N,224,cycles,118789192
+N,240,cycles,145983273
+N,256,cycles,182034213
+N,512,cycles,1581944228
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_16_KC_256_NC_16
+N,16,cycles,129622
+N,32,cycles,539432
+N,48,cycles,1564707
+N,64,cycles,3113034
+N,80,cycles,6010459
+N,96,cycles,10407314
+N,112,cycles,17706290
+N,128,cycles,26084480
+N,144,cycles,36426418
+N,160,cycles,50592516
+N,176,cycles,69815610
+N,192,cycles,92637569
+N,208,cycles,118861893
+N,224,cycles,151378041
+N,240,cycles,188116083
+N,256,cycles,232768031
+N,512,cycles,1851142895
+ 
+benchmark: ./gemm_blis_8x8 MC_16_KC_256_NC_16
+N,16,cycles,125503
+N,32,cycles,474504
+N,48,cycles,1368282
+N,64,cycles,3012212
+N,80,cycles,6002734
+N,96,cycles,10008246
+N,112,cycles,16062361
+N,128,cycles,24168224
+N,144,cycles,35560112
+N,160,cycles,48645954
+N,176,cycles,64629358
+N,192,cycles,85238706
+N,208,cycles,108420077
+N,224,cycles,136352000
+N,240,cycles,167280389
+N,256,cycles,208148270
+N,512,cycles,1671173444
+ 
+benchmark: ./gemm_blis_16x16 MC_16_KC_256_NC_16
+N,16,cycles,159468
+N,32,cycles,488258
+N,48,cycles,1258556
+N,64,cycles,2930240
+N,80,cycles,5522462
+N,96,cycles,9266029
+N,112,cycles,14848025
+N,128,cycles,22560410
+N,144,cycles,32084718
+N,160,cycles,42731178
+N,176,cycles,57824307
+N,192,cycles,75876163
+N,208,cycles,95310052
+N,224,cycles,118897785
+N,240,cycles,144673502
+N,256,cycles,184621262
+N,512,cycles,1603133178
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_16_KC_320_NC_16
+N,16,cycles,133033
+N,32,cycles,496833
+N,48,cycles,1417853
+N,64,cycles,3114196
+N,80,cycles,6125243
+N,96,cycles,10393222
+N,112,cycles,17803253
+N,128,cycles,26225121
+N,144,cycles,36409819
+N,160,cycles,51641937
+N,176,cycles,70879858
+N,192,cycles,91446726
+N,208,cycles,118872903
+N,224,cycles,151145871
+N,240,cycles,188225739
+N,256,cycles,232633251
+N,512,cycles,1859401737
+ 
+benchmark: ./gemm_blis_8x8 MC_16_KC_320_NC_16
+N,16,cycles,122276
+N,32,cycles,476441
+N,48,cycles,1420062
+N,64,cycles,3003030
+N,80,cycles,5836684
+N,96,cycles,10353902
+N,112,cycles,16871794
+N,128,cycles,25200147
+N,144,cycles,35607216
+N,160,cycles,48850598
+N,176,cycles,64826817
+N,192,cycles,83870557
+N,208,cycles,108500158
+N,224,cycles,135224767
+N,240,cycles,167224536
+N,256,cycles,208078444
+N,512,cycles,1666787223
+ 
+benchmark: ./gemm_blis_16x16 MC_16_KC_320_NC_16
+N,16,cycles,116731
+N,32,cycles,443706
+N,48,cycles,1446743
+N,64,cycles,2879023
+N,80,cycles,5655983
+N,96,cycles,9514282
+N,112,cycles,15113072
+N,128,cycles,22717836
+N,144,cycles,32068294
+N,160,cycles,43790719
+N,176,cycles,58110626
+N,192,cycles,75304399
+N,208,cycles,95300623
+N,224,cycles,118063081
+N,240,cycles,145428383
+N,256,cycles,183586920
+N,512,cycles,1598244005
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_16_KC_384_NC_16
+N,16,cycles,130235
+N,32,cycles,498600
+N,48,cycles,1416307
+N,64,cycles,3219729
+N,80,cycles,6907587
+N,96,cycles,10320882
+N,112,cycles,16953666
+N,128,cycles,25222511
+N,144,cycles,37341052
+N,160,cycles,51473346
+N,176,cycles,70908872
+N,192,cycles,91345596
+N,208,cycles,118750800
+N,224,cycles,151592082
+N,240,cycles,188067089
+N,256,cycles,232890069
+N,512,cycles,1877602208
+ 
+benchmark: ./gemm_blis_8x8 MC_16_KC_384_NC_16
+N,16,cycles,122861
+N,32,cycles,470752
+N,48,cycles,1356715
+N,64,cycles,3046933
+N,80,cycles,5915448
+N,96,cycles,10978194
+N,112,cycles,15863566
+N,128,cycles,23952772
+N,144,cycles,35633392
+N,160,cycles,48577126
+N,176,cycles,65650598
+N,192,cycles,84391608
+N,208,cycles,109562668
+N,224,cycles,136254870
+N,240,cycles,168101948
+N,256,cycles,207734997
+N,512,cycles,1653828444
+ 
+benchmark: ./gemm_blis_16x16 MC_16_KC_384_NC_16
+N,16,cycles,115732
+N,32,cycles,443992
+N,48,cycles,1253896
+N,64,cycles,2882940
+N,80,cycles,5464312
+N,96,cycles,9299145
+N,112,cycles,15730769
+N,128,cycles,23415012
+N,144,cycles,32027435
+N,160,cycles,43684587
+N,176,cycles,57903125
+N,192,cycles,75277575
+N,208,cycles,94389606
+N,224,cycles,118018438
+N,240,cycles,145571845
+N,256,cycles,183282194
+N,512,cycles,1583287723
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_16_KC_448_NC_16
+N,16,cycles,128962
+N,32,cycles,502193
+N,48,cycles,1417262
+N,64,cycles,3112620
+N,80,cycles,6016154
+N,96,cycles,10464474
+N,112,cycles,17712139
+N,128,cycles,26202921
+N,144,cycles,36478080
+N,160,cycles,51539844
+N,176,cycles,69842615
+N,192,cycles,92687527
+N,208,cycles,119118602
+N,224,cycles,151312323
+N,240,cycles,187354982
+N,256,cycles,232525013
+N,512,cycles,1963300533
+ 
+benchmark: ./gemm_blis_8x8 MC_16_KC_448_NC_16
+N,16,cycles,121995
+N,32,cycles,472167
+N,48,cycles,1359769
+N,64,cycles,3199535
+N,80,cycles,5810746
+N,96,cycles,10885143
+N,112,cycles,15931207
+N,128,cycles,24026506
+N,144,cycles,35623552
+N,160,cycles,48594603
+N,176,cycles,65735362
+N,192,cycles,84291342
+N,208,cycles,109565194
+N,224,cycles,136426943
+N,240,cycles,167286293
+N,256,cycles,207835398
+N,512,cycles,1671292700
+ 
+benchmark: ./gemm_blis_16x16 MC_16_KC_448_NC_16
+N,16,cycles,116936
+N,32,cycles,402424
+N,48,cycles,1291318
+N,64,cycles,2883671
+N,80,cycles,5646287
+N,96,cycles,10319784
+N,112,cycles,14935778
+N,128,cycles,22552919
+N,144,cycles,32167846
+N,160,cycles,43553846
+N,176,cycles,57950304
+N,192,cycles,75271154
+N,208,cycles,95346780
+N,224,cycles,118132861
+N,240,cycles,145263708
+N,256,cycles,183707145
+N,512,cycles,1580318939
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_16_KC_512_NC_16
+N,16,cycles,129987
+N,32,cycles,497761
+N,48,cycles,1418700
+N,64,cycles,3116600
+N,80,cycles,6191776
+N,96,cycles,10382593
+N,112,cycles,16580629
+N,128,cycles,24720944
+N,144,cycles,37624219
+N,160,cycles,51602591
+N,176,cycles,69881421
+N,192,cycles,92767115
+N,208,cycles,119309932
+N,224,cycles,151213221
+N,240,cycles,187997373
+N,256,cycles,231820326
+N,512,cycles,2062054151
+ 
+benchmark: ./gemm_blis_8x8 MC_16_KC_512_NC_16
+N,16,cycles,123548
+N,32,cycles,475010
+N,48,cycles,1367607
+N,64,cycles,3048050
+N,80,cycles,5909719
+N,96,cycles,9941561
+N,112,cycles,17181665
+N,128,cycles,25313196
+N,144,cycles,34562290
+N,160,cycles,48615424
+N,176,cycles,64562909
+N,192,cycles,85085106
+N,208,cycles,108524691
+N,224,cycles,135358748
+N,240,cycles,167313606
+N,256,cycles,207855935
+N,512,cycles,1705588171
+ 
+benchmark: ./gemm_blis_16x16 MC_16_KC_512_NC_16
+N,16,cycles,117390
+N,32,cycles,401840
+N,48,cycles,1255126
+N,64,cycles,2949272
+N,80,cycles,5526631
+N,96,cycles,9306359
+N,112,cycles,14998062
+N,128,cycles,22834720
+N,144,cycles,32097592
+N,160,cycles,42845398
+N,176,cycles,57985692
+N,192,cycles,76150821
+N,208,cycles,95107592
+N,224,cycles,118687315
+N,240,cycles,144779563
+N,256,cycles,184472714
+N,512,cycles,1587952827
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_16_KC_576_NC_16
+N,16,cycles,170750
+N,32,cycles,498109
+N,48,cycles,1419129
+N,64,cycles,3452139
+N,80,cycles,6218708
+N,96,cycles,10258870
+N,112,cycles,16569182
+N,128,cycles,24796822
+N,144,cycles,37636648
+N,160,cycles,51608600
+N,176,cycles,70020821
+N,192,cycles,92653067
+N,208,cycles,118988677
+N,224,cycles,151249604
+N,240,cycles,188237334
+N,256,cycles,231771207
+N,512,cycles,2061515665
+ 
+benchmark: ./gemm_blis_8x8 MC_16_KC_576_NC_16
+N,16,cycles,123667
+N,32,cycles,617497
+N,48,cycles,1366753
+N,64,cycles,3005616
+N,80,cycles,5837393
+N,96,cycles,9986514
+N,112,cycles,17142339
+N,128,cycles,25259558
+N,144,cycles,34474733
+N,160,cycles,48696660
+N,176,cycles,64722610
+N,192,cycles,85074782
+N,208,cycles,108533037
+N,224,cycles,135192223
+N,240,cycles,167421851
+N,256,cycles,207848300
+N,512,cycles,1706336089
+ 
+benchmark: ./gemm_blis_16x16 MC_16_KC_576_NC_16
+N,16,cycles,116184
+N,32,cycles,436418
+N,48,cycles,1253127
+N,64,cycles,3833295
+N,80,cycles,5467682
+N,96,cycles,9384992
+N,112,cycles,15005655
+N,128,cycles,22818075
+N,144,cycles,31091007
+N,160,cycles,42798202
+N,176,cycles,58118931
+N,192,cycles,76046106
+N,208,cycles,95162396
+N,224,cycles,118873323
+N,240,cycles,144463740
+N,256,cycles,184576452
+N,512,cycles,1588021894
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_16_KC_640_NC_16
+N,16,cycles,131385
+N,32,cycles,496375
+N,48,cycles,1419836
+N,64,cycles,3147267
+N,80,cycles,6199708
+N,96,cycles,10587904
+N,112,cycles,16635440
+N,128,cycles,25046029
+N,144,cycles,37652519
+N,160,cycles,51733731
+N,176,cycles,70049115
+N,192,cycles,92459596
+N,208,cycles,118815297
+N,224,cycles,151394890
+N,240,cycles,188247927
+N,256,cycles,231382995
+N,512,cycles,2062438165
+ 
+benchmark: ./gemm_blis_8x8 MC_16_KC_640_NC_16
+N,16,cycles,167717
+N,32,cycles,473725
+N,48,cycles,1363908
+N,64,cycles,3005607
+N,80,cycles,6090184
+N,96,cycles,9941237
+N,112,cycles,17019373
+N,128,cycles,25156838
+N,144,cycles,34739473
+N,160,cycles,48645489
+N,176,cycles,64525079
+N,192,cycles,85137354
+N,208,cycles,108528580
+N,224,cycles,135491973
+N,240,cycles,167194084
+N,256,cycles,207877718
+N,512,cycles,1706187589
+ 
+benchmark: ./gemm_blis_16x16 MC_16_KC_640_NC_16
+N,16,cycles,117777
+N,32,cycles,400588
+N,48,cycles,1255055
+N,64,cycles,2881965
+N,80,cycles,5691512
+N,96,cycles,9359824
+N,112,cycles,14777951
+N,128,cycles,22913050
+N,144,cycles,32037795
+N,160,cycles,42740143
+N,176,cycles,57924966
+N,192,cycles,76202473
+N,208,cycles,95145838
+N,224,cycles,118934762
+N,240,cycles,144649960
+N,256,cycles,184903631
+N,512,cycles,1587014492
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_32_KC_64_NC_32
+N,16,cycles,133697
+N,32,cycles,442549
+N,48,cycles,1331750
+N,64,cycles,2762044
+N,80,cycles,5878611
+N,96,cycles,9423067
+N,112,cycles,14788419
+N,128,cycles,20946170
+N,144,cycles,31420336
+N,160,cycles,42498228
+N,176,cycles,57532059
+N,192,cycles,71545723
+N,208,cycles,93791414
+N,224,cycles,114464573
+N,240,cycles,141693677
+N,256,cycles,164667198
+N,512,cycles,1302119949
+ 
+benchmark: ./gemm_blis_8x8 MC_32_KC_64_NC_32
+N,16,cycles,123405
+N,32,cycles,382393
+N,48,cycles,1236737
+N,64,cycles,2696305
+N,80,cycles,5417160
+N,96,cycles,8888015
+N,112,cycles,13806947
+N,128,cycles,19746798
+N,144,cycles,30404880
+N,160,cycles,39330261
+N,176,cycles,53616607
+N,192,cycles,68308608
+N,208,cycles,89484778
+N,224,cycles,109573826
+N,240,cycles,135362032
+N,256,cycles,157920613
+N,512,cycles,1256723968
+ 
+benchmark: ./gemm_blis_16x16 MC_32_KC_64_NC_32
+N,16,cycles,116404
+N,32,cycles,395718
+N,48,cycles,1157810
+N,64,cycles,2436761
+N,80,cycles,5823023
+N,96,cycles,7903969
+N,112,cycles,13755606
+N,128,cycles,18319012
+N,144,cycles,27970765
+N,160,cycles,35740300
+N,176,cycles,49282778
+N,192,cycles,62742624
+N,208,cycles,80250983
+N,224,cycles,99005261
+N,240,cycles,122946369
+N,256,cycles,146820735
+N,512,cycles,1224534541
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_32_KC_128_NC_32
+N,16,cycles,134634
+N,32,cycles,446614
+N,48,cycles,1337289
+N,64,cycles,2763926
+N,80,cycles,5830066
+N,96,cycles,9709791
+N,112,cycles,16554002
+N,128,cycles,24904725
+N,144,cycles,35296288
+N,160,cycles,46350369
+N,176,cycles,61961384
+N,192,cycles,78675223
+N,208,cycles,100132866
+N,224,cycles,124646028
+N,240,cycles,156621501
+N,256,cycles,191405878
+N,512,cycles,1518487950
+ 
+benchmark: ./gemm_blis_8x8 MC_32_KC_128_NC_32
+N,16,cycles,123172
+N,32,cycles,422411
+N,48,cycles,1236921
+N,64,cycles,2678287
+N,80,cycles,5295664
+N,96,cycles,9819451
+N,112,cycles,14615264
+N,128,cycles,21549214
+N,144,cycles,32560276
+N,160,cycles,42108019
+N,176,cycles,56172978
+N,192,cycles,72569355
+N,208,cycles,92817353
+N,224,cycles,114651845
+N,240,cycles,143437340
+N,256,cycles,173462252
+N,512,cycles,1394193444
+ 
+benchmark: ./gemm_blis_16x16 MC_32_KC_128_NC_32
+N,16,cycles,117144
+N,32,cycles,393760
+N,48,cycles,1201016
+N,64,cycles,2473170
+N,80,cycles,5802679
+N,96,cycles,8101906
+N,112,cycles,14082809
+N,128,cycles,20248778
+N,144,cycles,28688598
+N,160,cycles,36690774
+N,176,cycles,49445214
+N,192,cycles,64014104
+N,208,cycles,82961640
+N,224,cycles,102087755
+N,240,cycles,127461674
+N,256,cycles,155637022
+N,512,cycles,1307838060
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_32_KC_192_NC_32
+N,16,cycles,128596
+N,32,cycles,445835
+N,48,cycles,1334058
+N,64,cycles,2783442
+N,80,cycles,5563129
+N,96,cycles,9607458
+N,112,cycles,16758162
+N,128,cycles,24748776
+N,144,cycles,35243282
+N,160,cycles,49920170
+N,176,cycles,67336185
+N,192,cycles,89143321
+N,208,cycles,112752560
+N,224,cycles,137799495
+N,240,cycles,167745227
+N,256,cycles,199017472
+N,512,cycles,1636381997
+ 
+benchmark: ./gemm_blis_8x8 MC_32_KC_192_NC_32
+N,16,cycles,166450
+N,32,cycles,420471
+N,48,cycles,1232382
+N,64,cycles,2639574
+N,80,cycles,5302088
+N,96,cycles,9063099
+N,112,cycles,15750124
+N,128,cycles,22627552
+N,144,cycles,32501791
+N,160,cycles,43967727
+N,176,cycles,58865815
+N,192,cycles,75864692
+N,208,cycles,97063836
+N,224,cycles,118993265
+N,240,cycles,146721871
+N,256,cycles,175904674
+N,512,cycles,1439718903
+ 
+benchmark: ./gemm_blis_16x16 MC_32_KC_192_NC_32
+N,16,cycles,118168
+N,32,cycles,394856
+N,48,cycles,1163700
+N,64,cycles,2475032
+N,80,cycles,4878831
+N,96,cycles,8339689
+N,112,cycles,14043699
+N,128,cycles,19110828
+N,144,cycles,28451745
+N,160,cycles,37234959
+N,176,cycles,51264364
+N,192,cycles,65103191
+N,208,cycles,83975528
+N,224,cycles,102350270
+N,240,cycles,126697880
+N,256,cycles,154651435
+N,512,cycles,1319168859
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_32_KC_256_NC_32
+N,16,cycles,172985
+N,32,cycles,447271
+N,48,cycles,1445917
+N,64,cycles,2809151
+N,80,cycles,5556792
+N,96,cycles,9524752
+N,112,cycles,15652578
+N,128,cycles,23855047
+N,144,cycles,36068066
+N,160,cycles,49874670
+N,176,cycles,68392125
+N,192,cycles,87965978
+N,208,cycles,114588580
+N,224,cycles,144419315
+N,240,cycles,180489878
+N,256,cycles,219951621
+N,512,cycles,1754129250
+ 
+benchmark: ./gemm_blis_8x8 MC_32_KC_256_NC_32
+N,16,cycles,122753
+N,32,cycles,420493
+N,48,cycles,1235475
+N,64,cycles,2637398
+N,80,cycles,5548288
+N,96,cycles,8890679
+N,112,cycles,14741463
+N,128,cycles,21883252
+N,144,cycles,32238953
+N,160,cycles,42978076
+N,176,cycles,59259230
+N,192,cycles,76018212
+N,208,cycles,98332813
+N,224,cycles,122204204
+N,240,cycles,151965820
+N,256,cycles,184813276
+N,512,cycles,1489370969
+ 
+benchmark: ./gemm_blis_16x16 MC_32_KC_256_NC_32
+N,16,cycles,120965
+N,32,cycles,393172
+N,48,cycles,1193706
+N,64,cycles,2529031
+N,80,cycles,5971419
+N,96,cycles,8039579
+N,112,cycles,14195627
+N,128,cycles,20298202
+N,144,cycles,28847826
+N,160,cycles,37204009
+N,176,cycles,51030645
+N,192,cycles,65025540
+N,208,cycles,83927531
+N,224,cycles,103259556
+N,240,cycles,127651876
+N,256,cycles,157307175
+N,512,cycles,1324410198
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_32_KC_320_NC_32
+N,16,cycles,170198
+N,32,cycles,443839
+N,48,cycles,1293181
+N,64,cycles,2790743
+N,80,cycles,5598476
+N,96,cycles,9647375
+N,112,cycles,16714686
+N,128,cycles,24813995
+N,144,cycles,35088549
+N,160,cycles,49879977
+N,176,cycles,67462618
+N,192,cycles,89141896
+N,208,cycles,115437048
+N,224,cycles,143763338
+N,240,cycles,179158024
+N,256,cycles,219335827
+N,512,cycles,1757662645
+ 
+benchmark: ./gemm_blis_8x8 MC_32_KC_320_NC_32
+N,16,cycles,125980
+N,32,cycles,382280
+N,48,cycles,1238039
+N,64,cycles,2638581
+N,80,cycles,5283432
+N,96,cycles,8897669
+N,112,cycles,14714694
+N,128,cycles,22627767
+N,144,cycles,31289047
+N,160,cycles,43857338
+N,176,cycles,59695030
+N,192,cycles,76819251
+N,208,cycles,98188411
+N,224,cycles,122757399
+N,240,cycles,151745725
+N,256,cycles,185209342
+N,512,cycles,1486035140
+ 
+benchmark: ./gemm_blis_16x16 MC_32_KC_320_NC_32
+N,16,cycles,116712
+N,32,cycles,395957
+N,48,cycles,1256273
+N,64,cycles,2475085
+N,80,cycles,4892650
+N,96,cycles,8977429
+N,112,cycles,13019629
+N,128,cycles,19323227
+N,144,cycles,27573812
+N,160,cycles,38182016
+N,176,cycles,51032506
+N,192,cycles,65333182
+N,208,cycles,83270364
+N,224,cycles,103138237
+N,240,cycles,128657543
+N,256,cycles,157247815
+N,512,cycles,1323928300
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_32_KC_384_NC_32
+N,16,cycles,129435
+N,32,cycles,445261
+N,48,cycles,1424636
+N,64,cycles,2789567
+N,80,cycles,5569365
+N,96,cycles,10447651
+N,112,cycles,15692666
+N,128,cycles,23728307
+N,144,cycles,36129566
+N,160,cycles,49818794
+N,176,cycles,67453512
+N,192,cycles,88109482
+N,208,cycles,114447322
+N,224,cycles,144695181
+N,240,cycles,179418369
+N,256,cycles,219459438
+N,512,cycles,1757333350
+ 
+benchmark: ./gemm_blis_8x8 MC_32_KC_384_NC_32
+N,16,cycles,126277
+N,32,cycles,420443
+N,48,cycles,1272400
+N,64,cycles,2754272
+N,80,cycles,5363439
+N,96,cycles,8896343
+N,112,cycles,14533345
+N,128,cycles,21529264
+N,144,cycles,32313249
+N,160,cycles,43616303
+N,176,cycles,58830863
+N,192,cycles,75485265
+N,208,cycles,98383952
+N,224,cycles,121875402
+N,240,cycles,151873286
+N,256,cycles,185853034
+N,512,cycles,1486055511
+ 
+benchmark: ./gemm_blis_16x16 MC_32_KC_384_NC_32
+N,16,cycles,116275
+N,32,cycles,392384
+N,48,cycles,1165363
+N,64,cycles,2472449
+N,80,cycles,4936680
+N,96,cycles,8040796
+N,112,cycles,13265288
+N,128,cycles,20343502
+N,144,cycles,28742775
+N,160,cycles,38055429
+N,176,cycles,50964725
+N,192,cycles,65120785
+N,208,cycles,83935607
+N,224,cycles,103096632
+N,240,cycles,127626725
+N,256,cycles,157171012
+N,512,cycles,1318427376
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_32_KC_448_NC_32
+N,16,cycles,130346
+N,32,cycles,446678
+N,48,cycles,1344502
+N,64,cycles,2934846
+N,80,cycles,5615630
+N,96,cycles,9611868
+N,112,cycles,16622023
+N,128,cycles,24659839
+N,144,cycles,36124978
+N,160,cycles,49933728
+N,176,cycles,67438245
+N,192,cycles,88848084
+N,208,cycles,114594849
+N,224,cycles,144568555
+N,240,cycles,179102230
+N,256,cycles,219007115
+N,512,cycles,1794607159
+ 
+benchmark: ./gemm_blis_8x8 MC_32_KC_448_NC_32
+N,16,cycles,124851
+N,32,cycles,421423
+N,48,cycles,1292871
+N,64,cycles,2670061
+N,80,cycles,5425123
+N,96,cycles,9108084
+N,112,cycles,14538868
+N,128,cycles,21687182
+N,144,cycles,31427563
+N,160,cycles,42955473
+N,176,cycles,59121005
+N,192,cycles,76798700
+N,208,cycles,98371322
+N,224,cycles,122027328
+N,240,cycles,151940542
+N,256,cycles,184698446
+N,512,cycles,1491572125
+ 
+benchmark: ./gemm_blis_16x16 MC_32_KC_448_NC_32
+N,16,cycles,115786
+N,32,cycles,399620
+N,48,cycles,1155136
+N,64,cycles,2477215
+N,80,cycles,4880293
+N,96,cycles,8041482
+N,112,cycles,14030271
+N,128,cycles,20204743
+N,144,cycles,28807400
+N,160,cycles,37039360
+N,176,cycles,50966379
+N,192,cycles,65081023
+N,208,cycles,84225730
+N,224,cycles,103198047
+N,240,cycles,127311003
+N,256,cycles,157355656
+N,512,cycles,1308963018
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_32_KC_512_NC_32
+N,16,cycles,134808
+N,32,cycles,407180
+N,48,cycles,1297672
+N,64,cycles,2862831
+N,80,cycles,5563286
+N,96,cycles,9409164
+N,112,cycles,15717294
+N,128,cycles,23671156
+N,144,cycles,36098576
+N,160,cycles,49953450
+N,176,cycles,68247869
+N,192,cycles,88031462
+N,208,cycles,114449378
+N,224,cycles,144825402
+N,240,cycles,180293388
+N,256,cycles,219994573
+N,512,cycles,1889503026
+ 
+benchmark: ./gemm_blis_8x8 MC_32_KC_512_NC_32
+N,16,cycles,127324
+N,32,cycles,423712
+N,48,cycles,1238288
+N,64,cycles,2642460
+N,80,cycles,5267900
+N,96,cycles,8895618
+N,112,cycles,14548877
+N,128,cycles,21428583
+N,144,cycles,32626181
+N,160,cycles,43607922
+N,176,cycles,58858309
+N,192,cycles,75617008
+N,208,cycles,98302584
+N,224,cycles,121541296
+N,240,cycles,151814533
+N,256,cycles,185660085
+N,512,cycles,1529399625
+ 
+benchmark: ./gemm_blis_16x16 MC_32_KC_512_NC_32
+N,16,cycles,116591
+N,32,cycles,393745
+N,48,cycles,1159383
+N,64,cycles,2474098
+N,80,cycles,4881330
+N,96,cycles,8067135
+N,112,cycles,14081209
+N,128,cycles,19318415
+N,144,cycles,28585027
+N,160,cycles,37116678
+N,176,cycles,50988607
+N,192,cycles,65132831
+N,208,cycles,84049026
+N,224,cycles,103188458
+N,240,cycles,127978653
+N,256,cycles,157198912
+N,512,cycles,1318566276
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_32_KC_576_NC_32
+N,16,cycles,171342
+N,32,cycles,445255
+N,48,cycles,1337975
+N,64,cycles,2811200
+N,80,cycles,5565098
+N,96,cycles,10460157
+N,112,cycles,15672157
+N,128,cycles,23839892
+N,144,cycles,36120102
+N,160,cycles,49905810
+N,176,cycles,67700009
+N,192,cycles,88679690
+N,208,cycles,114508743
+N,224,cycles,144948025
+N,240,cycles,179198178
+N,256,cycles,219263750
+N,512,cycles,1889497699
+ 
+benchmark: ./gemm_blis_8x8 MC_32_KC_576_NC_32
+N,16,cycles,167734
+N,32,cycles,630508
+N,48,cycles,1234888
+N,64,cycles,2641855
+N,80,cycles,5305457
+N,96,cycles,8949908
+N,112,cycles,15480700
+N,128,cycles,22423887
+N,144,cycles,32390172
+N,160,cycles,43840080
+N,176,cycles,58910836
+N,192,cycles,75683202
+N,208,cycles,97432255
+N,224,cycles,121864931
+N,240,cycles,151728827
+N,256,cycles,185815385
+N,512,cycles,1531453319
+ 
+benchmark: ./gemm_blis_16x16 MC_32_KC_576_NC_32
+N,16,cycles,159307
+N,32,cycles,393851
+N,48,cycles,1191602
+N,64,cycles,2464193
+N,80,cycles,5056540
+N,96,cycles,8033260
+N,112,cycles,13418929
+N,128,cycles,20304857
+N,144,cycles,28949388
+N,160,cycles,38140501
+N,176,cycles,50867433
+N,192,cycles,64991348
+N,208,cycles,84133930
+N,224,cycles,103160784
+N,240,cycles,127559227
+N,256,cycles,157415973
+N,512,cycles,1319620632
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_32_KC_640_NC_32
+N,16,cycles,173522
+N,32,cycles,444064
+N,48,cycles,1329666
+N,64,cycles,2802403
+N,80,cycles,5646305
+N,96,cycles,9446349
+N,112,cycles,16757097
+N,128,cycles,24690215
+N,144,cycles,35199363
+N,160,cycles,48940620
+N,176,cycles,67545119
+N,192,cycles,89053284
+N,208,cycles,115313153
+N,224,cycles,143698904
+N,240,cycles,180076605
+N,256,cycles,219158997
+N,512,cycles,1890934999
+ 
+benchmark: ./gemm_blis_8x8 MC_32_KC_640_NC_32
+N,16,cycles,124393
+N,32,cycles,382797
+N,48,cycles,1280013
+N,64,cycles,3652239
+N,80,cycles,5289988
+N,96,cycles,8899453
+N,112,cycles,14567461
+N,128,cycles,21689591
+N,144,cycles,31144942
+N,160,cycles,43905018
+N,176,cycles,59382972
+N,192,cycles,76697220
+N,208,cycles,98327661
+N,224,cycles,122783948
+N,240,cycles,151979566
+N,256,cycles,184998183
+N,512,cycles,1530396038
+ 
+benchmark: ./gemm_blis_16x16 MC_32_KC_640_NC_32
+N,16,cycles,155803
+N,32,cycles,393534
+N,48,cycles,1163365
+N,64,cycles,2626181
+N,80,cycles,5053062
+N,96,cycles,9007203
+N,112,cycles,13407308
+N,128,cycles,19545505
+N,144,cycles,27707661
+N,160,cycles,38191345
+N,176,cycles,51060218
+N,192,cycles,65139818
+N,208,cycles,83192241
+N,224,cycles,102676148
+N,240,cycles,128501988
+N,256,cycles,157312426
+N,512,cycles,1320240029
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_64_KC_64_NC_64
+N,16,cycles,171907
+N,32,cycles,443346
+N,48,cycles,1177699
+N,64,cycles,2801339
+N,80,cycles,5861358
+N,96,cycles,9051374
+N,112,cycles,14050851
+N,128,cycles,21569198
+N,144,cycles,31226593
+N,160,cycles,42588219
+N,176,cycles,55210926
+N,192,cycles,72506888
+N,208,cycles,94417111
+N,224,cycles,114568859
+N,240,cycles,139788750
+N,256,cycles,171827642
+N,512,cycles,1365794650
+ 
+benchmark: ./gemm_blis_8x8 MC_64_KC_64_NC_64
+N,16,cycles,127998
+N,32,cycles,420218
+N,48,cycles,1224602
+N,64,cycles,3451254
+N,80,cycles,5140493
+N,96,cycles,8566683
+N,112,cycles,12919420
+N,128,cycles,19413685
+N,144,cycles,28582909
+N,160,cycles,38767269
+N,176,cycles,50731492
+N,192,cycles,66586504
+N,208,cycles,85117569
+N,224,cycles,104527802
+N,240,cycles,128731126
+N,256,cycles,155340628
+N,512,cycles,1241307286
+ 
+benchmark: ./gemm_blis_16x16 MC_64_KC_64_NC_64
+N,16,cycles,114761
+N,32,cycles,391382
+N,48,cycles,1029465
+N,64,cycles,2264830
+N,80,cycles,4558402
+N,96,cycles,7435614
+N,112,cycles,11550697
+N,128,cycles,17167893
+N,144,cycles,25098680
+N,160,cycles,34284760
+N,176,cycles,44756823
+N,192,cycles,57586133
+N,208,cycles,74152309
+N,224,cycles,92376395
+N,240,cycles,112635027
+N,256,cycles,136185386
+N,512,cycles,1120306313
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_64_KC_128_NC_64
+N,16,cycles,129140
+N,32,cycles,446210
+N,48,cycles,1171550
+N,64,cycles,2762677
+N,80,cycles,5776390
+N,96,cycles,10042651
+N,112,cycles,17010183
+N,128,cycles,25624325
+N,144,cycles,34920684
+N,160,cycles,46903686
+N,176,cycles,61439235
+N,192,cycles,79962999
+N,208,cycles,103868015
+N,224,cycles,130703158
+N,240,cycles,161918389
+N,256,cycles,198727284
+N,512,cycles,1586438796
+ 
+benchmark: ./gemm_blis_8x8 MC_64_KC_128_NC_64
+N,16,cycles,122935
+N,32,cycles,422322
+N,48,cycles,1115003
+N,64,cycles,2651106
+N,80,cycles,5250600
+N,96,cycles,8815542
+N,112,cycles,13896634
+N,128,cycles,20816658
+N,144,cycles,29897106
+N,160,cycles,40731547
+N,176,cycles,53134911
+N,192,cycles,68748762
+N,208,cycles,89497912
+N,224,cycles,110858032
+N,240,cycles,137168685
+N,256,cycles,167338135
+N,512,cycles,1334197605
+ 
+benchmark: ./gemm_blis_16x16 MC_64_KC_128_NC_64
+N,16,cycles,208482
+N,32,cycles,392832
+N,48,cycles,1030255
+N,64,cycles,2231858
+N,80,cycles,4565843
+N,96,cycles,7591214
+N,112,cycles,12055409
+N,128,cycles,18466323
+N,144,cycles,26513963
+N,160,cycles,34238020
+N,176,cycles,45852856
+N,192,cycles,59011416
+N,208,cycles,77254855
+N,224,cycles,95163467
+N,240,cycles,116812755
+N,256,cycles,141230632
+N,512,cycles,1165700774
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_64_KC_192_NC_64
+N,16,cycles,129524
+N,32,cycles,442780
+N,48,cycles,1211520
+N,64,cycles,2802273
+N,80,cycles,5843992
+N,96,cycles,10914903
+N,112,cycles,16097485
+N,128,cycles,24490509
+N,144,cycles,36574999
+N,160,cycles,50079608
+N,176,cycles,66629187
+N,192,cycles,86659770
+N,208,cycles,109968264
+N,224,cycles,134047750
+N,240,cycles,162883625
+N,256,cycles,198246093
+N,512,cycles,1635116699
+ 
+benchmark: ./gemm_blis_8x8 MC_64_KC_192_NC_64
+N,16,cycles,123637
+N,32,cycles,382357
+N,48,cycles,1145983
+N,64,cycles,2523130
+N,80,cycles,6359572
+N,96,cycles,8838989
+N,112,cycles,14844406
+N,128,cycles,21714609
+N,144,cycles,31082163
+N,160,cycles,41933549
+N,176,cycles,55565784
+N,192,cycles,71712046
+N,208,cycles,92601353
+N,224,cycles,113748582
+N,240,cycles,138066555
+N,256,cycles,166664726
+N,512,cycles,1358209337
+ 
+benchmark: ./gemm_blis_16x16 MC_64_KC_192_NC_64
+N,16,cycles,117404
+N,32,cycles,394668
+N,48,cycles,1031425
+N,64,cycles,2432296
+N,80,cycles,4561812
+N,96,cycles,7594916
+N,112,cycles,11927210
+N,128,cycles,18938874
+N,144,cycles,26776455
+N,160,cycles,35478861
+N,176,cycles,46909951
+N,192,cycles,60156025
+N,208,cycles,76814562
+N,224,cycles,95687699
+N,240,cycles,116115610
+N,256,cycles,142593599
+N,512,cycles,1177304056
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_64_KC_256_NC_64
+N,16,cycles,130789
+N,32,cycles,446154
+N,48,cycles,1173821
+N,64,cycles,2999789
+N,80,cycles,5778729
+N,96,cycles,10028511
+N,112,cycles,16010361
+N,128,cycles,24405319
+N,144,cycles,36517595
+N,160,cycles,49940256
+N,176,cycles,66826726
+N,192,cycles,86690874
+N,208,cycles,111780565
+N,224,cycles,140825552
+N,240,cycles,173678424
+N,256,cycles,210750553
+N,512,cycles,1682102199
+ 
+benchmark: ./gemm_blis_8x8 MC_64_KC_256_NC_64
+N,16,cycles,123199
+N,32,cycles,422840
+N,48,cycles,1114989
+N,64,cycles,2553526
+N,80,cycles,5245463
+N,96,cycles,8844008
+N,112,cycles,14891984
+N,128,cycles,21707779
+N,144,cycles,31094173
+N,160,cycles,42004685
+N,176,cycles,55512905
+N,192,cycles,71620339
+N,208,cycles,93266489
+N,224,cycles,117031937
+N,240,cycles,141480333
+N,256,cycles,173548142
+N,512,cycles,1391179455
+ 
+benchmark: ./gemm_blis_16x16 MC_64_KC_256_NC_64
+N,16,cycles,117130
+N,32,cycles,391853
+N,48,cycles,1035858
+N,64,cycles,2270308
+N,80,cycles,4554411
+N,96,cycles,7631499
+N,112,cycles,12923868
+N,128,cycles,18752382
+N,144,cycles,26724992
+N,160,cycles,34675718
+N,176,cycles,46812024
+N,192,cycles,60254589
+N,208,cycles,77200446
+N,224,cycles,96905097
+N,240,cycles,118044073
+N,256,cycles,145092664
+N,512,cycles,1185881572
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_64_KC_320_NC_64
+N,16,cycles,172783
+N,32,cycles,452020
+N,48,cycles,1170840
+N,64,cycles,2868159
+N,80,cycles,5817216
+N,96,cycles,9784732
+N,112,cycles,16945969
+N,128,cycles,25514967
+N,144,cycles,35778094
+N,160,cycles,49899415
+N,176,cycles,66959665
+N,192,cycles,87630069
+N,208,cycles,111629787
+N,224,cycles,140796935
+N,240,cycles,174033664
+N,256,cycles,210430162
+N,512,cycles,1689312003
+ 
+benchmark: ./gemm_blis_8x8 MC_64_KC_320_NC_64
+N,16,cycles,127747
+N,32,cycles,515724
+N,48,cycles,1306972
+N,64,cycles,2532208
+N,80,cycles,5128360
+N,96,cycles,9841609
+N,112,cycles,13719187
+N,128,cycles,20494494
+N,144,cycles,31147991
+N,160,cycles,41080603
+N,176,cycles,55606892
+N,192,cycles,72740743
+N,208,cycles,93100676
+N,224,cycles,115865805
+N,240,cycles,143012212
+N,256,cycles,173405368
+N,512,cycles,1393124194
+ 
+benchmark: ./gemm_blis_16x16 MC_64_KC_320_NC_64
+N,16,cycles,116060
+N,32,cycles,351017
+N,48,cycles,1033995
+N,64,cycles,2235984
+N,80,cycles,4555164
+N,96,cycles,7592001
+N,112,cycles,11850265
+N,128,cycles,17777584
+N,144,cycles,25610360
+N,160,cycles,35791604
+N,176,cycles,46871554
+N,192,cycles,61165883
+N,208,cycles,78446440
+N,224,cycles,96891593
+N,240,cycles,119112042
+N,256,cycles,143635029
+N,512,cycles,1185957140
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_64_KC_384_NC_64
+N,16,cycles,172673
+N,32,cycles,446521
+N,48,cycles,1178529
+N,64,cycles,2768041
+N,80,cycles,5839048
+N,96,cycles,10111313
+N,112,cycles,17131483
+N,128,cycles,25627540
+N,144,cycles,35483896
+N,160,cycles,50015988
+N,176,cycles,66686248
+N,192,cycles,87768878
+N,208,cycles,111836886
+N,224,cycles,140967592
+N,240,cycles,172636547
+N,256,cycles,210664987
+N,512,cycles,1705166303
+ 
+benchmark: ./gemm_blis_8x8 MC_64_KC_384_NC_64
+N,16,cycles,123416
+N,32,cycles,422815
+N,48,cycles,1115599
+N,64,cycles,2585838
+N,80,cycles,5275934
+N,96,cycles,8825710
+N,112,cycles,13796205
+N,128,cycles,21682394
+N,144,cycles,30060730
+N,160,cycles,41992898
+N,176,cycles,55555014
+N,192,cycles,71638958
+N,208,cycles,93203714
+N,224,cycles,116115303
+N,240,cycles,142714416
+N,256,cycles,174712493
+N,512,cycles,1403383604
+ 
+benchmark: ./gemm_blis_16x16 MC_64_KC_384_NC_64
+N,16,cycles,116378
+N,32,cycles,405129
+N,48,cycles,1028871
+N,64,cycles,2234700
+N,80,cycles,4551432
+N,96,cycles,7805273
+N,112,cycles,11838765
+N,128,cycles,17717145
+N,144,cycles,25405897
+N,160,cycles,35960441
+N,176,cycles,46873450
+N,192,cycles,61082024
+N,208,cycles,78571605
+N,224,cycles,96963833
+N,240,cycles,119287114
+N,256,cycles,143878625
+N,512,cycles,1184121541
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_64_KC_448_NC_64
+N,16,cycles,130182
+N,32,cycles,444628
+N,48,cycles,1178590
+N,64,cycles,2799177
+N,80,cycles,5737972
+N,96,cycles,10937409
+N,112,cycles,16026321
+N,128,cycles,24392718
+N,144,cycles,36695720
+N,160,cycles,49936002
+N,176,cycles,66652655
+N,192,cycles,86722064
+N,208,cycles,111647088
+N,224,cycles,140886652
+N,240,cycles,173864898
+N,256,cycles,210597456
+N,512,cycles,1723752748
+ 
+benchmark: ./gemm_blis_8x8 MC_64_KC_448_NC_64
+N,16,cycles,122148
+N,32,cycles,383342
+N,48,cycles,1149261
+N,64,cycles,2686737
+N,80,cycles,5192812
+N,96,cycles,9756844
+N,112,cycles,13792646
+N,128,cycles,20579077
+N,144,cycles,31006878
+N,160,cycles,41072652
+N,176,cycles,55688681
+N,192,cycles,72786808
+N,208,cycles,93344685
+N,224,cycles,115605647
+N,240,cycles,142838785
+N,256,cycles,173125603
+N,512,cycles,1412580056
+ 
+benchmark: ./gemm_blis_16x16 MC_64_KC_448_NC_64
+N,16,cycles,117874
+N,32,cycles,394466
+N,48,cycles,1033948
+N,64,cycles,2270068
+N,80,cycles,4555917
+N,96,cycles,7824955
+N,112,cycles,11806451
+N,128,cycles,17670006
+N,144,cycles,25612770
+N,160,cycles,35868699
+N,176,cycles,46904007
+N,192,cycles,60586484
+N,208,cycles,78581380
+N,224,cycles,96921381
+N,240,cycles,118297883
+N,256,cycles,144096606
+N,512,cycles,1181290042
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_64_KC_512_NC_64
+N,16,cycles,130091
+N,32,cycles,443925
+N,48,cycles,1173910
+N,64,cycles,2768688
+N,80,cycles,5848416
+N,96,cycles,10053438
+N,112,cycles,16020271
+N,128,cycles,24468158
+N,144,cycles,36620541
+N,160,cycles,49904509
+N,176,cycles,67754999
+N,192,cycles,87748311
+N,208,cycles,111930745
+N,224,cycles,139675463
+N,240,cycles,172755025
+N,256,cycles,210427761
+N,512,cycles,1804669872
+ 
+benchmark: ./gemm_blis_8x8 MC_64_KC_512_NC_64
+N,16,cycles,123947
+N,32,cycles,421649
+N,48,cycles,1116091
+N,64,cycles,2528827
+N,80,cycles,5132493
+N,96,cycles,8823409
+N,112,cycles,13751977
+N,128,cycles,20505395
+N,144,cycles,30127084
+N,160,cycles,41858548
+N,176,cycles,55649752
+N,192,cycles,72838470
+N,208,cycles,92150324
+N,224,cycles,115806130
+N,240,cycles,143112218
+N,256,cycles,173359543
+N,512,cycles,1445199348
+ 
+benchmark: ./gemm_blis_16x16 MC_64_KC_512_NC_64
+N,16,cycles,114883
+N,32,cycles,394243
+N,48,cycles,1031284
+N,64,cycles,2228481
+N,80,cycles,4611803
+N,96,cycles,7701239
+N,112,cycles,11968853
+N,128,cycles,17674744
+N,144,cycles,25703718
+N,160,cycles,35599434
+N,176,cycles,46670825
+N,192,cycles,60264396
+N,208,cycles,78406108
+N,224,cycles,97044018
+N,240,cycles,118737267
+N,256,cycles,144086215
+N,512,cycles,1189727400
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_64_KC_576_NC_64
+N,16,cycles,170470
+N,32,cycles,443970
+N,48,cycles,1383172
+N,64,cycles,2812033
+N,80,cycles,5816310
+N,96,cycles,10881102
+N,112,cycles,16083518
+N,128,cycles,25693545
+N,144,cycles,36505916
+N,160,cycles,50037426
+N,176,cycles,66625593
+N,192,cycles,87623714
+N,208,cycles,111600887
+N,224,cycles,140710468
+N,240,cycles,174218367
+N,256,cycles,210555813
+N,512,cycles,1803292027
+ 
+benchmark: ./gemm_blis_8x8 MC_64_KC_576_NC_64
+N,16,cycles,124428
+N,32,cycles,382364
+N,48,cycles,1149327
+N,64,cycles,2529178
+N,80,cycles,5131691
+N,96,cycles,8797880
+N,112,cycles,14836522
+N,128,cycles,21476378
+N,144,cycles,30951544
+N,160,cycles,42271811
+N,176,cycles,55772424
+N,192,cycles,71780177
+N,208,cycles,93036935
+N,224,cycles,116738910
+N,240,cycles,142198765
+N,256,cycles,173360006
+N,512,cycles,1446127968
+ 
+benchmark: ./gemm_blis_16x16 MC_64_KC_576_NC_64
+N,16,cycles,157575
+N,32,cycles,393252
+N,48,cycles,1061077
+N,64,cycles,2268900
+N,80,cycles,4798852
+N,96,cycles,7623485
+N,112,cycles,12256015
+N,128,cycles,18678254
+N,144,cycles,26846898
+N,160,cycles,34488820
+N,176,cycles,46955893
+N,192,cycles,60134358
+N,208,cycles,77579825
+N,224,cycles,96799919
+N,240,cycles,118088148
+N,256,cycles,144688479
+N,512,cycles,1188850304
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_64_KC_640_NC_64
+N,16,cycles,173404
+N,32,cycles,443215
+N,48,cycles,1178769
+N,64,cycles,2804681
+N,80,cycles,5987559
+N,96,cycles,9784396
+N,112,cycles,16065591
+N,128,cycles,24686934
+N,144,cycles,36593288
+N,160,cycles,49930956
+N,176,cycles,67213420
+N,192,cycles,87646172
+N,208,cycles,112740155
+N,224,cycles,139655825
+N,240,cycles,173140696
+N,256,cycles,210802077
+N,512,cycles,1804470237
+ 
+benchmark: ./gemm_blis_8x8 MC_64_KC_640_NC_64
+N,16,cycles,124731
+N,32,cycles,381532
+N,48,cycles,1150992
+N,64,cycles,2567432
+N,80,cycles,5232227
+N,96,cycles,8677353
+N,112,cycles,13887883
+N,128,cycles,20805226
+N,144,cycles,29963289
+N,160,cycles,42155351
+N,176,cycles,55548112
+N,192,cycles,71579815
+N,208,cycles,93376055
+N,224,cycles,115781570
+N,240,cycles,143066438
+N,256,cycles,174512227
+N,512,cycles,1446199458
+ 
+benchmark: ./gemm_blis_16x16 MC_64_KC_640_NC_64
+N,16,cycles,116687
+N,32,cycles,353013
+N,48,cycles,1060031
+N,64,cycles,2322228
+N,80,cycles,4590149
+N,96,cycles,8712199
+N,112,cycles,11810093
+N,128,cycles,17603853
+N,144,cycles,25470152
+N,160,cycles,35910557
+N,176,cycles,46939329
+N,192,cycles,60355921
+N,208,cycles,78771452
+N,224,cycles,96973285
+N,240,cycles,118053075
+N,256,cycles,144963473
+N,512,cycles,1189523126
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_96_KC_64_NC_96
+N,16,cycles,130342
+N,32,cycles,445252
+N,48,cycles,1174114
+N,64,cycles,2769699
+N,80,cycles,5624155
+N,96,cycles,10276618
+N,112,cycles,15531682
+N,128,cycles,22887449
+N,144,cycles,32387430
+N,160,cycles,43518955
+N,176,cycles,58848385
+N,192,cycles,78338852
+N,208,cycles,100176499
+N,224,cycles,120692571
+N,240,cycles,148461986
+N,256,cycles,182470493
+N,512,cycles,1475644237
+ 
+benchmark: ./gemm_blis_8x8 MC_96_KC_64_NC_96
+N,16,cycles,122912
+N,32,cycles,420110
+N,48,cycles,1117411
+N,64,cycles,2517451
+N,80,cycles,4852395
+N,96,cycles,9252810
+N,112,cycles,13343780
+N,128,cycles,19627234
+N,144,cycles,27566853
+N,160,cycles,38492023
+N,176,cycles,51031435
+N,192,cycles,66264357
+N,208,cycles,86375997
+N,224,cycles,105427045
+N,240,cycles,128181338
+N,256,cycles,157117844
+N,512,cycles,1261162595
+ 
+benchmark: ./gemm_blis_16x16 MC_96_KC_64_NC_96
+N,16,cycles,115729
+N,32,cycles,352657
+N,48,cycles,1030724
+N,64,cycles,2340387
+N,80,cycles,4181154
+N,96,cycles,6980767
+N,112,cycles,12673350
+N,128,cycles,17256528
+N,144,cycles,25035488
+N,160,cycles,33048189
+N,176,cycles,43740577
+N,192,cycles,56383775
+N,208,cycles,72648249
+N,224,cycles,90419692
+N,240,cycles,110829378
+N,256,cycles,134698114
+N,512,cycles,1093682497
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_96_KC_128_NC_96
+N,16,cycles,129162
+N,32,cycles,443439
+N,48,cycles,1178738
+N,64,cycles,2846007
+N,80,cycles,5878684
+N,96,cycles,11330688
+N,112,cycles,16579257
+N,128,cycles,25456195
+N,144,cycles,35376341
+N,160,cycles,47010427
+N,176,cycles,63354711
+N,192,cycles,83053084
+N,208,cycles,105364965
+N,224,cycles,131412767
+N,240,cycles,162627471
+N,256,cycles,199400725
+N,512,cycles,1584120563
+ 
+benchmark: ./gemm_blis_8x8 MC_96_KC_128_NC_96
+N,16,cycles,163025
+N,32,cycles,421618
+N,48,cycles,1179127
+N,64,cycles,2692952
+N,80,cycles,4938910
+N,96,cycles,8572397
+N,112,cycles,13840432
+N,128,cycles,20569072
+N,144,cycles,28880717
+N,160,cycles,39987668
+N,176,cycles,52537829
+N,192,cycles,67896929
+N,208,cycles,88820367
+N,224,cycles,109561624
+N,240,cycles,135446392
+N,256,cycles,164506311
+N,512,cycles,1313456539
+ 
+benchmark: ./gemm_blis_16x16 MC_96_KC_128_NC_96
+N,16,cycles,115534
+N,32,cycles,352473
+N,48,cycles,1034318
+N,64,cycles,2271011
+N,80,cycles,4469155
+N,96,cycles,7171608
+N,112,cycles,12961140
+N,128,cycles,17685296
+N,144,cycles,25637504
+N,160,cycles,33968375
+N,176,cycles,44668380
+N,192,cycles,57347340
+N,208,cycles,75020304
+N,224,cycles,91693902
+N,240,cycles,113262267
+N,256,cycles,139082711
+N,512,cycles,1128518246
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_96_KC_192_NC_96
+N,16,cycles,129956
+N,32,cycles,445230
+N,48,cycles,1207982
+N,64,cycles,2767388
+N,80,cycles,5865124
+N,96,cycles,11150934
+N,112,cycles,16528028
+N,128,cycles,24355572
+N,144,cycles,36222716
+N,160,cycles,49709665
+N,176,cycles,65843007
+N,192,cycles,85188901
+N,208,cycles,108236412
+N,224,cycles,132314793
+N,240,cycles,163187638
+N,256,cycles,198860909
+N,512,cycles,1615077852
+ 
+benchmark: ./gemm_blis_8x8 MC_96_KC_192_NC_96
+N,16,cycles,124278
+N,32,cycles,381490
+N,48,cycles,1145021
+N,64,cycles,2534195
+N,80,cycles,5004331
+N,96,cycles,8511003
+N,112,cycles,13919009
+N,128,cycles,21795843
+N,144,cycles,29271701
+N,160,cycles,41178926
+N,176,cycles,54258263
+N,192,cycles,69938522
+N,208,cycles,90530036
+N,224,cycles,111152911
+N,240,cycles,136287795
+N,256,cycles,166045266
+N,512,cycles,1332958109
+ 
+benchmark: ./gemm_blis_16x16 MC_96_KC_192_NC_96
+N,16,cycles,118414
+N,32,cycles,394831
+N,48,cycles,1028763
+N,64,cycles,2292549
+N,80,cycles,4479768
+N,96,cycles,7199191
+N,112,cycles,12899211
+N,128,cycles,18593233
+N,144,cycles,25911295
+N,160,cycles,33610814
+N,176,cycles,45405732
+N,192,cycles,59726092
+N,208,cycles,75947724
+N,224,cycles,93789047
+N,240,cycles,113923205
+N,256,cycles,139345180
+N,512,cycles,1140036857
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_96_KC_256_NC_96
+N,16,cycles,129883
+N,32,cycles,499983
+N,48,cycles,1200890
+N,64,cycles,2909068
+N,80,cycles,5796452
+N,96,cycles,10219513
+N,112,cycles,16509054
+N,128,cycles,24361273
+N,144,cycles,36278972
+N,160,cycles,49730079
+N,176,cycles,66912250
+N,192,cycles,85703412
+N,208,cycles,110052813
+N,224,cycles,137889582
+N,240,cycles,170638657
+N,256,cycles,207852935
+N,512,cycles,1655792855
+ 
+benchmark: ./gemm_blis_8x8 MC_96_KC_256_NC_96
+N,16,cycles,123421
+N,32,cycles,422444
+N,48,cycles,1255166
+N,64,cycles,2521020
+N,80,cycles,4989323
+N,96,cycles,8676319
+N,112,cycles,13831970
+N,128,cycles,20474204
+N,144,cycles,29280902
+N,160,cycles,41149236
+N,176,cycles,55441443
+N,192,cycles,70126703
+N,208,cycles,91227268
+N,224,cycles,113559477
+N,240,cycles,140575063
+N,256,cycles,170632334
+N,512,cycles,1365426925
+ 
+benchmark: ./gemm_blis_16x16 MC_96_KC_256_NC_96
+N,16,cycles,116589
+N,32,cycles,392370
+N,48,cycles,1030449
+N,64,cycles,2232675
+N,80,cycles,4257074
+N,96,cycles,7372666
+N,112,cycles,11927981
+N,128,cycles,18599283
+N,144,cycles,25782625
+N,160,cycles,33725027
+N,176,cycles,45644152
+N,192,cycles,58667153
+N,208,cycles,76795088
+N,224,cycles,94863102
+N,240,cycles,116850847
+N,256,cycles,140986105
+N,512,cycles,1152913387
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_96_KC_320_NC_96
+N,16,cycles,169294
+N,32,cycles,445386
+N,48,cycles,1180327
+N,64,cycles,2884372
+N,80,cycles,5880822
+N,96,cycles,10218669
+N,112,cycles,16587023
+N,128,cycles,24486706
+N,144,cycles,36199365
+N,160,cycles,49625174
+N,176,cycles,67094688
+N,192,cycles,86401180
+N,208,cycles,111065391
+N,224,cycles,138770744
+N,240,cycles,170289135
+N,256,cycles,208008515
+N,512,cycles,1666083125
+ 
+benchmark: ./gemm_blis_8x8 MC_96_KC_320_NC_96
+N,16,cycles,124867
+N,32,cycles,421596
+N,48,cycles,1148696
+N,64,cycles,2525607
+N,80,cycles,5144007
+N,96,cycles,8509647
+N,112,cycles,13997708
+N,128,cycles,20561543
+N,144,cycles,30440586
+N,160,cycles,40152853
+N,176,cycles,54265791
+N,192,cycles,71027452
+N,208,cycles,90294597
+N,224,cycles,114009268
+N,240,cycles,140450444
+N,256,cycles,171821425
+N,512,cycles,1369118753
+ 
+benchmark: ./gemm_blis_16x16 MC_96_KC_320_NC_96
+N,16,cycles,116458
+N,32,cycles,394859
+N,48,cycles,1032880
+N,64,cycles,2310122
+N,80,cycles,4297660
+N,96,cycles,8329649
+N,112,cycles,11890230
+N,128,cycles,17802972
+N,144,cycles,24893216
+N,160,cycles,34575408
+N,176,cycles,45575878
+N,192,cycles,58657908
+N,208,cycles,75507680
+N,224,cycles,94823427
+N,240,cycles,115807156
+N,256,cycles,141933795
+N,512,cycles,1151521567
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_96_KC_384_NC_96
+N,16,cycles,172025
+N,32,cycles,405702
+N,48,cycles,1176779
+N,64,cycles,2931249
+N,80,cycles,5787945
+N,96,cycles,11375216
+N,112,cycles,16409495
+N,128,cycles,25137898
+N,144,cycles,36400123
+N,160,cycles,49735274
+N,176,cycles,65806918
+N,192,cycles,85069650
+N,208,cycles,109897680
+N,224,cycles,138650441
+N,240,cycles,170649694
+N,256,cycles,207700036
+N,512,cycles,1687373046
+ 
+benchmark: ./gemm_blis_8x8 MC_96_KC_384_NC_96
+N,16,cycles,123826
+N,32,cycles,418640
+N,48,cycles,1149360
+N,64,cycles,2527549
+N,80,cycles,5784030
+N,96,cycles,8555550
+N,112,cycles,14961297
+N,128,cycles,21513516
+N,144,cycles,30283481
+N,160,cycles,41090121
+N,176,cycles,54439870
+N,192,cycles,70153941
+N,208,cycles,91409724
+N,224,cycles,113649205
+N,240,cycles,140772527
+N,256,cycles,170508415
+N,512,cycles,1382319023
+ 
+benchmark: ./gemm_blis_16x16 MC_96_KC_384_NC_96
+N,16,cycles,117979
+N,32,cycles,352116
+N,48,cycles,1036988
+N,64,cycles,2316763
+N,80,cycles,4311614
+N,96,cycles,7169484
+N,112,cycles,11878431
+N,128,cycles,18782966
+N,144,cycles,25875851
+N,160,cycles,33563523
+N,176,cycles,44787100
+N,192,cycles,58571772
+N,208,cycles,75502015
+N,224,cycles,95105305
+N,240,cycles,116631976
+N,256,cycles,140947881
+N,512,cycles,1150749416
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_96_KC_448_NC_96
+N,16,cycles,173187
+N,32,cycles,493330
+N,48,cycles,1175783
+N,64,cycles,2814829
+N,80,cycles,5820734
+N,96,cycles,10322758
+N,112,cycles,16402194
+N,128,cycles,24338004
+N,144,cycles,36255541
+N,160,cycles,49698245
+N,176,cycles,66941011
+N,192,cycles,85407412
+N,208,cycles,109995406
+N,224,cycles,137712928
+N,240,cycles,170615985
+N,256,cycles,207768880
+N,512,cycles,1718231434
+ 
+benchmark: ./gemm_blis_8x8 MC_96_KC_448_NC_96
+N,16,cycles,124884
+N,32,cycles,381685
+N,48,cycles,1115912
+N,64,cycles,2519985
+N,80,cycles,4939250
+N,96,cycles,8676759
+N,112,cycles,14783019
+N,128,cycles,21417617
+N,144,cycles,30448419
+N,160,cycles,40963222
+N,176,cycles,54272916
+N,192,cycles,71393359
+N,208,cycles,91382415
+N,224,cycles,113760803
+N,240,cycles,140712235
+N,256,cycles,170730547
+N,512,cycles,1396263378
+ 
+benchmark: ./gemm_blis_16x16 MC_96_KC_448_NC_96
+N,16,cycles,116783
+N,32,cycles,392687
+N,48,cycles,1034121
+N,64,cycles,2272660
+N,80,cycles,4275847
+N,96,cycles,7196310
+N,112,cycles,11889520
+N,128,cycles,17480064
+N,144,cycles,24788562
+N,160,cycles,34846563
+N,176,cycles,45594330
+N,192,cycles,58811835
+N,208,cycles,76714956
+N,224,cycles,93846585
+N,240,cycles,115946749
+N,256,cycles,141728997
+N,512,cycles,1149502100
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_96_KC_512_NC_96
+N,16,cycles,169692
+N,32,cycles,454599
+N,48,cycles,1209068
+N,64,cycles,2767517
+N,80,cycles,5996514
+N,96,cycles,10245774
+N,112,cycles,17556798
+N,128,cycles,25437552
+N,144,cycles,35397632
+N,160,cycles,49746120
+N,176,cycles,66259068
+N,192,cycles,86420185
+N,208,cycles,110066498
+N,224,cycles,138599275
+N,240,cycles,171482391
+N,256,cycles,207878958
+N,512,cycles,1782916312
+ 
+benchmark: ./gemm_blis_8x8 MC_96_KC_512_NC_96
+N,16,cycles,126323
+N,32,cycles,380599
+N,48,cycles,1144787
+N,64,cycles,2632969
+N,80,cycles,4936845
+N,96,cycles,8605625
+N,112,cycles,14826828
+N,128,cycles,20481061
+N,144,cycles,30427002
+N,160,cycles,41119485
+N,176,cycles,54232888
+N,192,cycles,71103362
+N,208,cycles,91268253
+N,224,cycles,113727507
+N,240,cycles,140612534
+N,256,cycles,170778452
+N,512,cycles,1424996071
+ 
+benchmark: ./gemm_blis_16x16 MC_96_KC_512_NC_96
+N,16,cycles,118063
+N,32,cycles,354815
+N,48,cycles,1035520
+N,64,cycles,2390473
+N,80,cycles,4232762
+N,96,cycles,7176728
+N,112,cycles,12751354
+N,128,cycles,17647195
+N,144,cycles,24863064
+N,160,cycles,34546821
+N,176,cycles,45423201
+N,192,cycles,58586433
+N,208,cycles,76619252
+N,224,cycles,94879939
+N,240,cycles,115756975
+N,256,cycles,141897699
+N,512,cycles,1157245729
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_96_KC_576_NC_96
+N,16,cycles,130247
+N,32,cycles,444786
+N,48,cycles,1210039
+N,64,cycles,2769795
+N,80,cycles,6031894
+N,96,cycles,10218199
+N,112,cycles,16611377
+N,128,cycles,24583056
+N,144,cycles,36186719
+N,160,cycles,49709881
+N,176,cycles,65825527
+N,192,cycles,86535805
+N,208,cycles,109896564
+N,224,cycles,138635096
+N,240,cycles,170700909
+N,256,cycles,207792152
+N,512,cycles,1784037822
+ 
+benchmark: ./gemm_blis_8x8 MC_96_KC_576_NC_96
+N,16,cycles,166330
+N,32,cycles,382846
+N,48,cycles,1149459
+N,64,cycles,2520645
+N,80,cycles,4941873
+N,96,cycles,8653758
+N,112,cycles,13774917
+N,128,cycles,21508511
+N,144,cycles,29364213
+N,160,cycles,40981200
+N,176,cycles,54238455
+N,192,cycles,70206392
+N,208,cycles,91179432
+N,224,cycles,114868459
+N,240,cycles,139670991
+N,256,cycles,170461582
+N,512,cycles,1425829424
+ 
+benchmark: ./gemm_blis_16x16 MC_96_KC_576_NC_96
+N,16,cycles,116977
+N,32,cycles,392861
+N,48,cycles,1058696
+N,64,cycles,2343213
+N,80,cycles,4474687
+N,96,cycles,7210319
+N,112,cycles,11989516
+N,128,cycles,18614694
+N,144,cycles,26019805
+N,160,cycles,33767975
+N,176,cycles,45681246
+N,192,cycles,58834973
+N,208,cycles,75963778
+N,224,cycles,94875972
+N,240,cycles,116969245
+N,256,cycles,140711793
+N,512,cycles,1157922622
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_96_KC_640_NC_96
+N,16,cycles,130567
+N,32,cycles,445006
+N,48,cycles,1175778
+N,64,cycles,2770481
+N,80,cycles,5793412
+N,96,cycles,11141600
+N,112,cycles,16478057
+N,128,cycles,24319068
+N,144,cycles,36170005
+N,160,cycles,49652791
+N,176,cycles,65822236
+N,192,cycles,85407897
+N,208,cycles,110011609
+N,224,cycles,137766617
+N,240,cycles,170637139
+N,256,cycles,207723447
+N,512,cycles,1783184719
+ 
+benchmark: ./gemm_blis_8x8 MC_96_KC_640_NC_96
+N,16,cycles,162661
+N,32,cycles,420543
+N,48,cycles,1116817
+N,64,cycles,2525822
+N,80,cycles,4937323
+N,96,cycles,9637116
+N,112,cycles,13802159
+N,128,cycles,20648527
+N,144,cycles,30179978
+N,160,cycles,40299235
+N,176,cycles,54351372
+N,192,cycles,70968980
+N,208,cycles,90291422
+N,224,cycles,113654932
+N,240,cycles,140866669
+N,256,cycles,171779272
+N,512,cycles,1424690249
+ 
+benchmark: ./gemm_blis_16x16 MC_96_KC_640_NC_96
+N,16,cycles,155906
+N,32,cycles,394863
+N,48,cycles,1032765
+N,64,cycles,2270663
+N,80,cycles,4224608
+N,96,cycles,7460457
+N,112,cycles,11811933
+N,128,cycles,17483623
+N,144,cycles,24502013
+N,160,cycles,34842663
+N,176,cycles,45668324
+N,192,cycles,58694848
+N,208,cycles,75809456
+N,224,cycles,95029050
+N,240,cycles,115759151
+N,256,cycles,141962913
+N,512,cycles,1157607676
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_128_KC_64_NC_128
+N,16,cycles,170843
+N,32,cycles,407471
+N,48,cycles,1177802
+N,64,cycles,2804890
+N,80,cycles,6636570
+N,96,cycles,9344412
+N,112,cycles,15661078
+N,128,cycles,24794536
+N,144,cycles,33631492
+N,160,cycles,45411509
+N,176,cycles,59615586
+N,192,cycles,77950032
+N,208,cycles,100241193
+N,224,cycles,124253883
+N,240,cycles,156157661
+N,256,cycles,192636651
+N,512,cycles,1530923399
+ 
+benchmark: ./gemm_blis_8x8 MC_128_KC_64_NC_128
+N,16,cycles,166582
+N,32,cycles,421890
+N,48,cycles,1145342
+N,64,cycles,3534307
+N,80,cycles,5062460
+N,96,cycles,8144305
+N,112,cycles,13215087
+N,128,cycles,20856825
+N,144,cycles,28424527
+N,160,cycles,39151273
+N,176,cycles,51220272
+N,192,cycles,67448022
+N,208,cycles,83794251
+N,224,cycles,105172834
+N,240,cycles,130326039
+N,256,cycles,158484145
+N,512,cycles,1266878380
+ 
+benchmark: ./gemm_blis_16x16 MC_128_KC_64_NC_128
+N,16,cycles,120653
+N,32,cycles,391746
+N,48,cycles,1028422
+N,64,cycles,2270460
+N,80,cycles,4179256
+N,96,cycles,6981076
+N,112,cycles,12207769
+N,128,cycles,16503467
+N,144,cycles,25175401
+N,160,cycles,33315433
+N,176,cycles,43656681
+N,192,cycles,56336580
+N,208,cycles,70448955
+N,224,cycles,88262737
+N,240,cycles,108063528
+N,256,cycles,132436365
+N,512,cycles,1063640666
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_128_KC_128_NC_128
+N,16,cycles,131150
+N,32,cycles,405541
+N,48,cycles,1178106
+N,64,cycles,2796561
+N,80,cycles,6748067
+N,96,cycles,10252961
+N,112,cycles,16525927
+N,128,cycles,24630284
+N,144,cycles,35361066
+N,160,cycles,46897910
+N,176,cycles,62504941
+N,192,cycles,82324336
+N,208,cycles,105436532
+N,224,cycles,131757384
+N,240,cycles,162948043
+N,256,cycles,198464092
+N,512,cycles,1579841788
+ 
+benchmark: ./gemm_blis_8x8 MC_128_KC_128_NC_128
+N,16,cycles,126251
+N,32,cycles,381640
+N,48,cycles,1149899
+N,64,cycles,2532823
+N,80,cycles,4996411
+N,96,cycles,8515299
+N,112,cycles,13606638
+N,128,cycles,20072134
+N,144,cycles,29971877
+N,160,cycles,39001065
+N,176,cycles,52661172
+N,192,cycles,67760597
+N,208,cycles,87378002
+N,224,cycles,108328099
+N,240,cycles,133664371
+N,256,cycles,162004599
+N,512,cycles,1291541203
+ 
+benchmark: ./gemm_blis_16x16 MC_128_KC_128_NC_128
+N,16,cycles,115154
+N,32,cycles,444837
+N,48,cycles,1032660
+N,64,cycles,2234752
+N,80,cycles,4259667
+N,96,cycles,7237314
+N,112,cycles,11275760
+N,128,cycles,17974479
+N,144,cycles,25584649
+N,160,cycles,32875932
+N,176,cycles,44557302
+N,192,cycles,57314775
+N,208,cycles,73471946
+N,224,cycles,89535529
+N,240,cycles,110784681
+N,256,cycles,135808313
+N,512,cycles,1092178178
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_128_KC_192_NC_128
+N,16,cycles,174028
+N,32,cycles,407401
+N,48,cycles,1176090
+N,64,cycles,2812328
+N,80,cycles,6881772
+N,96,cycles,10319145
+N,112,cycles,16368258
+N,128,cycles,24431815
+N,144,cycles,36129661
+N,160,cycles,49154077
+N,176,cycles,65960502
+N,192,cycles,86099108
+N,208,cycles,107540324
+N,224,cycles,132375155
+N,240,cycles,163025079
+N,256,cycles,199396441
+N,512,cycles,1600416353
+ 
+benchmark: ./gemm_blis_8x8 MC_128_KC_192_NC_128
+N,16,cycles,166178
+N,32,cycles,421957
+N,48,cycles,1117156
+N,64,cycles,2529332
+N,80,cycles,4935982
+N,96,cycles,8632263
+N,112,cycles,13610271
+N,128,cycles,21160576
+N,144,cycles,29401588
+N,160,cycles,40915893
+N,176,cycles,54269297
+N,192,cycles,70047093
+N,208,cycles,88955545
+N,224,cycles,109159182
+N,240,cycles,135185201
+N,256,cycles,163277074
+N,512,cycles,1311012693
+ 
+benchmark: ./gemm_blis_16x16 MC_128_KC_192_NC_128
+N,16,cycles,115698
+N,32,cycles,390234
+N,48,cycles,1034141
+N,64,cycles,2273282
+N,80,cycles,5275592
+N,96,cycles,7168039
+N,112,cycles,12290976
+N,128,cycles,16705997
+N,144,cycles,25510269
+N,160,cycles,34796929
+N,176,cycles,45547852
+N,192,cycles,58854060
+N,208,cycles,74341296
+N,224,cycles,90482776
+N,240,cycles,111527548
+N,256,cycles,135355696
+N,512,cycles,1105264259
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_128_KC_256_NC_128
+N,16,cycles,130854
+N,32,cycles,448021
+N,48,cycles,1209731
+N,64,cycles,2772964
+N,80,cycles,5783555
+N,96,cycles,11341173
+N,112,cycles,16510864
+N,128,cycles,24612506
+N,144,cycles,35765504
+N,160,cycles,49088575
+N,176,cycles,65671912
+N,192,cycles,85362345
+N,208,cycles,109418692
+N,224,cycles,136261817
+N,240,cycles,168261834
+N,256,cycles,204986621
+N,512,cycles,1634522141
+ 
+benchmark: ./gemm_blis_8x8 MC_128_KC_256_NC_128
+N,16,cycles,166129
+N,32,cycles,421652
+N,48,cycles,1292762
+N,64,cycles,2613573
+N,80,cycles,4932513
+N,96,cycles,9605481
+N,112,cycles,13384610
+N,128,cycles,19890734
+N,144,cycles,29822890
+N,160,cycles,40042612
+N,176,cycles,54388612
+N,192,cycles,71047031
+N,208,cycles,89090972
+N,224,cycles,111799379
+N,240,cycles,137308738
+N,256,cycles,167778838
+N,512,cycles,1342495125
+ 
+benchmark: ./gemm_blis_16x16 MC_128_KC_256_NC_128
+N,16,cycles,116165
+N,32,cycles,355120
+N,48,cycles,1033120
+N,64,cycles,2274301
+N,80,cycles,4257537
+N,96,cycles,7168942
+N,112,cycles,12408843
+N,128,cycles,17893671
+N,144,cycles,25725354
+N,160,cycles,33627827
+N,176,cycles,45620155
+N,192,cycles,58681650
+N,208,cycles,75049212
+N,224,cycles,92954894
+N,240,cycles,113713444
+N,256,cycles,139010172
+N,512,cycles,1119329795
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_128_KC_320_NC_128
+N,16,cycles,129887
+N,32,cycles,446712
+N,48,cycles,1206982
+N,64,cycles,2806958
+N,80,cycles,5793367
+N,96,cycles,11193125
+N,112,cycles,16638151
+N,128,cycles,24725505
+N,144,cycles,35875172
+N,160,cycles,48983345
+N,176,cycles,65777365
+N,192,cycles,85272904
+N,208,cycles,109212144
+N,224,cycles,136615360
+N,240,cycles,168418138
+N,256,cycles,204994187
+N,512,cycles,1645538675
+ 
+benchmark: ./gemm_blis_8x8 MC_128_KC_320_NC_128
+N,16,cycles,122940
+N,32,cycles,378843
+N,48,cycles,1151737
+N,64,cycles,2527179
+N,80,cycles,5899305
+N,96,cycles,8502957
+N,112,cycles,14668879
+N,128,cycles,21239125
+N,144,cycles,30234641
+N,160,cycles,40907291
+N,176,cycles,54161842
+N,192,cycles,70017597
+N,208,cycles,89911326
+N,224,cycles,112121510
+N,240,cycles,138619167
+N,256,cycles,169065627
+N,512,cycles,1346782412
+ 
+benchmark: ./gemm_blis_16x16 MC_128_KC_320_NC_128
+N,16,cycles,119977
+N,32,cycles,352427
+N,48,cycles,1033200
+N,64,cycles,2276349
+N,80,cycles,4399260
+N,96,cycles,7289430
+N,112,cycles,11479461
+N,128,cycles,16696335
+N,144,cycles,24716993
+N,160,cycles,34666229
+N,176,cycles,45648375
+N,192,cycles,58853461
+N,208,cycles,74179300
+N,224,cycles,92933980
+N,240,cycles,113701438
+N,256,cycles,138839789
+N,512,cycles,1117530619
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_128_KC_384_NC_128
+N,16,cycles,130692
+N,32,cycles,444714
+N,48,cycles,1177576
+N,64,cycles,2818548
+N,80,cycles,6963983
+N,96,cycles,10429384
+N,112,cycles,16365035
+N,128,cycles,24666416
+N,144,cycles,36079594
+N,160,cycles,49183005
+N,176,cycles,65746214
+N,192,cycles,86337063
+N,208,cycles,109189679
+N,224,cycles,137273497
+N,240,cycles,168757291
+N,256,cycles,204948957
+N,512,cycles,1670238692
+ 
+benchmark: ./gemm_blis_8x8 MC_128_KC_384_NC_128
+N,16,cycles,126997
+N,32,cycles,420781
+N,48,cycles,1292451
+N,64,cycles,2524595
+N,80,cycles,4989510
+N,96,cycles,9856876
+N,112,cycles,13442060
+N,128,cycles,20031803
+N,144,cycles,30028861
+N,160,cycles,40898958
+N,176,cycles,54357287
+N,192,cycles,71062378
+N,208,cycles,89957181
+N,224,cycles,111997760
+N,240,cycles,137374842
+N,256,cycles,168042193
+N,512,cycles,1359432592
+ 
+benchmark: ./gemm_blis_16x16 MC_128_KC_384_NC_128
+N,16,cycles,116410
+N,32,cycles,395103
+N,48,cycles,1030502
+N,64,cycles,2278631
+N,80,cycles,4230212
+N,96,cycles,7246848
+N,112,cycles,11286525
+N,128,cycles,17026478
+N,144,cycles,24855909
+N,160,cycles,34520170
+N,176,cycles,45547525
+N,192,cycles,58641177
+N,208,cycles,73789008
+N,224,cycles,92965045
+N,240,cycles,113684882
+N,256,cycles,138933434
+N,512,cycles,1116322072
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_128_KC_448_NC_128
+N,16,cycles,130544
+N,32,cycles,444477
+N,48,cycles,1209023
+N,64,cycles,2768569
+N,80,cycles,6031957
+N,96,cycles,10302951
+N,112,cycles,16656868
+N,128,cycles,24662461
+N,144,cycles,35794507
+N,160,cycles,49156324
+N,176,cycles,65453422
+N,192,cycles,86350200
+N,208,cycles,109246719
+N,224,cycles,137101341
+N,240,cycles,168497761
+N,256,cycles,204849628
+N,512,cycles,1705539755
+ 
+benchmark: ./gemm_blis_8x8 MC_128_KC_448_NC_128
+N,16,cycles,126594
+N,32,cycles,381540
+N,48,cycles,1148825
+N,64,cycles,2524899
+N,80,cycles,5821711
+N,96,cycles,8556726
+N,112,cycles,14629879
+N,128,cycles,21252178
+N,144,cycles,30040700
+N,160,cycles,40928054
+N,176,cycles,54155588
+N,192,cycles,69898519
+N,208,cycles,90019613
+N,224,cycles,111835374
+N,240,cycles,138156334
+N,256,cycles,168750088
+N,512,cycles,1380703450
+ 
+benchmark: ./gemm_blis_16x16 MC_128_KC_448_NC_128
+N,16,cycles,118310
+N,32,cycles,361276
+N,48,cycles,1034810
+N,64,cycles,2333795
+N,80,cycles,5207447
+N,96,cycles,7437191
+N,112,cycles,12412624
+N,128,cycles,16780597
+N,144,cycles,25479596
+N,160,cycles,34722287
+N,176,cycles,45567439
+N,192,cycles,59488094
+N,208,cycles,74964590
+N,224,cycles,91909789
+N,240,cycles,113450203
+N,256,cycles,138930958
+N,512,cycles,1118527533
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_128_KC_512_NC_128
+N,16,cycles,129161
+N,32,cycles,442698
+N,48,cycles,1174469
+N,64,cycles,2883880
+N,80,cycles,5781903
+N,96,cycles,11327784
+N,112,cycles,16433261
+N,128,cycles,25332394
+N,144,cycles,36084396
+N,160,cycles,49133225
+N,176,cycles,65603620
+N,192,cycles,85045081
+N,208,cycles,109199452
+N,224,cycles,136236037
+N,240,cycles,168410691
+N,256,cycles,204162454
+N,512,cycles,1762774549
+ 
+benchmark: ./gemm_blis_8x8 MC_128_KC_512_NC_128
+N,16,cycles,124183
+N,32,cycles,381833
+N,48,cycles,1145471
+N,64,cycles,2526133
+N,80,cycles,4942770
+N,96,cycles,9587060
+N,112,cycles,13425473
+N,128,cycles,20218115
+N,144,cycles,30056781
+N,160,cycles,39933078
+N,176,cycles,54217517
+N,192,cycles,71035539
+N,208,cycles,88834332
+N,224,cycles,111913672
+N,240,cycles,137267776
+N,256,cycles,167753446
+N,512,cycles,1405211686
+ 
+benchmark: ./gemm_blis_16x16 MC_128_KC_512_NC_128
+N,16,cycles,116741
+N,32,cycles,543261
+N,48,cycles,1059335
+N,64,cycles,2275432
+N,80,cycles,4228548
+N,96,cycles,8224130
+N,112,cycles,11245712
+N,128,cycles,16800913
+N,144,cycles,24486688
+N,160,cycles,34701802
+N,176,cycles,45628069
+N,192,cycles,58682612
+N,208,cycles,73830268
+N,224,cycles,92964165
+N,240,cycles,113491801
+N,256,cycles,137986484
+N,512,cycles,1126786378
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_128_KC_576_NC_128
+N,16,cycles,128613
+N,32,cycles,445221
+N,48,cycles,1204201
+N,64,cycles,2804524
+N,80,cycles,5785456
+N,96,cycles,11294197
+N,112,cycles,16493944
+N,128,cycles,24698828
+N,144,cycles,36044686
+N,160,cycles,49122366
+N,176,cycles,65574145
+N,192,cycles,85402746
+N,208,cycles,109314499
+N,224,cycles,136017493
+N,240,cycles,168464896
+N,256,cycles,205090171
+N,512,cycles,1763196343
+ 
+benchmark: ./gemm_blis_8x8 MC_128_KC_576_NC_128
+N,16,cycles,125013
+N,32,cycles,385600
+N,48,cycles,1298812
+N,64,cycles,2732925
+N,80,cycles,5057207
+N,96,cycles,9669720
+N,112,cycles,13435507
+N,128,cycles,20023391
+N,144,cycles,29864632
+N,160,cycles,40041841
+N,176,cycles,54375968
+N,192,cycles,70914228
+N,208,cycles,88970140
+N,224,cycles,111816730
+N,240,cycles,137419886
+N,256,cycles,167880217
+N,512,cycles,1404897498
+ 
+benchmark: ./gemm_blis_16x16 MC_128_KC_576_NC_128
+N,16,cycles,116092
+N,32,cycles,404064
+N,48,cycles,1031834
+N,64,cycles,2268843
+N,80,cycles,4226625
+N,96,cycles,8304458
+N,112,cycles,11245222
+N,128,cycles,16803337
+N,144,cycles,24427467
+N,160,cycles,34725316
+N,176,cycles,45631790
+N,192,cycles,58852544
+N,208,cycles,73959684
+N,224,cycles,92889415
+N,240,cycles,113727360
+N,256,cycles,138028588
+N,512,cycles,1126557571
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_128_KC_640_NC_128
+N,16,cycles,172950
+N,32,cycles,406950
+N,48,cycles,1281464
+N,64,cycles,2888831
+N,80,cycles,5788056
+N,96,cycles,10430019
+N,112,cycles,16366934
+N,128,cycles,24528965
+N,144,cycles,36077611
+N,160,cycles,49113726
+N,176,cycles,66616054
+N,192,cycles,85507404
+N,208,cycles,109432100
+N,224,cycles,136246083
+N,240,cycles,168584814
+N,256,cycles,205114045
+N,512,cycles,1762891287
+ 
+benchmark: ./gemm_blis_8x8 MC_128_KC_640_NC_128
+N,16,cycles,122708
+N,32,cycles,422945
+N,48,cycles,1114465
+N,64,cycles,2778537
+N,80,cycles,4942458
+N,96,cycles,8511098
+N,112,cycles,13496027
+N,128,cycles,19983966
+N,144,cycles,29034433
+N,160,cycles,40992784
+N,176,cycles,54206489
+N,192,cycles,69929645
+N,208,cycles,90072480
+N,224,cycles,112923091
+N,240,cycles,137557736
+N,256,cycles,167737315
+N,512,cycles,1405222284
+ 
+benchmark: ./gemm_blis_16x16 MC_128_KC_640_NC_128
+N,16,cycles,117990
+N,32,cycles,352694
+N,48,cycles,1034957
+N,64,cycles,2337917
+N,80,cycles,4290172
+N,96,cycles,7175511
+N,112,cycles,11340637
+N,128,cycles,17835481
+N,144,cycles,25671077
+N,160,cycles,33607270
+N,176,cycles,44628362
+N,192,cycles,58626008
+N,208,cycles,74108562
+N,224,cycles,92899999
+N,240,cycles,114680187
+N,256,cycles,138413570
+N,512,cycles,1124920120
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_256_KC_64_NC_256
+N,16,cycles,130392
+N,32,cycles,446663
+N,48,cycles,1317812
+N,64,cycles,2767904
+N,80,cycles,6485939
+N,96,cycles,9574058
+N,112,cycles,16478665
+N,128,cycles,24733368
+N,144,cycles,33499819
+N,160,cycles,47108257
+N,176,cycles,63346575
+N,192,cycles,82113302
+N,208,cycles,104160974
+N,224,cycles,131612065
+N,240,cycles,160872680
+N,256,cycles,195774452
+N,512,cycles,1559749558
+ 
+benchmark: ./gemm_blis_8x8 MC_256_KC_64_NC_256
+N,16,cycles,122239
+N,32,cycles,418635
+N,48,cycles,1120362
+N,64,cycles,2527167
+N,80,cycles,4879500
+N,96,cycles,9223244
+N,112,cycles,12994903
+N,128,cycles,19511466
+N,144,cycles,27592156
+N,160,cycles,39071145
+N,176,cycles,51653349
+N,192,cycles,66603379
+N,208,cycles,85127890
+N,224,cycles,105823469
+N,240,cycles,129640651
+N,256,cycles,158471476
+N,512,cycles,1256474958
+ 
+benchmark: ./gemm_blis_16x16 MC_256_KC_64_NC_256
+N,16,cycles,157846
+N,32,cycles,391941
+N,48,cycles,1060937
+N,64,cycles,2272596
+N,80,cycles,4372110
+N,96,cycles,6978175
+N,112,cycles,12134056
+N,128,cycles,16548175
+N,144,cycles,23081020
+N,160,cycles,32367538
+N,176,cycles,42688174
+N,192,cycles,55007082
+N,208,cycles,68650013
+N,224,cycles,86584886
+N,240,cycles,105947763
+N,256,cycles,127916303
+N,512,cycles,1029482719
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_256_KC_128_NC_256
+N,16,cycles,172200
+N,32,cycles,405963
+N,48,cycles,1170295
+N,64,cycles,2770140
+N,80,cycles,5792797
+N,96,cycles,10228894
+N,112,cycles,16580949
+N,128,cycles,24582856
+N,144,cycles,35102634
+N,160,cycles,47652495
+N,176,cycles,63600684
+N,192,cycles,83199179
+N,208,cycles,105117566
+N,224,cycles,130452336
+N,240,cycles,160807112
+N,256,cycles,195652812
+N,512,cycles,1556688316
+ 
+benchmark: ./gemm_blis_8x8 MC_256_KC_128_NC_256
+N,16,cycles,125866
+N,32,cycles,420531
+N,48,cycles,1148605
+N,64,cycles,2522292
+N,80,cycles,5969300
+N,96,cycles,8504395
+N,112,cycles,14757510
+N,128,cycles,21255133
+N,144,cycles,29537380
+N,160,cycles,39649288
+N,176,cycles,51952881
+N,192,cycles,68296895
+N,208,cycles,84643520
+N,224,cycles,106466026
+N,240,cycles,131149159
+N,256,cycles,158672058
+N,512,cycles,1265405013
+ 
+benchmark: ./gemm_blis_16x16 MC_256_KC_128_NC_256
+N,16,cycles,158412
+N,32,cycles,390749
+N,48,cycles,1031674
+N,64,cycles,3215463
+N,80,cycles,4232810
+N,96,cycles,7173281
+N,112,cycles,11302738
+N,128,cycles,17904631
+N,144,cycles,24532925
+N,160,cycles,31922070
+N,176,cycles,43221619
+N,192,cycles,55656767
+N,208,cycles,70371895
+N,224,cycles,88411200
+N,240,cycles,109273300
+N,256,cycles,132233593
+N,512,cycles,1054603713
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_256_KC_192_NC_256
+N,16,cycles,131640
+N,32,cycles,444806
+N,48,cycles,1179121
+N,64,cycles,2775261
+N,80,cycles,6904196
+N,96,cycles,10466452
+N,112,cycles,16461832
+N,128,cycles,24430024
+N,144,cycles,35964387
+N,160,cycles,48853650
+N,176,cycles,64673972
+N,192,cycles,84739271
+N,208,cycles,105764282
+N,224,cycles,133355363
+N,240,cycles,162926158
+N,256,cycles,197961350
+N,512,cycles,1576975699
+ 
+benchmark: ./gemm_blis_8x8 MC_256_KC_192_NC_256
+N,16,cycles,125670
+N,32,cycles,383711
+N,48,cycles,1148341
+N,64,cycles,2526696
+N,80,cycles,4944275
+N,96,cycles,8513759
+N,112,cycles,13431848
+N,128,cycles,21249950
+N,144,cycles,28441418
+N,160,cycles,40171368
+N,176,cycles,53000554
+N,192,cycles,68498862
+N,208,cycles,87388235
+N,224,cycles,108438213
+N,240,cycles,133407285
+N,256,cycles,160909909
+N,512,cycles,1283826361
+ 
+benchmark: ./gemm_blis_16x16 MC_256_KC_192_NC_256
+N,16,cycles,116829
+N,32,cycles,390116
+N,48,cycles,1033594
+N,64,cycles,2269232
+N,80,cycles,4424596
+N,96,cycles,7174661
+N,112,cycles,11517822
+N,128,cycles,16713512
+N,144,cycles,23929597
+N,160,cycles,33676282
+N,176,cycles,44376865
+N,192,cycles,57209214
+N,208,cycles,71670751
+N,224,cycles,89620449
+N,240,cycles,109418693
+N,256,cycles,133301363
+N,512,cycles,1070796464
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_256_KC_256_NC_256
+N,16,cycles,131358
+N,32,cycles,446413
+N,48,cycles,1363720
+N,64,cycles,2775200
+N,80,cycles,5998228
+N,96,cycles,11283650
+N,112,cycles,16397619
+N,128,cycles,25563716
+N,144,cycles,35999146
+N,160,cycles,48830425
+N,176,cycles,64638773
+N,192,cycles,83771160
+N,208,cycles,107586874
+N,224,cycles,134040823
+N,240,cycles,165807953
+N,256,cycles,202264595
+N,512,cycles,1610618452
+ 
+benchmark: ./gemm_blis_8x8 MC_256_KC_256_NC_256
+N,16,cycles,202021
+N,32,cycles,383869
+N,48,cycles,1322593
+N,64,cycles,2529459
+N,80,cycles,4935871
+N,96,cycles,9749376
+N,112,cycles,13489240
+N,128,cycles,19988116
+N,144,cycles,29509050
+N,160,cycles,40078611
+N,176,cycles,53875662
+N,192,cycles,68747651
+N,208,cycles,88315482
+N,224,cycles,110840697
+N,240,cycles,135333509
+N,256,cycles,165106782
+N,512,cycles,1320072877
+ 
+benchmark: ./gemm_blis_16x16 MC_256_KC_256_NC_256
+N,16,cycles,115219
+N,32,cycles,393566
+N,48,cycles,1059862
+N,64,cycles,2278538
+N,80,cycles,5139923
+N,96,cycles,7244601
+N,112,cycles,12233236
+N,128,cycles,16999992
+N,144,cycles,23932445
+N,160,cycles,33443960
+N,176,cycles,44352240
+N,192,cycles,57185191
+N,208,cycles,72379704
+N,224,cycles,90910800
+N,240,cycles,111392630
+N,256,cycles,135186588
+N,512,cycles,1085921811
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_256_KC_320_NC_256
+N,16,cycles,131259
+N,32,cycles,456929
+N,48,cycles,1175340
+N,64,cycles,2848784
+N,80,cycles,5825885
+N,96,cycles,10220614
+N,112,cycles,17492773
+N,128,cycles,25530310
+N,144,cycles,34884422
+N,160,cycles,48922123
+N,176,cycles,64707138
+N,192,cycles,84846557
+N,208,cycles,107413874
+N,224,cycles,133891115
+N,240,cycles,166011641
+N,256,cycles,201979151
+N,512,cycles,1623126652
+ 
+benchmark: ./gemm_blis_8x8 MC_256_KC_320_NC_256
+N,16,cycles,162919
+N,32,cycles,421098
+N,48,cycles,1154531
+N,64,cycles,2523433
+N,80,cycles,4949746
+N,96,cycles,8563257
+N,112,cycles,13691920
+N,128,cycles,21293339
+N,144,cycles,28626647
+N,160,cycles,40194494
+N,176,cycles,52984434
+N,192,cycles,68573699
+N,208,cycles,88218729
+N,224,cycles,110067644
+N,240,cycles,136226256
+N,256,cycles,165263463
+N,512,cycles,1322607614
+ 
+benchmark: ./gemm_blis_16x16 MC_256_KC_320_NC_256
+N,16,cycles,117392
+N,32,cycles,352094
+N,48,cycles,1031478
+N,64,cycles,2236247
+N,80,cycles,4247094
+N,96,cycles,7358501
+N,112,cycles,11522739
+N,128,cycles,16756029
+N,144,cycles,23872448
+N,160,cycles,33689990
+N,176,cycles,44303146
+N,192,cycles,57243148
+N,208,cycles,72522145
+N,224,cycles,91317704
+N,240,cycles,112259144
+N,256,cycles,135076186
+N,512,cycles,1085687288
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_256_KC_384_NC_256
+N,16,cycles,130515
+N,32,cycles,488853
+N,48,cycles,1211653
+N,64,cycles,2799604
+N,80,cycles,5991758
+N,96,cycles,11200475
+N,112,cycles,16523110
+N,128,cycles,24488976
+N,144,cycles,35892126
+N,160,cycles,48803504
+N,176,cycles,64799516
+N,192,cycles,83841437
+N,208,cycles,107853259
+N,224,cycles,133957685
+N,240,cycles,165746288
+N,256,cycles,202152548
+N,512,cycles,1647135237
+ 
+benchmark: ./gemm_blis_8x8 MC_256_KC_384_NC_256
+N,16,cycles,124407
+N,32,cycles,421215
+N,48,cycles,1119065
+N,64,cycles,2526518
+N,80,cycles,5122372
+N,96,cycles,8568044
+N,112,cycles,14758160
+N,128,cycles,21089420
+N,144,cycles,29651750
+N,160,cycles,40102389
+N,176,cycles,53016152
+N,192,cycles,69764462
+N,208,cycles,87131578
+N,224,cycles,109902127
+N,240,cycles,136033042
+N,256,cycles,165405334
+N,512,cycles,1337990513
+ 
+benchmark: ./gemm_blis_16x16 MC_256_KC_384_NC_256
+N,16,cycles,117705
+N,32,cycles,396008
+N,48,cycles,1061516
+N,64,cycles,2269225
+N,80,cycles,4438807
+N,96,cycles,7279170
+N,112,cycles,12327655
+N,128,cycles,16805616
+N,144,cycles,24736991
+N,160,cycles,33687475
+N,176,cycles,44273195
+N,192,cycles,57124289
+N,208,cycles,72157316
+N,224,cycles,90022732
+N,240,cycles,111587511
+N,256,cycles,135859642
+N,512,cycles,1084243226
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_256_KC_448_NC_256
+N,16,cycles,131156
+N,32,cycles,583665
+N,48,cycles,1174513
+N,64,cycles,2784008
+N,80,cycles,5795641
+N,96,cycles,10218370
+N,112,cycles,17434998
+N,128,cycles,25415132
+N,144,cycles,34902734
+N,160,cycles,48971408
+N,176,cycles,64494787
+N,192,cycles,84501651
+N,208,cycles,107404662
+N,224,cycles,133812174
+N,240,cycles,165632673
+N,256,cycles,202082791
+N,512,cycles,1691318336
+ 
+benchmark: ./gemm_blis_8x8 MC_256_KC_448_NC_256
+N,16,cycles,123458
+N,32,cycles,381316
+N,48,cycles,1149778
+N,64,cycles,2526255
+N,80,cycles,4939218
+N,96,cycles,8573978
+N,112,cycles,14561518
+N,128,cycles,21071338
+N,144,cycles,29533788
+N,160,cycles,40105331
+N,176,cycles,52995276
+N,192,cycles,69608724
+N,208,cycles,87241600
+N,224,cycles,109929594
+N,240,cycles,135209211
+N,256,cycles,165081469
+N,512,cycles,1361400804
+ 
+benchmark: ./gemm_blis_16x16 MC_256_KC_448_NC_256
+N,16,cycles,117545
+N,32,cycles,394749
+N,48,cycles,1033850
+N,64,cycles,2270816
+N,80,cycles,4355517
+N,96,cycles,7320153
+N,112,cycles,11377595
+N,128,cycles,16709083
+N,144,cycles,23748117
+N,160,cycles,33643126
+N,176,cycles,44345926
+N,192,cycles,57190762
+N,208,cycles,72227785
+N,224,cycles,91056264
+N,240,cycles,111251899
+N,256,cycles,134918430
+N,512,cycles,1086721608
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_256_KC_512_NC_256
+N,16,cycles,173782
+N,32,cycles,449401
+N,48,cycles,1243652
+N,64,cycles,2768634
+N,80,cycles,5871084
+N,96,cycles,10396419
+N,112,cycles,17564729
+N,128,cycles,25708599
+N,144,cycles,34864949
+N,160,cycles,48875336
+N,176,cycles,64661277
+N,192,cycles,84884350
+N,208,cycles,107345954
+N,224,cycles,134932694
+N,240,cycles,165755124
+N,256,cycles,201444098
+N,512,cycles,1741422225
+ 
+benchmark: ./gemm_blis_8x8 MC_256_KC_512_NC_256
+N,16,cycles,124765
+N,32,cycles,382380
+N,48,cycles,1148637
+N,64,cycles,2698917
+N,80,cycles,4939296
+N,96,cycles,8511003
+N,112,cycles,14554976
+N,128,cycles,20864558
+N,144,cycles,29398183
+N,160,cycles,40072748
+N,176,cycles,53052702
+N,192,cycles,69587692
+N,208,cycles,87129649
+N,224,cycles,110047051
+N,240,cycles,135078460
+N,256,cycles,165260725
+N,512,cycles,1384627914
+ 
+benchmark: ./gemm_blis_16x16 MC_256_KC_512_NC_256
+N,16,cycles,117187
+N,32,cycles,393668
+N,48,cycles,1149161
+N,64,cycles,2272535
+N,80,cycles,4228704
+N,96,cycles,7180682
+N,112,cycles,11244490
+N,128,cycles,16751006
+N,144,cycles,23614745
+N,160,cycles,33458973
+N,176,cycles,44310894
+N,192,cycles,57150837
+N,208,cycles,72243019
+N,224,cycles,91045309
+N,240,cycles,111484186
+N,256,cycles,135074830
+N,512,cycles,1094841012
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_256_KC_576_NC_256
+N,16,cycles,132645
+N,32,cycles,405581
+N,48,cycles,1175446
+N,64,cycles,2811793
+N,80,cycles,6155387
+N,96,cycles,10312242
+N,112,cycles,16432847
+N,128,cycles,24415085
+N,144,cycles,35949975
+N,160,cycles,48869724
+N,176,cycles,64907540
+N,192,cycles,84809225
+N,208,cycles,107780699
+N,224,cycles,134879868
+N,240,cycles,166565759
+N,256,cycles,202250700
+N,512,cycles,1742812799
+ 
+benchmark: ./gemm_blis_8x8 MC_256_KC_576_NC_256
+N,16,cycles,127114
+N,32,cycles,422661
+N,48,cycles,1116509
+N,64,cycles,2526154
+N,80,cycles,4943310
+N,96,cycles,8568167
+N,112,cycles,13589414
+N,128,cycles,21076099
+N,144,cycles,28633371
+N,160,cycles,40168954
+N,176,cycles,53095873
+N,192,cycles,68773132
+N,208,cycles,88368673
+N,224,cycles,110065259
+N,240,cycles,136040323
+N,256,cycles,166346239
+N,512,cycles,1385643443
+ 
+benchmark: ./gemm_blis_16x16 MC_256_KC_576_NC_256
+N,16,cycles,115664
+N,32,cycles,389693
+N,48,cycles,1033818
+N,64,cycles,2272883
+N,80,cycles,4226323
+N,96,cycles,7166478
+N,112,cycles,11401989
+N,128,cycles,18003996
+N,144,cycles,24918573
+N,160,cycles,32519200
+N,176,cycles,44293178
+N,192,cycles,58131638
+N,208,cycles,73418408
+N,224,cycles,90034869
+N,240,cycles,111412266
+N,256,cycles,136234787
+N,512,cycles,1094744517
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+ 
+benchmark: ./gemm_blis_4x4 MC_256_KC_640_NC_256
+N,16,cycles,129303
+N,32,cycles,445762
+N,48,cycles,1360211
+N,64,cycles,2961738
+N,80,cycles,5898135
+N,96,cycles,10416182
+N,112,cycles,16416322
+N,128,cycles,24530969
+N,144,cycles,36032133
+N,160,cycles,48839775
+N,176,cycles,65568410
+N,192,cycles,83709354
+N,208,cycles,107469652
+N,224,cycles,134350940
+N,240,cycles,165763602
+N,256,cycles,202189252
+N,512,cycles,1743261401
+ 
+benchmark: ./gemm_blis_8x8 MC_256_KC_640_NC_256
+N,16,cycles,122877
+N,32,cycles,420275
+N,48,cycles,1148214
+N,64,cycles,2732102
+N,80,cycles,4934122
+N,96,cycles,8499653
+N,112,cycles,13519416
+N,128,cycles,19994591
+N,144,cycles,28357966
+N,160,cycles,40232162
+N,176,cycles,53038175
+N,192,cycles,68464914
+N,208,cycles,88253149
+N,224,cycles,110895959
+N,240,cycles,136116211
+N,256,cycles,165029450
+N,512,cycles,1385544594
+ 
+benchmark: ./gemm_blis_16x16 MC_256_KC_640_NC_256
+N,16,cycles,115893
+N,32,cycles,393582
+N,48,cycles,1216421
+N,64,cycles,2272601
+N,80,cycles,4286326
+N,96,cycles,7191747
+N,112,cycles,11371412
+N,128,cycles,16741635
+N,144,cycles,23882972
+N,160,cycles,32677499
+N,176,cycles,43230462
+N,192,cycles,57142728
+N,208,cycles,72440719
+N,224,cycles,91084727
+N,240,cycles,111288057
+N,256,cycles,136150241
+N,512,cycles,1094506803
+# 
