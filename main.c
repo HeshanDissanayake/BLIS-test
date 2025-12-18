@@ -112,7 +112,7 @@ int main(int argc, char **argv)
     // print_matrix("Matrix C", C, M, N);
 
     /* Performance stats */
-    double flops = 2.0 * M * N * K;
+    double flops = 2.0 * (double)M * (double)N * (double)K;
     double time = cycles / 50.0; // us
     double mflops = flops / time;
     
