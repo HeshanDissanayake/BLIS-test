@@ -65,6 +65,7 @@ int main(int argc, char **argv)
     unsigned long long M = atoi(argv[1]);
     unsigned long long K = atoi(argv[2]);
     unsigned long long N = atoi(argv[3]);
+    double flops = 2.0 * (double)M * (double)N * (double)K;
 
     /* Allocate matrices */
     double *A = aligned_alloc(64, sizeof(double) * M * K);
@@ -111,7 +112,7 @@ int main(int argc, char **argv)
     // print_matrix("Matrix C", C, M, N);
 
     /* Performance stats */
-    double flops = 2.0 * (double)M * (double)N * (double)K;
+    
     double time = cycles / 50.0; // us
     double mflops = flops / time;
     
