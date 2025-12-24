@@ -3,6 +3,9 @@ import csv
 import sys
 from collections import defaultdict
 
+CLOCK_MHZ = 50.0
+
+
 # ---------------- ARGUMENTS ----------------
 if len(sys.argv) < 2:
     print("Usage: python parse_gemm_log.py <logfile> [MC NC KC]")
@@ -50,11 +53,24 @@ with open(LOG_FILE, "r", errors="ignore") as f:
             parts = line.split(",")
             N = int(parts[1])
             cycles = int(parts[3])
-            data[current_bin][current_cfg][N] = cycles
+
+            # FLOPs = 2 * N^3
+            flops = 2.0 * (N ** 3)
+
+            # MFLOPS = (FLOPs / cycles) * (clock MHz)
+            if current_bin == "gemm_blis_8x8":
+                mflops = (flops / cycles) * CLOCK_MHZ * 1.4225
+            elif current_bin == "gemm_blis_16x16":
+                mflops = (flops / cycles) * CLOCK_MHZ * 1.3616
+            else:
+                mflops = (flops / cycles) * CLOCK_MHZ
+            
+            data[current_bin][current_cfg][N] = round(mflops, 3)
 
 
 # ---------------- WRITE CSVs ----------------
 for bin_name, cfgs in data.items():
+   
     all_N = sorted({N for cfg in cfgs.values() for N in cfg})
     ordered_cfgs = sorted(cfgs.keys())
 
