@@ -1,0 +1,346 @@
+787680] random: crng init done
+Starting sshd: OK
+NFS preparation skipped, OK
+# cd home
+# cd home/
+# cd bli
+# cd blis/
+# ./run_
+# ./run_static.sh 
+benchmark: ./gemm_blis_4x4 MC_16_KC_64_NC_16
+N,16,cycles,39995,instret,39995
+N,32,cycles,161120,instret,161120
+N,48,cycles,463727,instret,463727
+N,64,cycles,985706,instret,985706
+N,80,cycles,2075847,instret,2075847
+N,96,cycles,3422276,instret,3422276
+N,112,cycles,5293130,instret,5293130
+N,128,cycles,7648062,instret,7648062
+N,144,cycles,11437550,instret,11437550
+N,160,cycles,15332871,instret,15332871
+N,176,cycles,20065935,instret,20065935
+N,192,cycles,25663896,instret,25663896
+N,208,cycles,33716599,instret,33716599
+N,224,cycles,41522959,instret,41522959
+N,240,cycles,50455653,instret,50455653
+N,256,cycles,60588382,instret,60588382
+N,512,cycles,482429038,instret,482429038
+benchmark: ./gemm_blis_8x8 MC_16_KC_64_NC_16
+N,16,cycles,35515,instret,35515
+N,32,cycles,139268,instret,139268
+N,48,cycles,391793,instret,391793
+N,64,cycles,860482,instret,860482
+N,80,cycles,1796401,instret,1796401
+N,96,cycles,2956412,instret,2956412
+N,112,cycles,4560713,instret,4560713
+N,128,cycles,6678404,instret,6678404
+N,144,cycles,9872429,instret,9872429
+N,160,cycles,13284614,instret,13284614
+N,176,cycles,17435714,instret,17435714
+N,192,cycles,22343530,instret,22343530
+N,208,cycles,29185437,instret,29185437
+N,224,cycles,36025482,instret,36025482
+N,240,cycles,43873129,instret,43873129
+N,256,cycles,52768367,instret,52768367
+N,512,cycles,420114692,instret,420114692
+benchmark: ./gemm_blis_16x16 MC_16_KC_64_NC_16
+N,16,cycles,48653,instret,48653
+N,32,cycles,144890,instret,144890
+N,48,cycles,409310,instret,409310
+N,64,cycles,899918,instret,899918
+N,80,cycles,1824957,instret,1824957
+N,96,cycles,3052792,instret,3052792
+N,112,cycles,4739031,instret,4739031
+N,128,cycles,6869070,instret,6869070
+N,144,cycles,10070827,instret,10070827
+N,160,cycles,13594846,instret,13594846
+N,176,cycles,17849574,instret,17849574
+N,192,cycles,22912761,instret,22912761
+N,208,cycles,29731265,instret,29731265
+N,224,cycles,36757220,instret,36757220
+N,240,cycles,44825178,instret,44825178
+N,256,cycles,53965860,instret,53965860
+N,512,cycles,428064637,instret,428064637
+
+benchmark: ./gemm_blis_4x4 MC_32_KC_64_NC_32
+N,16,cycles,39995,instret,39995
+N,32,cycles,137351,instret,137351
+N,48,cycles,424102,instret,424102
+N,64,cycles,878392,instret,878392
+N,80,cycles,1840445,instret,1840445
+N,96,cycles,2995925,instret,2995925
+N,112,cycles,4722290,instret,4722290
+N,128,cycles,6837877,instret,6837877
+N,144,cycles,10145965,instret,10145965
+N,160,cycles,13530830,instret,13530830
+N,176,cycles,17980120,instret,17980120
+N,192,cycles,22897974,instret,22897974
+N,208,cycles,29977246,instret,29977246
+N,224,cycles,36776058,instret,36776058
+N,240,cycles,45181412,instret,45181412
+N,256,cycles,54077063,instret,54077063
+N,512,cycles,430752497,instret,430752497
+benchmark: ./gemm_blis_8x8 MC_32_KC_64_NC_32
+N,16,cycles,35515,instret,35515
+N,32,cycles,117119,instret,117119
+N,48,cycles,354886,instret,354886
+N,64,cycles,761184,instret,761184
+N,80,cycles,1564405,instret,1564405
+N,96,cycles,2584769,instret,2584769
+N,112,cycles,4106032,instret,4106032
+N,128,cycles,5900042,instret,5900042
+N,144,cycles,8687092,instret,8687092
+N,160,cycles,11622618,instret,11622618
+N,176,cycles,15499404,instret,15499404
+N,192,cycles,19804215,instret,19804215
+N,208,cycles,25737246,instret,25737246
+N,224,cycles,31659798,instret,31659798
+N,240,cycles,39004447,instret,39004447
+N,256,cycles,46769939,instret,46769939
+N,512,cycles,372553190,instret,372553190
+benchmark: ./gemm_blis_16x16 MC_32_KC_64_NC_32
+N,16,cycles,36290,instret,36290
+N,32,cycles,117195,instret,117195
+N,48,cycles,359428,instret,359428
+N,64,cycles,753604,instret,753604
+N,80,cycles,1535735,instret,1535735
+N,96,cycles,2486405,instret,2486405
+N,112,cycles,4034156,instret,4034156
+N,128,cycles,5730042,instret,5730042
+N,144,cycles,8416553,instret,8416553
+N,160,cycles,11193513,instret,11193513
+N,176,cycles,15053829,instret,15053829
+N,192,cycles,19100730,instret,19100730
+N,208,cycles,24798537,instret,24798537
+N,224,cycles,30378476,instret,30378476
+N,240,cycles,37651224,instret,37651224
+N,256,cycles,44967650,instret,44967650
+N,512,cycles,356411387,instret,356411387
+
+
+# ./run _
+# ./run_static.sh 
+benchmark: ./gemm_blis_4x4 MC_64_KC_64_NC_64
+N,16,cycles,39995,instret,39995
+N,32,cycles,137351,instret,137351
+N,48,cycles,392989,instret,392989
+N,64,cycles,837503,instret,837503
+N,80,cycles,1748280,instret,1748280
+N,96,cycles,2887856,instret,2887856
+N,112,cycles,4452456,instret,4452456
+N,128,cycles,6526507,instret,6526507
+N,144,cycles,9657387,instret,9657387
+N,160,cycles,12988340,instret,12988340
+N,176,cycles,17040279,instret,17040279
+N,192,cycles,21850969,instret,21850969
+N,208,cycles,28570115,instret,28570115
+N,224,cycles,35249360,instret,35249360
+N,240,cycles,42923238,instret,42923238
+N,256,cycles,51641272,instret,51641272
+N,512,cycles,411460157,instret,411460157
+benchmark: ./gemm_blis_8x8 MC_64_KC_64_NC_64
+N,16,cycles,35515,instret,35515
+N,32,cycles,117119,instret,117119
+N,48,cycles,326491,instret,326491
+N,64,cycles,724303,instret,724303
+N,80,cycles,1480820,instret,1480820
+N,96,cycles,2487803,instret,2487803
+N,112,cycles,3863517,instret,3863517
+N,128,cycles,5638472,instret,5638472
+N,144,cycles,8247442,instret,8247442
+N,160,cycles,11146245,instret,11146245
+N,176,cycles,14676222,instret,14676222
+N,192,cycles,18869772,instret,18869772
+N,208,cycles,24469916,instret,24469916
+N,224,cycles,30280691,instret,30280691
+N,240,cycles,36974004,instret,36974004
+N,256,cycles,44585683,instret,44585683
+N,512,cycles,355337518,instret,355337518
+benchmark: ./gemm_blis_16x16 MC_64_KC_64_NC_64
+N,16,cycles,36290,instret,36290
+N,32,cycles,117195,instret,117195
+N,48,cycles,318058,instret,318058
+N,64,cycles,693215,instret,693215
+N,80,cycles,1416660,instret,1416660
+N,96,cycles,2337308,instret,2337308
+N,112,cycles,3601200,instret,3601200
+N,128,cycles,5262672,instret,5262672
+N,144,cycles,7738935,instret,7738935
+N,160,cycles,10417050,instret,10417050
+N,176,cycles,13673508,instret,13673508
+N,192,cycles,17533467,instret,17533467
+N,208,cycles,22795470,instret,22795470
+N,224,cycles,28143264,instret,28143264
+N,240,cycles,34302383,instret,34302383
+N,256,cycles,41289113,instret,41289113
+N,512,cycles,327134195,instret,327134195
+
+# ./run_static.sh 
+benchmark: ./gemm_blis_4x4 MC_96_KC_64_NC_96
+N,16,cycles,39995,instret,39995
+N,32,cycles,137351,instret,137351
+N,48,cycles,380659,instret,380659
+N,64,cycles,837503,instret,837503
+N,80,cycles,1673139,instret,1673139
+N,96,cycles,2796811,instret,2796811
+N,112,cycles,4452456,instret,4452456
+N,128,cycles,6526507,instret,6526507
+N,144,cycles,9451402,instret,9451402
+N,160,cycles,12768978,instret,12768978
+N,176,cycles,16765716,instret,16765716
+N,192,cycles,21560764,instret,21560764
+N,208,cycles,28162069,instret,28162069
+N,224,cycles,34796188,instret,34796188
+N,240,cycles,42429890,instret,42429890
+N,256,cycles,51120052,instret,51120052
+N,512,cycles,407310457,instret,407310457
+benchmark: ./gemm_blis_8x8 MC_96_KC_64_NC_96
+N,16,cycles,35515,instret,35515
+N,32,cycles,117119,instret,117119
+N,48,cycles,326491,instret,326491
+N,64,cycles,724303,instret,724303
+N,80,cycles,1414259,instret,1414259
+N,96,cycles,2385307,instret,2385307
+N,112,cycles,3825228,instret,3825228
+N,128,cycles,5620736,instret,5620736
+N,144,cycles,8065918,instret,8065918
+N,160,cycles,10931608,instret,10931608
+N,176,cycles,14437559,instret,14437559
+N,192,cycles,18619070,instret,18619070
+N,208,cycles,24100897,instret,24100897
+N,224,cycles,29886409,instret,29886409
+N,240,cycles,36539163,instret,36539163
+N,256,cycles,44126913,instret,44126913
+N,512,cycles,351688428,instret,351688428
+benchmark: ./gemm_blis_16x16 MC_96_KC_64_NC_96
+N,16,cycles,36290,instret,36290
+N,32,cycles,117195,instret,117195
+N,48,cycles,318058,instret,318058
+N,64,cycles,693215,instret,693215
+N,80,cycles,1314609,instret,1314609
+N,96,cycles,2205235,instret,2205235
+N,112,cycles,3601200,instret,3601200
+N,128,cycles,5293212,instret,5293212
+N,144,cycles,7431306,instret,7431306
+N,160,cycles,10073977,instret,10073977
+N,176,cycles,13267789,instret,13267789
+N,192,cycles,17057191,instret,17057191
+N,208,cycles,22195877,instret,22195877
+N,224,cycles,27489681,instret,27489681
+N,240,cycles,33539323,instret,33539323
+N,256,cycles,40447644,instret,40447644
+N,512,cycles,320498900,instret,320498900
+
+# ./run_
+# ./run_static.sh 
+benchmark: ./gemm_blis_4x4 MC_128_KC_64_NC_128
+N,16,cycles,39995,instret,39995
+N,32,cycles,137351,instret,137351
+N,48,cycles,380659,instret,380659
+N,64,cycles,837503,instret,837503
+N,80,cycles,1673139,instret,1673139
+N,96,cycles,2796811,instret,2796811
+N,112,cycles,4343075,instret,4343075
+N,128,cycles,6396355,instret,6396355
+N,144,cycles,9451402,instret,9451402
+N,160,cycles,12776952,instret,12776952
+N,176,cycles,16765717,instret,16765717
+N,192,cycles,21560764,instret,21560764
+N,208,cycles,27793754,instret,27793754
+N,224,cycles,34389327,instret,34389327
+N,240,cycles,41983391,instret,41983391
+N,256,cycles,50628571,instret,50628571
+N,512,cycles,403455415,instret,403455415
+benchmark: ./gemm_blis_8x8 MC_128_KC_64_NC_128
+N,16,cycles,35515,instret,35515
+N,32,cycles,117119,instret,117119
+N,48,cycles,326491,instret,326491
+N,64,cycles,724303,instret,724303
+N,80,cycles,1414259,instret,1414259
+N,96,cycles,2385307,instret,2385307
+N,112,cycles,3729203,instret,3729203
+N,128,cycles,5506619,instret,5506619
+N,144,cycles,8065916,instret,8065916
+N,160,cycles,10945127,instret,10945127
+N,176,cycles,14443381,instret,14443381
+N,192,cycles,18612334,instret,18612334
+N,208,cycles,23780428,instret,23780428
+N,224,cycles,29540700,instret,29540700
+N,240,cycles,36156844,instret,36156844
+N,256,cycles,43693674,instret,43693674
+N,512,cycles,348326844,instret,348326844
+benchmark: ./gemm_blis_16x16 MC_128_KC_64_NC_128
+N,16,cycles,36290,instret,36290
+N,32,cycles,117195,instret,117195
+N,48,cycles,318058,instret,318058
+N,64,cycles,693215,instret,693215
+N,80,cycles,1314609,instret,1314609
+N,96,cycles,2205235,instret,2205235
+N,112,cycles,3433761,instret,3433761
+N,128,cycles,5054523,instret,5054523
+N,144,cycles,7445085,instret,7445085
+N,160,cycles,10074008,instret,10074008
+N,176,cycles,13258431,instret,13258431
+N,192,cycles,17069454,instret,17069454
+N,208,cycles,21636369,instret,21636369
+N,224,cycles,26843492,instret,26843492
+N,240,cycles,32834073,instret,32834073
+N,256,cycles,39645678,instret,39645678
+N,512,cycles,314114209,instret,314114209
+
+# ./ru  _
+# ./run_static.sh 
+benchmark: ./gemm_blis_4x4 MC_256_KC_64_NC_256
+N,16,cycles,39995,instret,39995
+N,32,cycles,137351,instret,137351
+N,48,cycles,380659,instret,380659
+N,64,cycles,837503,instret,837503
+N,80,cycles,1673139,instret,1673139
+N,96,cycles,2796811,instret,2796811
+N,112,cycles,4343075,instret,4343075
+N,128,cycles,6396353,instret,6396353
+N,144,cycles,9271043,instret,9271043
+N,160,cycles,12561720,instret,12561720
+N,176,cycles,16529042,instret,16529042
+N,192,cycles,21292329,instret,21292329
+N,208,cycles,27459016,instret,27459016
+N,224,cycles,34035519,instret,34035519
+N,240,cycles,41588185,instret,41588185
+N,256,cycles,50166819,instret,50166819
+N,512,cycles,399847019,instret,399847019
+benchmark: ./gemm_blis_8x8 MC_256_KC_64_NC_256
+N,16,cycles,35515,instret,35515
+N,32,cycles,117119,instret,117119
+N,48,cycles,326491,instret,326491
+N,64,cycles,724303,instret,724303
+N,80,cycles,1414259,instret,1414259
+N,96,cycles,2385307,instret,2385307
+N,112,cycles,3769957,instret,3769957
+N,128,cycles,5506619,instret,5506619
+N,144,cycles,7915337,instret,7915337
+N,160,cycles,10756868,instret,10756868
+N,176,cycles,14246748,instret,14246748
+N,192,cycles,18379349,instret,18379349
+N,208,cycles,23502978,instret,23502978
+N,224,cycles,29227172,instret,29227172
+N,240,cycles,35802287,instret,35802287
+N,256,cycles,43306837,instret,43306837
+N,512,cycles,345260389,instret,345260389
+benchmark: ./gemm_blis_16x16 MC_256_KC_64_NC_256
+N,16,cycles,36290,instret,36290
+N,32,cycles,117195,instret,117195
+N,48,cycles,318058,instret,318058
+N,64,cycles,693215,instret,693215
+N,80,cycles,1328363,instret,1328363
+N,96,cycles,2205235,instret,2205235
+N,112,cycles,3433761,instret,3433761
+N,128,cycles,5054523,instret,5054523
+N,144,cycles,7174770,instret,7174770
+N,160,cycles,9745228,instret,9745228
+N,176,cycles,12879875,instret,12879875
+N,192,cycles,16631701,instret,16631701
+N,208,cycles,21095450,instret,21095450
+N,224,cycles,26238679,instret,26238679
+N,240,cycles,32143880,instret,32143880
+N,256,cycles,38884546,instret,38884546
+N,512,cycles,308022356,instret,308022356

@@ -3,6 +3,29 @@
 #include <time.h>
 #include "blis.h"
 
+#define CSR_MEM_DUMP 0x815
+#define CSR_MEM_LOG_MARKER 0x816
+
+static inline void csr_mem_dump_set_bits(int val)
+{
+    asm volatile (
+        "csrw %0, %1"
+        :
+        : "i"(CSR_MEM_DUMP), "r"(val)
+        : 
+    );
+}
+
+static inline void csr_mem_log_marker(int val)
+{
+    asm volatile (
+        "csrw %0, %1"
+        :
+        : "i"(CSR_MEM_LOG_MARKER), "r"(val)
+        : 
+    );
+}
+
 /* Print rectangular matrix */
 void print_matrix(const char* name, const double* M, dim_t rows, dim_t cols)
 {
@@ -102,12 +125,18 @@ int main(int argc, char **argv)
 
     /* Measure */
     unsigned long long start_cycles = read_cycles();
-    
+    unsigned long long start_instret = read_instret();
+
+    csr_mem_log_marker(0);
+    csr_mem_dump_set_bits(1);
     bli_gemm(&alpha, &a, &b, &beta, &c);
+    csr_mem_dump_set_bits(0);
     
     unsigned long long end_cycles = read_cycles();
+    unsigned long long end_instret = read_instret();
 
     unsigned long long cycles = end_cycles - start_cycles;
+    unsigned long long instret = end_instret - start_instret;
 
     // print_matrix("Matrix C", C, M, N);
 
@@ -118,7 +147,7 @@ int main(int argc, char **argv)
     
     // double sum = checksum(C, M, N);
 
-    printf("N,%ld,cycles,%llu\n", (long)N, cycles);
+    printf("N,%ld,cycles,%llu,instret,%llu\n", (long)N, cycles, instret);
 
 
     /* Cleanup */

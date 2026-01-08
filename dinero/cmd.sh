@@ -1,0 +1,1 @@
+-l1-isize 8k -l1-dsize 8k -l1-ibsize 16 -l1-dbsize 16 -l1-iassoc 2 -l1-dassoc 2 -l1-irepl l -l1-drepl l -l1-ifetch d -l1-dfetch d -l1-dwalloc a -l1-dwback a -flushcount 10k -stat-idcombine -informat d
