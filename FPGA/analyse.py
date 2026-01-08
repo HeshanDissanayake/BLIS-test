@@ -24,7 +24,7 @@ OUTPUT_PREFIX = ""
 
 
 benchmark_re = re.compile(
-    r"benchmark:\s+\./(?P<bin>gemm_blis_(?P<MR>\d+)x(?P<NR>\d+))\s+"
+    r"benchmark:\s(?P<bin>gemm_blis_(?P<MR>\d+)x(?P<NR>\d+))\s+"
     r"MC_(?P<MC>\d+)_KC_(?P<KC>\d+)_NC_(?P<NC>\d+)"
 )
 
@@ -39,6 +39,7 @@ with open(LOG_FILE, "r", errors="ignore") as f:
         line = line.strip()
 
         m = benchmark_re.search(line)
+        print(m)
         if m:
             current_bin = m.group("bin")
             cfg_map = {

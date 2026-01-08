@@ -8,7 +8,7 @@ MC=($(parse_list "$MC"))
 NC=($(parse_list "$NC"))
 KC=($(parse_list "$KC"))
 
-pushd /home/heshds/working_dir/BLIS/blis > /dev/null
+pushd /home/heshds/working_dir/blis > /dev/null
 
 # Debug: Print current directory and check for build.sh
 

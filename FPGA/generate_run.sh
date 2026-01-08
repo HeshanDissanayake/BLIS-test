@@ -34,14 +34,14 @@ echo "    for mc in ${MC[*]}; do" >> "$OUT"
 echo "      for nc in ${NC[*]}; do" >> "$OUT"
 echo "        for kc in ${KC[*]}; do" >> "$OUT"
 echo "          CACHE_PROFILE=MC_\${mc}_KC_\${kc}_NC_\${nc}" >> "$OUT"
+echo "          echo "benchmark: gemm_blis_\${mr}x\${nr} \${CACHE_PROFILE}"" >> "$OUT"
 echo "          #fetch files from the host" >> "$OUT"
 echo "          wget http://\${HOST_IP}:8000/BLIS_exec/build/\${CACHE_PROFILE}/gemm_blis_\${mr}x\${nr} -O gemm_blis_\${mr}x\${nr}" >> "$OUT"
 echo "          chmod u+x gemm_blis_\${mr}x\${nr}" >> "$OUT"
 echo "          " >> "$OUT"    
 echo "          for n in ${N[*]}; do" >> "$OUT"
 
-cat >> "$OUT" <<'EOF'
-                    echo "benchmark: gemm_blis_${mr}x${nr} ${CACHE_PROFILE}" 
+cat >> "$OUT" <<'EOF' 
                     exec="./gemm_blis_${mr}x${nr} ${n} ${n} ${n}"
                    ./$exec
 EOF
