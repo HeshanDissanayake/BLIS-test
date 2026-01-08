@@ -22,6 +22,10 @@ OUT=run_static.sh
 cat > "$OUT" <<EOF
 #!/bin/sh
 # this program is meant to be run on the FPGA with the linux distro
+# wget http://10.65.196.56:8000/FPGA/run_static.sh -O run.sh
+
+HOST_IP=10.65.196.56
+
 EOF
 
 echo "for mr in ${MR[*]}; do" >> "$OUT"
@@ -31,7 +35,7 @@ echo "      for nc in ${NC[*]}; do" >> "$OUT"
 echo "        for kc in ${KC[*]}; do" >> "$OUT"
 echo "          CACHE_PROFILE=MC_\${mc}_KC_\${kc}_NC_\${nc}" >> "$OUT"
 echo "          #fetch files from the host" >> "$OUT"
-echo "          wget http://\${HOST_IP}:8000/build/\${CACHE_PROFILE}/gemm_blis_\${mr}x\${nr} -O gemm_blis_\${mr}x\${nr}" >> "$OUT"
+echo "          wget http://\${HOST_IP}:8000/BLIS_exec/build/\${CACHE_PROFILE}/gemm_blis_\${mr}x\${nr} -O gemm_blis_\${mr}x\${nr}" >> "$OUT"
 echo "          chmod u+x gemm_blis_\${mr}x\${nr}" >> "$OUT"
 echo "          " >> "$OUT"    
 echo "          for n in ${N[*]}; do" >> "$OUT"

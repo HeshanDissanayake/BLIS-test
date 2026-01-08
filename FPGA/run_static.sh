@@ -1,5 +1,9 @@
 #!/bin/sh
 # this program is meant to be run on the FPGA with the linux distro
+# wget http://10.65.196.56:8000/FPGA/run_static.sh -O run.sh
+
+HOST_IP=10.65.196.56
+
 for mr in 4 8 16; do
   for nr in 4 8 16; do
     for mc in 4096; do
@@ -7,7 +11,7 @@ for mr in 4 8 16; do
         for kc in 96 192 384; do
           CACHE_PROFILE=MC_${mc}_KC_${kc}_NC_${nc}
           #fetch files from the host
-          wget http://${HOST_IP}:8000/build/${CACHE_PROFILE}/gemm_blis_${mr}x${nr} -O gemm_blis_${mr}x${nr}
+          wget http://${HOST_IP}:8000/BLIS_exec/build/${CACHE_PROFILE}/gemm_blis_${mr}x${nr} -O gemm_blis_${mr}x${nr}
           chmod u+x gemm_blis_${mr}x${nr}
           
           for n in 16 32 48 64 80 96 112 128 144 160 176 192 208 224 240 256 384 512 640 768 896 1024; do
