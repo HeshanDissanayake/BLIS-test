@@ -28,8 +28,10 @@ benchmark_re = re.compile(
     r"MC_(?P<MC>\d+)_KC_(?P<KC>\d+)_NC_(?P<NC>\d+)"
 )
 
-data = defaultdict(lambda: defaultdict(dict))
-# data[bin][(MC,NC,KC)][N] = cycles
+data_cycles = defaultdict(lambda: defaultdict(dict))
+data_instret = defaultdict(lambda: defaultdict(dict))
+# data_cycles[bin][(MC,NC,KC)][N] = mflops_based_on_cycles
+# data_instret[bin][(MC,NC,KC)][N] = mflops_based_on_instret
 
 current_bin = None
 current_cfg = None
@@ -54,26 +56,35 @@ with open(LOG_FILE, "r", errors="ignore") as f:
             parts = line.split(",")
             N = int(parts[1])
             cycles = int(parts[3])
+            instret = int(parts[5]) if len(parts) > 5 else None
 
             # FLOPs = 2 * N^3
             flops = 2.0 * (N ** 3)
 
-            # MFLOPS = (FLOPs / cycles) * (clock MHz)
+            # MFLOPS = (FLOPs / metric) * (clock MHz)
             if current_bin == "gemm_blis_8x8":
-                mflops = (flops / cycles) * CLOCK_MHZ * 1.4225
+                clock_factor = CLOCK_MHZ * 1.4225
             elif current_bin == "gemm_blis_16x16":
-                mflops = (flops / cycles) * CLOCK_MHZ * 1.3616
+                clock_factor = CLOCK_MHZ * 1.3616
             else:
-                mflops = (flops / cycles) * CLOCK_MHZ
+                clock_factor = CLOCK_MHZ
             
-            data[current_bin][current_cfg][N] = round(mflops, 3)
+            mflops_cycles = (flops / cycles) * clock_factor
+            data_cycles[current_bin][current_cfg][N] = round(mflops_cycles, 3)
+            
+            if instret is not None:
+                mflops_instret = (flops / instret) * clock_factor
+                data_instret[current_bin][current_cfg][N] = round(mflops_instret, 3)
 
 
 # ---------------- WRITE CSVs ----------------
-for bin_name, cfgs in data.items():
-   
-    all_N = sorted({N for cfg in cfgs.values() for N in cfg})
-    ordered_cfgs = sorted(cfgs.keys())
+for bin_name in set(data_cycles.keys()) | set(data_instret.keys()):
+    cfgs_cycles = data_cycles.get(bin_name, {})
+    cfgs_instret = data_instret.get(bin_name, {})
+    
+    all_N = sorted({N for cfg in cfgs_cycles.values() for N in cfg} | 
+                   {N for cfg in cfgs_instret.values() for N in cfg})
+    ordered_cfgs = sorted(set(cfgs_cycles.keys()) | set(cfgs_instret.keys()))
 
     headers = ["N"]
     for cfg in ordered_cfgs:
@@ -84,12 +95,28 @@ for bin_name, cfgs in data.items():
     out_file = f"{OUTPUT_PREFIX}{bin_name}.csv"
     with open(out_file, "w", newline="") as csvfile:
         writer = csv.writer(csvfile)
+        
+        # Write cycles data
+        writer.writerow(["Cycles MFLOPS"])
         writer.writerow(headers)
-
         for N in all_N:
             row = [N]
             for cfg in ordered_cfgs:
-                row.append(cfgs[cfg].get(N, ""))
+                row.append(cfgs_cycles.get(cfg, {}).get(N, ""))
+            writer.writerow(row)
+        
+        # Add spacing
+        writer.writerow([])
+        writer.writerow([])
+        writer.writerow([])
+        
+        # Write instret data
+        writer.writerow(["Instret MFLOPS"])
+        writer.writerow(headers)
+        for N in all_N:
+            row = [N]
+            for cfg in ordered_cfgs:
+                row.append(cfgs_instret.get(cfg, {}).get(N, ""))
             writer.writerow(row)
 
     print(f"Written {out_file}")

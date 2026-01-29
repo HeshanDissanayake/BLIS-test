@@ -7,15 +7,15 @@ HOST_IP=10.65.196.56
 for mr in 4 8 16; do
   for nr in 4 8 16; do
     for mc in 4096; do
-      for nc in 16; do
-        for kc in 96 192 384; do
+      for nc in 128 256 512 4096; do
+        for kc in 32 64 128 256 384; do
           CACHE_PROFILE=MC_${mc}_KC_${kc}_NC_${nc}
           echo benchmark: gemm_blis_${mr}x${nr} ${CACHE_PROFILE}
           #fetch files from the host
           wget http://${HOST_IP}:8000/BLIS_exec/build/${CACHE_PROFILE}/gemm_blis_${mr}x${nr} -O gemm_blis_${mr}x${nr}
           chmod u+x gemm_blis_${mr}x${nr}
           
-          for n in 16 32 48 64 80 96 112 128 144 160 176 192 208 224 240 256; do
+          for n in 16 32 48 64 80 96 112 128 144 160 176 192 208 224 240 256 384 512 1024 2048 4096; do
                     exec="./gemm_blis_${mr}x${nr} ${n} ${n} ${n}"
                    ./$exec
           done

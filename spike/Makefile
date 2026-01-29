@@ -12,12 +12,13 @@ rebuild-n-spike:
 	# cp run/run_static.sh $(SDK_PATH)/cva6-sdk-mods/home/blis
 	# echo $(CONFIG) > $(SDK_PATH)/cva6-sdk-mods/home/blis/config.txt
 
-	rm -r install64
+	-rm -r install64
 	make -C $(SDK_PATH) rebuild
 	$(SPIKE) --memtrace memtraces/memtrace_$(CONFIG) install64/spike_fw_payload.elf
 
 spike:
-	$(SPIKE) --memtrace memtraces/memtrace_$(CONFIG) install64/spike_fw_payload.elf
+	# $(SPIKE) --memtrace memtraces/memtrace_$(CONFIG) install64/spike_fw_payload.elf
+	$(SPIKE) /home/heshds/working_dir/spike-flexicas/riscv-spike-sdk/build/riscv-pk/bbl
 
 spike-pk: $(TARGET)
 	$(SPIKE) --memtrace memtrace $(PK) /home/heshds/working_dir/regsw_tests/BLIS-test/BLIS_exec/build/MC_32_KC_64_NC_32/gemm_blis_4x4 8 8 8

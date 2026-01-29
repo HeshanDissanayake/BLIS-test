@@ -1,0 +1,19 @@
+#!/usr/bin/expect -f
+set timeout 300
+spawn screen -L -Logfile logs/all_8.log /dev/ttyUSB0 115200
+
+send  "\r"
+expect "#"
+after 5000
+
+send "wget http://10.65.196.56:8000/FPGA/run_static.sh -O run.sh\r"
+expect "'run.sh' saved"
+after 2000
+expect "#"
+
+send "./run.sh\r"
+expect "N,128,cycles"
+send "\003"
+
+
+interact

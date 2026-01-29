@@ -1,0 +1,69 @@
+# wget http://10.65.196.56:8000/FPGA/run_static.sh -O run.sh
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: can't connect to remote host (10.65.196.56): Connection refused
+# ping 10.65.196.56
+PING 10.65.196.56 (10.65.196.56): 56 data bytes
+64 bytes from 10.65.196.56: seq=0 ttl=64 time=3.062 ms
+64 bytes from 10.65.196.56: seq=1 ttl=64 time=2.751 ms
+^C
+--- 10.65.196.56 ping statistics ---
+2 packets transmitted, 2 packets received, 0% packet loss
+round-trip min/avg/max = 2.751/2.906/3.062 ms
+# ^C
+# wget http://10.65.196.56:8000/FPGA/run_static.sh -O run.sh
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'run.sh'
+'run.sh' saved
+# chmod u+x run.sh
+# ./run.sh
+benchmark: gemm_blis_4x4 MC_4096_KC_48_NC_32
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+N,16,cycles,147526,instret,39999
+N,32,cycles,463202,instret,142260
+N,48,cycles,1367203,instret,417422
+N,64,cycles,4005770,instret,1196783
+N,80,cycles,5917999,instret,1844650
+N,96,cycles,10328400,instret,3059518
+N,112,cycles,16966521,instret,5005511
+N,128,cycles,24664785,instret,7229163
+N,144,cycles,37975554,instret,10490556
+N,160,cycles,51225819,instret,14434499
+N,176,cycles,68550714,instret,18984869
+N,192,cycles,89689562,instret,24444511
+N,208,cycles,114300108,instret,31527897
+N,224,cycles,142839538,instret,38964018
+N,240,cycles,175981421,instret,47554224
+N,256,cycles,214571718,instret,58404805
+N,384,cycles,720342417,instret,193406549
+N,512,cycles,1716857586,instret,458959460
+N,640,cycles,3332711708,instret,896475809
+N,768,cycles,5749064230,instret,1540868544
+N,896,cycles,9114262683,instret,2448955808
+N,1024,cycles,13708966216,instret,3659896619
+benchmark: gemm_blis_4x4 MC_4096_KC_64_NC_32
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+N,16,cycles,150504,instret,40001
+N,32,cycles,462891,instret,142253
+N,48,cycles,1368023,instret,417427
+N,64,cycles,3029210,instret,898571
+N,80,cycles,6272579,instret,1844593
+N,96,cycles,11286787,instret,3262147
+N,112,cycles,17587473,instret,4836567
+N,128,cycles,26851560,instret,7222712
+N,144,cycles,37972518,instret,10468454
+N,160,cycles,51112114,instret,14009839
+N,176,cycles,69092587,instret,18508423
+N,192,cycles,89482132,instret,23826130
+N,208,cycles,114205460,instret,30839266
+N,224,cycles,142161946,instret,38121413
+N,240,cycles,174994514,instret,46629219
+N,256,cycles,211505413,instret,56111127
+N,384,cycles,709574035,instret,188800193
+N,512,cycles,1685690866,instret,446557331
+N,640,cycles,3269586905,instret,871172805
+N,768,cycles,5656174353,instret,1504459920
+^[[A^[[A^[[B^[[B^[[B^[[AN,896,cycles,8961494650,instret,2387682928

@@ -1,0 +1,2008 @@
+
+# 
+# 
+# ^C
+# wget http://10.65.196.56:8000/FPGA/run_static.sh -O run.sh
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'run.sh'
+'run.sh' saved
+# ./run# ./run[J.# ./run.sh [J
+benchmark: gemm_blis_4x4 MC_4096_KC_32_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+N,16,cycles,146436,instret,40001
+N,32,cycles,524744,instret,157169
+N,48,cycles,1467537,instret,470495
+N,64,cycles,3191867,instret,1025241
+N,80,cycles,6401983,instret,2041285
+N,96,cycles,10663825,instret,3327363
+N,112,cycles,18307153,instret,5601015
+N,128,cycles,26641607,instret,8065241
+N,144,cycles,36542034,instret,11101574
+N,160,cycles,52707848,instret,15291337
+N,176,cycles,71513888,instret,20611893
+N,192,cycles,91796898,instret,26199274
+N,208,cycles,118858132,instret,33673118
+N,224,cycles,150444006,instret,41789772
+N,240,cycles,183488400,instret,51321076
+N,256,cycles,224226700,instret,61900358
+N,384,cycles,764208778,instret,207258503
+N,512,cycles,1839655167,instret,491881645
+benchmark: gemm_blis_4x4 MC_4096_KC_64_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+N,16,cycles,190527,instret,44913
+N,32,cycles,522221,instret,157160
+N,48,cycles,1374135,instret,417445
+N,64,cycles,3286782,instret,935135
+N,80,cycles,7565597,instret,2123072
+N,96,cycles,10892917,instret,3124825
+N,112,cycles,17803323,instret,4892078
+N,128,cycles,26945140,instret,7208731
+N,144,cycles,39049336,instret,10649047
+N,160,cycles,53163044,instret,14377375
+N,176,cycles,71283030,instret,18927528
+N,192,cycles,92426362,instret,24351520
+N,208,cycles,118450888,instret,31661533
+N,224,cycles,147846084,instret,39183534
+N,240,cycles,180302805,instret,47647051
+N,256,cycles,219006612,instret,57467771
+N,384,cycles,729311960,instret,192620581
+N,512,cycles,1744305418,instret,456894801
+benchmark: gemm_blis_4x4 MC_4096_KC_128_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+N,16,cycles,148319,instret,40008
+N,32,cycles,555390,instret,162040
+N,48,cycles,1369570,instret,417493
+N,64,cycles,3242394,instret,930228
+N,80,cycles,6799173,instret,1779772
+N,96,cycles,11518799,instret,2976293
+N,112,cycles,18419300,instret,4685716
+N,128,cycles,27239465,instret,6920486
+N,144,cycles,39098935,instret,10270311
+N,160,cycles,53184957,instret,13934537
+N,176,cycles,71008271,instret,18390955
+N,192,cycles,91788405,instret,23723550
+N,208,cycles,116824236,instret,30143813
+N,224,cycles,145803398,instret,37467281
+N,240,cycles,177677917,instret,45708956
+N,256,cycles,215465898,instret,55202457
+N,384,cycles,719347715,instret,185387817
+N,512,cycles,1718781609,instret,439891722
+benchmark: gemm_blis_4x4 MC_4096_KC_32_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+N,16,cycles,188080,instret,44913
+N,32,cycles,464715,instret,142260
+N,48,cycles,1276920,instret,433051
+N,64,cycles,2919010,instret,977095
+N,80,cycles,5729973,instret,1911354
+N,96,cycles,10301261,instret,3355741
+N,112,cycles,15358621,instret,5091245
+N,128,cycles,22843119,instret,7367366
+N,144,cycles,34025768,instret,10762437
+N,160,cycles,48455486,instret,14601636
+N,176,cycles,65827947,instret,19724393
+N,192,cycles,85273178,instret,24976445
+N,208,cycles,110223939,instret,32174467
+N,224,cycles,138966418,instret,39699666
+N,240,cycles,169808779,instret,48849508
+N,256,cycles,209852133,instret,59192323
+N,384,cycles,716361003,instret,197762933
+N,512,cycles,1715133321,instret,469012618
+benchmark: gemm_blis_4x4 MC_4096_KC_64_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+N,16,cycles,152995,instret,39992
+N,32,cycles,464209,instret,142262
+N,48,cycles,1197810,instret,390464
+N,64,cycles,3029197,instret,898612
+N,80,cycles,5934173,instret,1788275
+N,96,cycles,9957520,instret,2975403
+N,112,cycles,16818887,instret,4712747
+N,128,cycles,25285747,instret,6888143
+N,144,cycles,36123203,instret,10149421
+N,160,cycles,50085802,instret,13819099
+N,176,cycles,67543360,instret,18291903
+N,192,cycles,86007186,instret,23113673
+N,208,cycles,111042677,instret,30233868
+N,224,cycles,137103171,instret,37164667
+N,240,cycles,168997108,instret,45473422
+N,256,cycles,207182763,instret,55269383
+N,384,cycles,689441398,instret,184785048
+N,512,cycles,1639793660,instret,437977784
+benchmark: gemm_blis_4x4 MC_4096_KC_128_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+N,16,cycles,192819,instret,44913
+N,32,cycles,464084,instret,142260
+N,48,cycles,1229274,instret,395371
+N,64,cycles,3087004,instret,907163
+N,80,cycles,6158537,instret,1682710
+N,96,cycles,11658784,instret,3060395
+N,112,cycles,17181512,instret,4481876
+N,128,cycles,25593220,instret,6615400
+N,144,cycles,36855314,instret,9865027
+N,160,cycles,50339077,instret,13423733
+N,176,cycles,66528903,instret,17578190
+N,192,cycles,86651727,instret,22775976
+N,208,cycles,110482363,instret,28885764
+N,224,cycles,138062433,instret,35975974
+N,240,cycles,167697345,instret,43760149
+N,256,cycles,206025107,instret,53356865
+N,384,cycles,684982259,instret,178544163
+N,512,cycles,1626571456,instret,422936451
+benchmark: gemm_blis_4x4 MC_4096_KC_32_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+N,16,cycles,151960,instret,39999
+N,32,cycles,463412,instret,142253
+N,48,cycles,1312934,instret,437947
+N,64,cycles,2649673,instret,929006
+N,80,cycles,6170537,instret,2059621
+N,96,cycles,8473287,instret,3014878
+N,112,cycles,15754680,instret,5215966
+N,128,cycles,22860266,instret,7445288
+N,144,cycles,32897225,instret,10571470
+N,160,cycles,45963351,instret,14175109
+N,176,cycles,62492452,instret,19157524
+N,192,cycles,81716609,instret,24353971
+N,208,cycles,105683750,instret,31395026
+N,224,cycles,134331717,instret,38855679
+N,240,cycles,164611148,instret,47888139
+N,256,cycles,201914997,instret,57586383
+N,384,cycles,693105560,instret,193148568
+N,512,cycles,1661274305,instret,458744607
+benchmark: gemm_blis_4x4 MC_4096_KC_64_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+N,16,cycles,146221,instret,40001
+N,32,cycles,462842,instret,142260
+N,48,cycles,1195820,instret,390466
+N,64,cycles,3001078,instret,892010
+N,80,cycles,5587915,instret,1728922
+N,96,cycles,9359705,instret,2890083
+N,112,cycles,16003853,instret,4593610
+N,128,cycles,24242370,instret,6725133
+N,144,cycles,35547857,instret,10019848
+N,160,cycles,48031309,instret,13454998
+N,176,cycles,64460586,instret,17652830
+N,192,cycles,84464142,instret,22850108
+N,208,cycles,107306407,instret,29580278
+N,224,cycles,135001220,instret,36752302
+N,240,cycles,164990435,instret,44697821
+N,256,cycles,200163533,instret,53952265
+N,384,cycles,670079348,instret,180966693
+N,512,cycles,1594073178,instret,429624513
+benchmark: gemm_blis_4x4 MC_4096_KC_128_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+N,16,cycles,147729,instret,40008
+N,32,cycles,463588,instret,142253
+N,48,cycles,1193008,instret,390466
+N,64,cycles,2780518,instret,862025
+N,80,cycles,5845092,instret,1634333
+N,96,cycles,10223941,instret,2760232
+N,112,cycles,18126188,instret,4671990
+N,128,cycles,26152955,instret,6757209
+N,144,cycles,35032235,instret,9488699
+N,160,cycles,48482981,instret,13085317
+N,176,cycles,64510355,instret,17190473
+N,192,cycles,84536593,instret,22343660
+N,208,cycles,107807602,instret,28367623
+N,224,cycles,133596983,instret,35117300
+N,240,cycles,164294082,instret,43101046
+N,256,cycles,199309977,instret,52151745
+N,384,cycles,666288035,instret,175014252
+N,512,cycles,1583682819,instret,415180812
+benchmark: gemm_blis_4x8 MC_4096_KC_32_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_4x8: No such file or directory
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+benchmark: gemm_blis_4x8 MC_4096_KC_64_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_4x8: No such file or directory
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+benchmark: gemm_blis_4x8 MC_4096_KC_128_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_4x8: No such file or directory
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+benchmark: gemm_blis_4x8 MC_4096_KC_32_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_4x8: No such file or directory
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+benchmark: gemm_blis_4x8 MC_4096_KC_64_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_4x8: No such file or directory
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+benchmark: gemm_blis_4x8 MC_4096_KC_128_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_4x8: No such file or directory
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+benchmark: gemm_blis_4x8 MC_4096_KC_32_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_4x8: No such file or directory
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+benchmark: gemm_blis_4x8 MC_4096_KC_64_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_4x8: No such file or directory
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+benchmark: gemm_blis_4x8 MC_4096_KC_128_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_4x8: No such file or directory
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+./run.sh: line 20: ././gemm_blis_4x8: not found
+benchmark: gemm_blis_4x16 MC_4096_KC_32_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_4x16: No such file or directory
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+benchmark: gemm_blis_4x16 MC_4096_KC_64_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_4x16: No such file or directory
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+benchmark: gemm_blis_4x16 MC_4096_KC_128_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_4x16: No such file or directory
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+benchmark: gemm_blis_4x16 MC_4096_KC_32_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_4x16: No such file or directory
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+benchmark: gemm_blis_4x16 MC_4096_KC_64_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_4x16: No such file or directory
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+benchmark: gemm_blis_4x16 MC_4096_KC_128_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_4x16: No such file or directory
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+benchmark: gemm_blis_4x16 MC_4096_KC_32_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_4x16: No such file or directory
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+benchmark: gemm_blis_4x16 MC_4096_KC_64_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_4x16: No such file or directory
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+benchmark: gemm_blis_4x16 MC_4096_KC_128_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_4x16: No such file or directory
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+./run.sh: line 20: ././gemm_blis_4x16: not found
+benchmark: gemm_blis_8x4 MC_4096_KC_32_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_8x4: No such file or directory
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+benchmark: gemm_blis_8x4 MC_4096_KC_64_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_8x4: No such file or directory
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+benchmark: gemm_blis_8x4 MC_4096_KC_128_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_8x4: No such file or directory
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+benchmark: gemm_blis_8x4 MC_4096_KC_32_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_8x4: No such file or directory
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+benchmark: gemm_blis_8x4 MC_4096_KC_64_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_8x4: No such file or directory
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+benchmark: gemm_blis_8x4 MC_4096_KC_128_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_8x4: No such file or directory
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+benchmark: gemm_blis_8x4 MC_4096_KC_32_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_8x4: No such file or directory
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+benchmark: gemm_blis_8x4 MC_4096_KC_64_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_8x4: No such file or directory
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+benchmark: gemm_blis_8x4 MC_4096_KC_128_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_8x4: No such file or directory
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+./run.sh: line 20: ././gemm_blis_8x4: not found
+benchmark: gemm_blis_8x8 MC_4096_KC_32_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+N,16,cycles,177929,instret,39769
+N,32,cycles,485940,instret,130324
+N,48,cycles,1359715,instret,373819
+N,64,cycles,3111390,instret,837484
+N,80,cycles,6014752,instret,1632157
+N,96,cycles,9369165,instret,2614519
+N,112,cycles,16312138,instret,4439622
+N,128,cycles,23512880,instret,6431174
+N,144,cycles,32130772,instret,8763533
+N,160,cycles,45042326,instret,12136759
+N,176,cycles,61246444,instret,16433984
+N,192,cycles,77060058,instret,20796140
+N,208,cycles,99054808,instret,26541228
+N,224,cycles,124356286,instret,33104468
+N,240,cycles,151085237,instret,40435337
+N,256,cycles,183724542,instret,48741349
+N,384,cycles,614228747,instret,163113160
+N,512,cycles,1493600867,instret,387476795
+benchmark: gemm_blis_8x8 MC_4096_KC_64_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+N,16,cycles,141849,instret,34855
+N,32,cycles,489398,instret,130324
+N,48,cycles,1243223,instret,338555
+N,64,cycles,2911557,instret,768664
+N,80,cycles,5899873,instret,1545772
+N,96,cycles,9381141,instret,2525962
+N,112,cycles,15980053,instret,4205537
+N,128,cycles,23613350,instret,6139893
+N,144,cycles,32495440,instret,8609365
+N,160,cycles,44370824,instret,11706890
+N,176,cycles,58701050,instret,15437149
+N,192,cycles,74602514,instret,19708605
+N,208,cycles,96236773,instret,25485068
+N,224,cycles,119867575,instret,31673701
+N,240,cycles,145953916,instret,38659073
+N,256,cycles,178466789,instret,46728846
+N,384,cycles,589979310,instret,156713208
+N,512,cycles,1430070189,instret,372030963
+benchmark: gemm_blis_8x8 MC_4096_KC_128_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+N,16,cycles,138287,instret,34864
+N,32,cycles,486399,instret,130322
+N,48,cycles,1341990,instret,348922
+N,64,cycles,2911473,instret,768664
+N,80,cycles,5637358,instret,1460888
+N,96,cycles,9746293,instret,2482687
+N,112,cycles,14939747,instret,3857572
+N,128,cycles,22341241,instret,5733983
+N,144,cycles,32645776,instret,8464634
+N,160,cycles,44076363,instret,11483009
+N,176,cycles,58355648,instret,15177061
+N,192,cycles,74145895,instret,19392637
+N,208,cycles,95224725,instret,24819882
+N,224,cycles,118358948,instret,30855143
+N,240,cycles,144658751,instret,37774901
+N,256,cycles,178360409,instret,45934260
+N,384,cycles,587561215,instret,153549515
+N,512,cycles,1427153340,instret,365091675
+benchmark: gemm_blis_8x8 MC_4096_KC_32_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+N,16,cycles,176391,instret,39785
+N,32,cycles,485912,instret,122880
+N,48,cycles,1169997,instret,340404
+N,64,cycles,2712819,instret,781065
+N,80,cycles,5145744,instret,1494480
+N,96,cycles,8472267,instret,2475607
+N,112,cycles,13926174,instret,4014258
+N,128,cycles,20152635,instret,5828025
+N,144,cycles,29774473,instret,8500037
+N,160,cycles,40249986,instret,11327870
+N,176,cycles,54387008,instret,15291131
+N,192,cycles,71003419,instret,19773486
+N,208,cycles,90262134,instret,25062153
+N,224,cycles,112794822,instret,31132131
+N,240,cycles,138921490,instret,38417216
+N,256,cycles,170689160,instret,46575017
+N,384,cycles,570966655,instret,155525424
+N,512,cycles,1371814198,instret,368478586
+benchmark: gemm_blis_8x8 MC_4096_KC_64_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+N,16,cycles,181927,instret,39769
+N,32,cycles,434189,instret,116869
+N,48,cycles,1150690,instret,323858
+N,64,cycles,2777324,instret,745513
+N,80,cycles,5158190,instret,1431520
+N,96,cycles,8694093,instret,2417580
+N,112,cycles,13864680,instret,3801762
+N,128,cycles,20732542,instret,5602363
+N,144,cycles,29182495,instret,8002904
+N,160,cycles,41272066,instret,11200758
+N,176,cycles,54995127,instret,14891027
+N,192,cycles,69491448,instret,18830539
+N,208,cycles,90070349,instret,24440188
+N,224,cycles,112103427,instret,30394904
+N,240,cycles,135062443,instret,36722469
+N,256,cycles,166587747,instret,44833470
+N,384,cycles,551620289,instret,150116098
+N,512,cycles,1320505776,instret,355588291
+benchmark: gemm_blis_8x8 MC_4096_KC_128_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+N,16,cycles,182119,instret,39769
+N,32,cycles,435373,instret,116860
+N,48,cycles,1149904,instret,323851
+N,64,cycles,2692967,instret,735740
+N,80,cycles,5176384,instret,1383343
+N,96,cycles,8881452,instret,2342883
+N,112,cycles,14165711,instret,3719271
+N,128,cycles,20856746,instret,5476281
+N,144,cycles,29390384,instret,7873977
+N,160,cycles,41334328,instret,11028009
+N,176,cycles,54281915,instret,14494056
+N,192,cycles,69509889,instret,18589683
+N,208,cycles,89700661,instret,23883465
+N,224,cycles,110893267,instret,29557958
+N,240,cycles,135812213,instret,36243553
+N,256,cycles,166962552,instret,44046293
+N,384,cycles,551379132,instret,147316990
+N,512,cycles,1322083187,instret,349559426
+benchmark: gemm_blis_8x8 MC_4096_KC_32_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+N,16,cycles,178252,instret,39769
+N,32,cycles,434230,instret,116869
+N,48,cycles,1168835,instret,340395
+N,64,cycles,2549387,instret,748848
+N,80,cycles,4614987,instret,1420835
+N,96,cycles,7758813,instret,2381774
+N,112,cycles,12984753,instret,3883796
+N,128,cycles,20286239,instret,5917291
+N,144,cycles,28296954,instret,8296046
+N,160,cycles,38911718,instret,11197258
+N,176,cycles,51345007,instret,14825941
+N,192,cycles,67429585,instret,19206799
+N,208,cycles,86410230,instret,24449611
+N,224,cycles,108615097,instret,30442001
+N,240,cycles,132859179,instret,37371698
+N,256,cycles,162871843,instret,45403238
+N,384,cycles,548086539,instret,151483640
+N,512,cycles,1316283711,instret,360051650
+benchmark: gemm_blis_8x8 MC_4096_KC_64_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+N,16,cycles,137818,instret,34864
+N,32,cycles,436471,instret,116869
+N,48,cycles,1116782,instret,318946
+N,64,cycles,2505740,instret,707737
+N,80,cycles,4804290,instret,1378083
+N,96,cycles,8098990,instret,2329611
+N,112,cycles,13559763,instret,3748764
+N,128,cycles,19879065,instret,5478461
+N,144,cycles,29256960,instret,8083803
+N,160,cycles,38276914,instret,10650654
+N,176,cycles,51858385,instret,14303345
+N,192,cycles,66895911,instret,18388428
+N,208,cycles,86912490,instret,23927323
+N,224,cycles,107503950,instret,29565454
+N,240,cycles,132449147,instret,36317800
+N,256,cycles,159719407,instret,43719000
+N,384,cycles,531232488,instret,146565970
+N,512,cycles,1271439036,instret,348332336
+benchmark: gemm_blis_8x8 MC_4096_KC_128_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_8x8'
+'gemm_blis_8x8' saved
+N,16,cycles,184243,instret,39778
+N,32,cycles,433540,instret,116876
+N,48,cycles,1114569,instret,318944
+N,64,cycles,2499659,instret,707737
+N,80,cycles,4874897,instret,1340083
+N,96,cycles,8380920,instret,2272789
+N,112,cycles,13814234,instret,3661951
+N,128,cycles,20577652,instret,5423114
+N,144,cycles,29370834,instret,7948233
+N,160,cycles,38833557,instret,10539901
+N,176,cycles,52153307,instret,14131162
+N,192,cycles,68091876,instret,18406193
+N,208,cycles,86988816,instret,23412901
+N,224,cycles,107444502,instret,28985503
+N,240,cycles,132537363,instret,35674561
+N,256,cycles,160168195,instret,43001118
+N,384,cycles,533544908,instret,144284904
+N,512,cycles,1275760408,instret,342682144
+benchmark: gemm_blis_8x16 MC_4096_KC_32_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_8x16: No such file or directory
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+benchmark: gemm_blis_8x16 MC_4096_KC_64_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_8x16: No such file or directory
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+benchmark: gemm_blis_8x16 MC_4096_KC_128_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_8x16: No such file or directory
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+benchmark: gemm_blis_8x16 MC_4096_KC_32_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_8x16: No such file or directory
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+benchmark: gemm_blis_8x16 MC_4096_KC_64_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_8x16: No such file or directory
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+benchmark: gemm_blis_8x16 MC_4096_KC_128_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_8x16: No such file or directory
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+benchmark: gemm_blis_8x16 MC_4096_KC_32_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_8x16: No such file or directory
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+benchmark: gemm_blis_8x16 MC_4096_KC_64_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_8x16: No such file or directory
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+benchmark: gemm_blis_8x16 MC_4096_KC_128_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_8x16: No such file or directory
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+./run.sh: line 20: ././gemm_blis_8x16: not found
+benchmark: gemm_blis_16x4 MC_4096_KC_32_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_16x4: No such file or directory
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+benchmark: gemm_blis_16x4 MC_4096_KC_64_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_16x4: No such file or directory
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+benchmark: gemm_blis_16x4 MC_4096_KC_128_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_16x4: No such file or directory
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+benchmark: gemm_blis_16x4 MC_4096_KC_32_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_16x4: No such file or directory
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+benchmark: gemm_blis_16x4 MC_4096_KC_64_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_16x4: No such file or directory
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+benchmark: gemm_blis_16x4 MC_4096_KC_128_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_16x4: No such file or directory
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+benchmark: gemm_blis_16x4 MC_4096_KC_32_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_16x4: No such file or directory
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+benchmark: gemm_blis_16x4 MC_4096_KC_64_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_16x4: No such file or directory
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+benchmark: gemm_blis_16x4 MC_4096_KC_128_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_16x4: No such file or directory
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+./run.sh: line 20: ././gemm_blis_16x4: not found
+benchmark: gemm_blis_16x8 MC_4096_KC_32_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_16x8: No such file or directory
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+benchmark: gemm_blis_16x8 MC_4096_KC_64_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_16x8: No such file or directory
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+benchmark: gemm_blis_16x8 MC_4096_KC_128_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_16x8: No such file or directory
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+benchmark: gemm_blis_16x8 MC_4096_KC_32_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_16x8: No such file or directory
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+benchmark: gemm_blis_16x8 MC_4096_KC_64_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_16x8: No such file or directory
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+benchmark: gemm_blis_16x8 MC_4096_KC_128_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_16x8: No such file or directory
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+benchmark: gemm_blis_16x8 MC_4096_KC_32_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_16x8: No such file or directory
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+benchmark: gemm_blis_16x8 MC_4096_KC_64_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_16x8: No such file or directory
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+benchmark: gemm_blis_16x8 MC_4096_KC_128_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+wget: server returned error: HTTP/1.0 404 File not found
+chmod: gemm_blis_16x8: No such file or directory
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+./run.sh: line 20: ././gemm_blis_16x8: not found
+benchmark: gemm_blis_16x16 MC_4096_KC_32_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+benchmark: gemm_blis_16x16 MC_4096_KC_64_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+benchmark: gemm_blis_16x16 MC_4096_KC_128_NC_24
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+
+libblis: frame/base/bli_gks.c (line 258):
+libblis: Default NC is non-multiple of NR for one or more datatypes.
+libblis: Aborting.
+Aborted
+benchmark: gemm_blis_16x16 MC_4096_KC_32_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+N,16,cycles,174192,instret,40911
+N,32,cycles,406684,instret,119801
+N,48,cycles,1063799,instret,331735
+N,64,cycles,2541015,instret,782606
+N,80,cycles,4505946,instret,1433413
+N,96,cycles,8287631,instret,2578845
+N,112,cycles,12030997,instret,3840298
+N,128,cycles,17644374,instret,5585723
+N,144,cycles,24490146,instret,7814466
+N,160,cycles,35317481,instret,11082775
+N,176,cycles,46022656,instret,14499520
+N,192,cycles,58478842,instret,18458735
+N,208,cycles,75089347,instret,23740786
+N,224,cycles,93834015,instret,29494295
+N,240,cycles,113876055,instret,35892031
+N,256,cycles,141544689,instret,43890480
+N,384,cycles,476686695,instret,145627172
+N,512,cycles,1161752354,instret,345172069
+benchmark: gemm_blis_16x16 MC_4096_KC_64_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+N,16,cycles,133159,instret,36006
+N,32,cycles,406172,instret,119794
+N,48,cycles,1038615,instret,320080
+N,64,cycles,2465018,instret,750993
+N,80,cycles,4694578,instret,1428089
+N,96,cycles,7419337,instret,2330999
+N,112,cycles,12256382,instret,3780431
+N,128,cycles,18077203,instret,5510865
+N,144,cycles,24897766,instret,7733823
+N,160,cycles,35206339,instret,10923524
+N,176,cycles,46075097,instret,14264687
+N,192,cycles,58895831,instret,18223532
+N,208,cycles,76114543,instret,23659202
+N,224,cycles,92685923,instret,28906805
+N,240,cycles,113720870,instret,35387205
+N,256,cycles,142184706,instret,43495017
+N,384,cycles,475414224,instret,144030366
+N,512,cycles,1158452082,instret,341253459
+benchmark: gemm_blis_16x16 MC_4096_KC_128_NC_48
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+N,16,cycles,175428,instret,40918
+N,32,cycles,407317,instret,119794
+N,48,cycles,1038437,instret,320080
+N,64,cycles,2467366,instret,751080
+N,80,cycles,5409892,instret,1595200
+N,96,cycles,7510466,instret,2300743
+N,112,cycles,13180748,instret,3946647
+N,128,cycles,18381227,instret,5471369
+N,144,cycles,26026200,instret,7884216
+N,160,cycles,35583078,instret,10852146
+N,176,cycles,46393252,instret,14179531
+N,192,cycles,59491595,instret,18138670
+N,208,cycles,77082091,instret,23485761
+N,224,cycles,94655110,instret,28903075
+N,240,cycles,115607863,instret,35187184
+N,256,cycles,143469477,instret,42976099
+N,384,cycles,484786904,instret,143285379
+N,512,cycles,1182241285,instret,339763945
+benchmark: gemm_blis_16x16 MC_4096_KC_32_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+N,16,cycles,133413,instret,36006
+N,32,cycles,409212,instret,119801
+N,48,cycles,1063097,instret,331742
+N,64,cycles,2189180,instret,708695
+N,80,cycles,4154137,instret,1342551
+N,96,cycles,6780383,instret,2233037
+N,112,cycles,11555135,instret,3696144
+N,128,cycles,16656695,instret,5355466
+N,144,cycles,23189530,instret,7517550
+N,160,cycles,32930524,instret,10435701
+N,176,cycles,41945285,instret,13476870
+N,192,cycles,55068772,instret,17536483
+N,208,cycles,72145158,instret,22890358
+N,224,cycles,88321901,instret,28022226
+N,240,cycles,108461968,instret,34443619
+N,256,cycles,131782101,instret,41422463
+N,384,cycles,445622474,instret,138477726
+N,512,cycles,1078493338,instret,329110883
+benchmark: gemm_blis_16x16 MC_4096_KC_64_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+N,16,cycles,133784,instret,36013
+N,32,cycles,406743,instret,119794
+N,48,cycles,1045800,instret,320080
+N,64,cycles,2393340,instret,715343
+N,80,cycles,4172728,instret,1317766
+N,96,cycles,6949133,instret,2211577
+N,112,cycles,11486849,instret,3602210
+N,128,cycles,18174513,instret,5519138
+N,144,cycles,24718090,instret,7673814
+N,160,cycles,33032359,instret,10301348
+N,176,cycles,43524965,instret,13520941
+N,192,cycles,56022968,instret,17360872
+N,208,cycles,71664017,instret,22406350
+N,224,cycles,89757455,instret,27954297
+N,240,cycles,110011612,instret,34243225
+N,256,cycles,133968298,instret,41255384
+N,384,cycles,446040250,instret,137056541
+N,512,cycles,1079249205,instret,325896130
+benchmark: gemm_blis_16x16 MC_4096_KC_128_NC_96
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_16x16'
+'gemm_blis_16x16' saved
+N,16,cycles,135028,instret,36006
+N,32,cycles,407907,instret,119794
+N,48,cycles,1038944,instret,320080
+N,64,cycles,2324196,instret,703914
+N,80,cycles,4404645,instret,1326096
+N,96,cycles,7122670,instret,2190151
+N,112,cycles,12063028,instret,3615355
+N,128,cycles,17467107,instret,5253977
+N,144,cycles,24622747,instret,7463740
+N,160,cycles,33604107,instret,10264191
+N,176,cycles,44128380,instret,13467326
+N,192,cycles,56534120,instret,17275554
+N,208,cycles,72802230,instret,22267596
+N,224,cycles,90944832,instret,27752434
+N,240,cycles,111157340,instret,33843670
+N,256,cycles,135254049,instret,40770268
+N,384,cycles,455561948,instret,136258430
+N,512,cycles,1104530141,instret,324733125
+# 

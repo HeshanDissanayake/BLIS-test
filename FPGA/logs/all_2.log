@@ -545,3 +545,9 @@ N,224,cycles,112043298,instret,33775795
 N,240,cycles,138499225,instret,41607288
 N,256,cycles,174840659,instret,50388650
 # 
+# 
+# # ./run.sh [J# wget http://10.65.196.56:8000/FPGA/run_static.sh -O run.sh[J
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'run.sh'
+'run.sh' saved
+# ./[J[J

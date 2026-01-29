@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-source ../config/blis/all-2
+source ../config/blis/all-8
 source ../config/parser.sh
 
 BLOCK_SIZES=($(parse_list "$MR"))

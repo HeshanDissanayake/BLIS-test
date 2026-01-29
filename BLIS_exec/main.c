@@ -51,7 +51,7 @@ double now_seconds() {
 /* RISC-V cycle counter */
 static inline unsigned long long read_cycles(void) {
     unsigned long long cycles;
-    asm volatile ("rdcycle %0" : "=r"(cycles));
+    // asm volatile ("rdcycle %0" : "=r"(cycles));
     return cycles;
 }
 
@@ -59,7 +59,7 @@ static inline unsigned long long read_cycles(void) {
 static inline uint64_t read_instret(void)
 {
     uint64_t val;
-    asm volatile ("rdinstret %0" : "=r"(val));
+    // asm volatile ("rdinstret %0" : "=r"(val));
     return val;
 }
 
@@ -96,18 +96,18 @@ int main(int argc, char **argv)
     double *C = aligned_alloc(64, sizeof(double) * M * N);
 
     /* Fill inputs */
-    fill_matrix(A, M, K, 0);
-    fill_matrix(B, K, N, 100);
+    // fill_matrix(A, M, K, 0);
+    // fill_matrix(B, K, N, 100);
 
-    for (dim_t i = 0; i < M * N; i++)
-        C[i] = 0.0;
+    // for (dim_t i = 0; i < M * N; i++)
+    //     C[i] = 0.0;
 
     // print_matrix("Matrix A", A, M, K);
     // print_matrix("Matrix B", B, K, N);
 
     /* Init BLIS */
     bli_init();
-
+    printf("inited\n");
     obj_t a, b, c, alpha, beta;
 
     /* Create BLIS objects (row-major: rs=cols, cs=1) */
@@ -119,9 +119,9 @@ int main(int argc, char **argv)
     bli_obj_create(BLIS_DOUBLE, 1, 1, 0, 0, &beta);
     bli_setsc(1.0, 0.0, &alpha);
     bli_setsc(0.0, 0.0, &beta);
-
+    printf("obj_created\n");
     /* Warm-up */
-    bli_gemm(&alpha, &a, &b, &beta, &c);
+    // bli_gemm(&alpha, &a, &b, &beta, &c);
 
     /* Measure */
     unsigned long long start_cycles = read_cycles();
@@ -130,6 +130,7 @@ int main(int argc, char **argv)
     // csr_mem_log_marker(0);
     // csr_mem_dump_set_bits(1);
     bli_gemm(&alpha, &a, &b, &beta, &c);
+    printf("gemm end\n");
     // csr_mem_dump_set_bits(0);
     
     unsigned long long end_cycles = read_cycles();

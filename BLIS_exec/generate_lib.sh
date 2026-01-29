@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-source ../config/blis/all-2
+source ../config/blis/all-8
 source ../config/parser.sh
 
 MC=($(parse_list "$MC"))

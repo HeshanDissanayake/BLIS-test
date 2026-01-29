@@ -1,0 +1,340 @@
+
+# 
+# ./run.sh [J
+benchmark: gemm_blis_4x4 MC_4096_KC_32_NC_128
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+N,16,cycles,711862,instret,105774
+N,32,cycles,720015,instret,175896
+N,48,cycles,1650727,instret,486684
+N,64,cycles,3053697,instret,995158
+N,80,cycles,5573379,instret,1907743
+N,96,cycles,9077859,instret,3125809
+N,112,cycles,14481493,instret,4984150
+N,128,cycles,21987475,instret,7247325
+N,144,cycles,33397381,instret,10759786
+N,160,cycles,46391628,instret,14371357
+N,176,cycles,62072541,instret,19173814
+N,192,cycles,82430265,instret,24623722
+N,208,cycles,104706837,instret,31366356
+N,224,cycles,132611878,instret,38770948
+N,240,cycles,163279633,instret,47844198
+N,256,cycles,200088000,instret,57526697
+N,384,cycles,688194567,instret,192962804
+N,512,cycles,1635293824,instret,456261897
+N,1024,cycles,13095836274,instret,3633818277
+^[[A    ^C
+# ^C
+# ./gen[Jm
+# ./gemm_blis_[J4
+# ./gemm_blis_4x4 [J256 256 256
+N,256,cycles,199408689,instret,57305611
+# 
+# ./gemm_blis_4x4 256 256 256[J 256 256 256[J[12D 256 256 256[J[12D 256 256 256[J[12D8 256 256 256[12Dx 256 256 256[12D8 256 256 256[12D 256 256 256
+N,256,cycles,162382495,instret,42052060
+# 
+# ./gemm_blis_8x8 256 256 256[J 256 256 256[J[12D 256 256 256[J[12D 256 256 256[J[12D1 256 256 256[12D6 256 256 256[12Dx 256 256 256[12D1 256 256 256[12D6 256 256 256[12D 256 256 256
+N,256,cycles,134769088,instret,39477252
+# 
+# ./gemm_blis_16x16 256 256 256[J
+# ./gemm_blis_8x8 256 256 256[J
+# ./gemm_blis_4x4 256 256 256[J
+# ./run.sh [J
+benchmark: gemm_blis_4x4 MC_4096_KC_32_NC_128
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+inited
+obj_created
+gemm end
+N,16,cycles,762145,instret,112199
+inited
+obj_created
+gemm end
+N,32,cycles,821865,instret,189116
+inited
+obj_created
+gemm end
+N,48,cycles,1879928,instret,520647
+inited
+obj_created
+gemm end
+N,64,cycles,3117612,instret,1002989
+inited
+obj_created
+gemm end
+N,80,cycles,5621931,instret,1910939
+inited
+obj_created
+gemm end
+N,96,cycles,9053275,instret,3127894
+inited
+obj_created
+gemm end
+N,112,cycles,14664512,instret,5012521
+inited
+obj_created
+gemm end
+N,128,cycles,22584297,instret,7428118
+inited
+obj_created
+gemm end
+N,144,cycles,32792510,instret,10581884
+inited
+obj_created
+gemm end
+N,160,cycles,45704510,instret,14178378
+inited
+obj_created
+gemm end
+N,176,cycles,62099122,instret,19167971
+inited
+obj_created
+gemm end
+N,192,cycles,81809915,instret,24433825
+inited
+obj_created
+gemm end
+N,208,cycles,105730361,instret,31602833
+inited
+obj_created
+gemm end
+N,224,cycles,132259705,instret,38604096
+inited
+obj_created
+gemm end
+N,240,cycles,163114736,instret,47826560
+inited
+obj_created
+gemm end
+N,256,cycles,199412264,instret,57344489
+inited
+obj_created
+gemm end
+N,384,cycles,689684589,instret,193205856
+inited
+obj_created
+gemm end
+N,512,cycles,1634904095,instret,456081867
+inited
+obj_created
+^[[B^[[B^[[B^C
+# ^C
+# ^C
+# 
+# ./run.sh [J
+# ./gemm_blis_16x16 256 256 256[J
+# ./gemm_blis_8x8 256 256 256[J
+# ./gemm_blis_4x4 256 256 256[J
+# ./run.sh [J
+# wget http://10.65.196.56:8000/FPGA/run_static.sh -O run.sh[J -O run.sh[J[10D -O run.sh[J[10D -O run.sh[J[10D -O run.sh[J[10D -O run.sh[J[10D -O run.sh[J[10D -O run.sh[J[10D -O run.sh[J[10D -O run.sh[J[10D -O run.sh[J[10D -O run.sh[J[10D -O run.sh[J[10D -O run.sh[J[10D -O run.sh[J[10D -O run.sh[J[10D -O run.sh[J[10D -O run.sh[J[10D -O run.sh[J[10Dc -O run.sh[10Dy -O run.sh[10Dc -O run.sh[10Dl -O run.sh[10De -O run.sh[10D_ -O run.sh[10Dt -O run.sh[10De -O run.sh[10Ds -O run.sh[10Dt -O run.sh[10D -O run.sh[J[J[J[J[J[Jcycle_test
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'cycle_test'
+'cycle_test' saved
+# ./cy
+# ./cycle_test [J
+-/bin/sh: ./cycle_test: Permission denied
+# chmod +x cycle
+# chmod +x cycle_test [J
+# 
+# chmod +x cycle_test [J
+# ./cycle_test [J
+./cycle_test: /lib64/libc.so.6: version `GLIBC_2.34' not found (required by ./cycle_test)
+# 
+# ./cycle_test [J
+# chmod +x cycle_test [J
+# ./cycle_test [J
+# wget http://10.65.196.56:8000/cycle_test -O cycle_test[J
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'cycle_test'
+'cycle_test' saved
+# 
+# wget http://10.65.196.56:8000/cycle_test -O cycle_test[J
+# ./cycle_test [J
+# chmod +x cycle_test [J
+# 
+# chmod +x cycle_test [J
+# wget http://10.65.196.56:8000/cycle_test -O cycle_test[J
+# ./cycle_test [J
+Enter sleep time in seconds: 5
+Sleep of 5 second(s) took 250211626 cycles
+# 
+# ./cycle_test [J
+# chmod +x cycle_test [J
+# wget http://10.65.196.56:8000/cycle_test -O cycle_test[J
+# chmod +x cycle_test [J
+# ./cycle_test [J20
+Enter sleep time in seconds: 20
+Sleep of 20 second(s) took 1000488197 cycles
+# time
+BusyBox v1.33.1 (2025-07-03 12:40:47 AEST) multi-call binary.
+
+Usage: time [-vpa] [-o FILE] PROG ARGS
+
+Run PROG, display resource usage when it exits
+
+	-v	Verbose
+	-p	POSIX output format
+	-f FMT	Custom format
+	-o FILE	Write result to FILE
+	-a	Append (else overwrite)
+# 
+# time[J ./gem
+# time ./gemm_blis_[J4x4
+# time ./gemm_blis_4x4 [J2048 24[J048 2048
+inited
+obj_created
+^CCommand terminated by signal 2
+real	0m 5.41s
+user	0m 4.35s
+sys	0m 0.94s
+# 
+# time ./gemm_blis_4x4 2048 2048 2048[J8[J[J[J[J[J[J[J[J[J[J[J[J[J56 256 256 
+inited
+obj_created
+gemm end
+N,256,cycles,200469655,instret,57522444
+real	0m 4.08s
+user	0m 3.88s
+sys	0m 0.10s
+# 
+# time ./gemm_blis_4x4 256 256 256 [J
+# time ./gemm_blis_4x4 2048 2048 2048[J
+inited
+obj_created
+gemm end
+N,2048,cycles,104384817182,instret,29002458213
+real	34m 48.16s
+user	33m 58.41s
+sys	0m 8.18s
+# 
+# ./[J[J
+# time ./gemm_blis_4x4 2048 2048 2048[J
+# time ./gemm_blis_4x4 256 256 256 [J
+# time ./gemm_blis_4x4 2048 2048 2048[J
+# time[J
+# ./cycle_test 20[J
+# ./cycle_test [J
+# chmod +x cycle_test [J
+# wget http://10.65.196.56:8000/cycle_test -O cycle_test[J
+# ./cycle_test [J
+# chmod +x cycle_test [J
+# ./cycle_test [J
+# wget http://10.65.196.56:8000/cycle_test -O cycle_test[J
+# ./run.sh [J
+# wget http://10.65.196.56:8000/cycle_test -O cycle_test[J
+# ./run.sh [J
+# ./gemm_blis_16x16 256 256 256[J
+# ./gemm_blis_8x8 256 256 256[J
+# ./gemm_blis_4x4 256 256 256[J
+# ./run.sh [J
+# wget http://10.65.196.56:8000/FPGA/run_static.sh -O run.sh[J
+# ./run.sh [J
+# wget http://10.65.196.56:8000/FPGA/run_static.sh -O run.sh[J
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'run.sh'
+'run.sh' saved
+# ./run
+# ./run[J.
+# ./run.sh [J
+benchmark: gemm_blis_4x4 MC_4096_KC_32_NC_128
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+inited
+obj_created
+gemm end
+N,16,cycles,806299,instret,119369
+inited
+obj_created
+gemm end
+N,32,cycles,818963,instret,188690
+inited
+obj_created
+gemm end
+N,48,cycles,1763372,instret,503657
+inited
+obj_created
+gemm end
+N,64,cycles,3116760,instret,1003032
+inited
+obj_created
+gemm end
+N,80,cycles,5612674,instret,1910891
+inited
+obj_created
+gemm end
+N,96,cycles,10000407,instret,3347048
+inited
+obj_created
+gemm end
+N,112,cycles,14529576,instret,4991616
+inited
+obj_created
+gemm end
+N,128,cycles,22571614,instret,7430681
+inited
+obj_created
+^C
+# ^C
+# 
+# ./run.sh [J
+# wget http://10.65.196.56:8000/FPGA/run_static.sh -O run.sh[J
+# time ./gemm_blis_4x4 2048 2048 2048[J
+# time ./gemm_blis_4x4 256 256 256 [J
+# time ./gemm_blis_4x4 2048 2048 2048[J
+# time[J
+# ./cycle_test 20[J
+# ./cycle_test [J
+# ./cycle_test 20[J
+# time[J
+# time ./gemm_blis_4x4 2048 2048 2048[J
+# time ./gemm_blis_4x4 256 256 256 [J
+# time ./gemm_blis_4x4 2048 2048 2048[J
+# wget http://10.65.196.56:8000/FPGA/run_static.sh -O run.sh[J
+# ./run.sh [J
+# [J
+# wget http://10.65.196.56:8000/FPGA/run_static.sh -O run.sh 
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'run.sh'
+'run.sh' saved
+# ./run.sh
+benchmark: gemm_blis_4x4 MC_4096_KC_32_NC_128
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'gemm_blis_4x4'
+'gemm_blis_4x4' saved
+inited
+obj_created
+gemm end
+N,16,cycles,818997,instret,121365
+inited
+obj_created
+gemm end
+N,32,cycles,777829,instret,181922
+inited
+obj_created
+gemm end
+N,48,cycles,1753814,instret,499695
+inited
+obj_created
+gemm end
+N,64,cycles,3306987,instret,1028914
+inited
+obj_created
+gemm end
+N,80,cycles,5628853,instret,1910762
+inited
+obj_created
+gemm end
+N,96,cycles,10105877,instret,3356843
+inited
+obj_created
+gemm end
+N,112,cycles,14399212,instret,4976108
+inited
+obj_created
+gemm end
+N,128,cycles,21860770,instret,7238172
+^C
+# 
