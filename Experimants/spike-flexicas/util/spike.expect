@@ -1,0 +1,70 @@
+#!/usr/bin/expect -f
+
+# Set timeout (in seconds)
+set timeout -1
+
+
+set mc [lindex $argv 0]
+set nc [lindex $argv 1]
+set kc [lindex $argv 2]
+
+set mr [lindex $argv 3]
+
+set n_start [lindex $argv 4]
+set n_end [lindex $argv 5]
+set n_step [lindex $argv 6]
+
+
+
+file mkdir "MC${mc}/KC${kc}/NC${nc}/MR${mr}"
+cd "MC${mc}/KC${kc}/NC${nc}/MR${mr}"
+
+
+
+set spike [lindex $argv 7]
+set bbl [lindex $argv 8]
+
+spawn $spike $bbl
+expect "login"
+send "root\r"
+expect "#"
+
+
+after 4000
+
+# Change to the build directory
+send "cd /MC_${mc}_KC_${kc}_NC_${nc}\r"
+expect "#"
+after 1000
+
+send "/utils/flexicas_start\r"
+after 4000
+
+# Iterate from n_start to n_end in steps of n_step
+for {set i $n_start} {$i <= $n_end} {set i [expr {$i + $n_step}]} {
+    send "./gemm_blis_${mr}x${mr} $i $i $i\r"
+    expect "gemm end"
+    expect "N,"
+}
+
+# # 6. Terminate by sending Ctrl+C (ASCII code \003)
+send "\003"
+
+
+
+expect {
+   -re {\[SBC Monitor\] Exported to:} {
+       send_user "\n--- SB Export detected. Exiting. ---\n"
+       exit
+   }
+   -re {Set utilization data exported to:.*BL} {
+   send_user "\n--- BL export detected. Exiting. ---\n"
+   exit
+   }
+   ": " {
+       send "q\r"
+       exp_continue
+   }
+   eof
+}
+

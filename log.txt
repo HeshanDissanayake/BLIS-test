@@ -1,0 +1,3 @@
+<stdin>:25.39-29.9: Warning (interrupt_provider): /cpus/cpu@0/interrupt-controller: Missing #address-cells in interrupt provider
+<stdin>:25.39-29.9: Warning (interrupt_provider): /cpus/cpu@0/interrupt-controller: Missing #address-cells in interrupt provider
+terminate called after throwing an instance of 'trap_load_access_fault'
