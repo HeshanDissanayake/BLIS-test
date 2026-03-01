@@ -127,10 +127,10 @@ int main(int argc, char **argv)
     unsigned long long start_cycles = read_cycles();
     unsigned long long start_instret = read_instret();
 
-    // csr_mem_log_marker(0);
     csr_mem_dump_set_bits(1);
     bli_gemm(&alpha, &a, &b, &beta, &c);
     printf("gemm end\n");
+    csr_mem_log_marker(0);
     csr_mem_dump_set_bits(0);
     
     unsigned long long end_cycles = read_cycles();

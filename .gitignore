@@ -1,3 +1,9 @@
 spike/install64
 Experimants/spike-flexicas/prebuilt_spikes
 Experimants/spike-flexicas/experiment-1
+Experimants/spike-normal/.venv
+Experimants/spike-normal/experiment-1
+Experimants/spike-normal/experiment-2
+Experimants/spike-normal/images
+
+BLIS_exec/build

@@ -1,0 +1,45 @@
+Role: Expert Python Developer (Data Analysis & Visualization)
+Task: Create a robust Python script for analyzing and plotting experimental data stored in a hierarchical directory structure.
+
+Input Data Structure:
+I have experimental results stored in a deep directory tree.
+
+Directory Naming: The path to a file defines the experimental parameters (dimensions). Directories follow a pattern like Name_Value or NameValue (e.g., L1_32, LW16, Associativity_4). The script must parse these folder names to extract key-value pairs (e.g., {'L1': 32, 'LW': 16}).
+File Format: The leaf nodes contain a json file with a arbitary name.
+Data extraction: I need to read a specific user-defined value of a key in the json and assingn it with the dir herachy
+
+Arguments & Interface (using argparse):
+
+--root: Base directory to scan.
+--x: Dimension name to map to the X-axis.
+--y: value form the json to map to the Y-axis.
+--x_subplot / --y_subplot: (Optional) Dimensions to map to subplot columns and rows.
+--color_dims: (Optional) List of dimensions to differentiate lines/markers within a single plot.
+--neglect_dims: (Optional) List of dimensions to ignore; average the data across these dimensions before plotting.
+--list_params: A flag that scans json and lists all available dimensions 
+
+Core Logic:
+
+Recursively walk the directory tree.
+Parse dimensions from the directory path relative to the root.
+Read the target json 
+Store this data in a Pandas DataFrame.
+If neglect_dims are provided, group by the remaining dimensions 
+
+
+Plotting Logic (matplotlib & pandas):
+
+The script should automatically handle "remaining dimensions". Any dimension not assigned to X, Y, Subplots, or Colors should split the data into separate output files.
+Generate a grid of subplots based on x_subplot and y_subplot.
+Within each subplot, plot Y vs X.
+If color_dims are present, plot multiple lines/scatter points, automatically cycling through markers and colors for unique combinations of those dimensions.
+Save plots to an output directory, generating filenames dynamically based on the dimensions constant to that file.
+Robustness:
+
+Handle missing columns gracefully.
+Support both integer and string values in dimensions.
+Use regex for robust directory parsing.
+Output:
+
+Provide the single Python script file.
+Ensure the code is clean, modular, and well-commented.
