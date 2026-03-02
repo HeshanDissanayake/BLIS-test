@@ -5,6 +5,34 @@ import json
 import subprocess
 from pathlib import Path
 
+
+def validate_keys_filename_safe(obj, path="<root>"):
+    """Ensure dict keys contain no path separators.
+
+    This script (and downstream tooling) may use keys to form filenames.
+    Reject keys containing '/' or '\\' (or platform-specific separators).
+    """
+    if isinstance(obj, dict):
+        for key, value in obj.items():
+            if not isinstance(key, str):
+                raise ValueError(f"Non-string key at {path}: {key!r}")
+
+            separators = {"/", "\\"}
+            if os.sep:
+                separators.add(os.sep)
+            if os.altsep:
+                separators.add(os.altsep)
+
+            if any(sep in key for sep in separators):
+                raise ValueError(
+                    f"Unsafe character in key at {path}: {key!r} contains a path separator"
+                )
+
+            validate_keys_filename_safe(value, f"{path}.{key}")
+    elif isinstance(obj, list):
+        for idx, item in enumerate(obj):
+            validate_keys_filename_safe(item, f"{path}[{idx}]")
+
 def recursive_sum(accumulator, new_data):
     """
     Recursively sums values from new_data into accumulator.
@@ -103,8 +131,10 @@ def main():
                 check=True
             )
             
+            print(result.stdout)  # Optional: print raw output for debugging
             # Parse JSON output
             data = json.loads(result.stdout)
+            validate_keys_filename_safe(data)
             recursive_sum(accumulator, data)
             valid_files += 1
             

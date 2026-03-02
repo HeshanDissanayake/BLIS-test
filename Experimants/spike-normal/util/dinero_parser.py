@@ -3,6 +3,21 @@ import sys
 import re
 import json
 
+
+_UNSAFE_KEY_CHARS_REGEX = re.compile(r"[^A-Za-z0-9._-]+")
+
+
+def sanitize_key_for_filename(key: str) -> str:
+    """Return a filename-safe dict key.
+
+    Dinero section headers can include characters like '/', which are not safe
+    when keys are later used to form filenames or paths.
+    """
+    key = (key or "").strip().lower()
+    key = _UNSAFE_KEY_CHARS_REGEX.sub("_", key)
+    key = key.strip("_")
+    return key or "key"
+
 def parse_line(line):
     # Split by whitespace, but be careful about the label which might contain spaces
     # Actually, Dinero output seems to be fixed columns, but let's try regex based on the specific labels we know.
@@ -29,8 +44,8 @@ def main():
         "Total Bytes r/w Mem": "total_bytes_rw_mem"
     }
 
-    current_line = ""
     current_cache_section = None
+    sanitized_to_raw_cache_section = {}
     
     # Cache section regex
     # Matches l1-icache, l1-dcache, l2-ucache, l1-I/Dcaches etc.
@@ -49,7 +64,15 @@ def main():
             
         # Check for cache section header
         if cache_header_regex.match(line):
-            current_cache_section = line.split()[0]
+            raw_section = line.split()[0]
+            current_cache_section = sanitize_key_for_filename(raw_section)
+            previous_raw = sanitized_to_raw_cache_section.get(current_cache_section)
+            if previous_raw is not None and previous_raw != raw_section:
+                raise ValueError(
+                    "Sanitized cache-section key collision: "
+                    f"'{previous_raw}' and '{raw_section}' both map to '{current_cache_section}'"
+                )
+            sanitized_to_raw_cache_section[current_cache_section] = raw_section
             if current_cache_section not in data:
                 data[current_cache_section] = {}
             continue

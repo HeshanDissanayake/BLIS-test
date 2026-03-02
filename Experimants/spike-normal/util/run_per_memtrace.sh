@@ -21,9 +21,9 @@ if [ -z "$MC" ] || [ -z "$NC" ] || [ -z "$KC" ] || [ -z "$MR" ] || [ -z "$EXP_DI
 fi
 
 
-
-EXP_TOOLS=/home/heshds/working_dir/regsw_tests/BLIS-test/Experimants/Experiment_tools
-UTIL=/home/heshds/working_dir/regsw_tests/BLIS-test/Experimants/spike-normal/util
+ROOT=$(pwd)
+EXP_TOOLS=${ROOT}/../../Experiment_tools
+UTIL=${ROOT}/../util
 
 # Run dinero for all the cache Configurations
 CACHE_CONFIG="MC${MC}/KC${KC}/NC${NC}/MR${MR}"
