@@ -1,0 +1,29 @@
+{
+    "demand_fetches": {
+        "total": 9123650.733333332,
+        "instrn": 0.0,
+        "data": 9123650.733333332,
+        "read": 8367132.133333334,
+        "write": 756518.6,
+        "misc": 0.0
+    },
+    "demand_misses": {
+        "total": 3580295.8,
+        "instrn": 0.0,
+        "data": 3580295.8,
+        "read": 3295212.2,
+        "write": 285083.6,
+        "misc": 0.0
+    },
+    "demand_miss_rate": {
+        "total": 0.30618666666666666,
+        "instrn": 0.0,
+        "data": 0.30618666666666666,
+        "read": 0.30679999999999996,
+        "write": 0.29836,
+        "misc": 0.0
+    },
+    "bytes_from_memory": 57284732.8,
+    "bytes_to_memory": 4834380.8,
+    "total_bytes_rw_mem": 62119113.6
+}

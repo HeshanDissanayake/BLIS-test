@@ -30,6 +30,7 @@ def parse_args():
     parser.add_argument("--output_dir", default="plots", help="Directory to save output plots (default: 'plots').")
     parser.add_argument("--preview", action="store_true", help="Show the first plot in a window.")
     parser.add_argument("--global_scale", action="store_true", help="Use the same Y-axis scale for all plots based on global min/max.")
+    parser.add_argument("--x_ticks_from_data", action="store_true", help="Set X-axis ticks to match data points exactly.")
     
     return parser.parse_args()
 
@@ -313,9 +314,13 @@ def main():
             filename_parts = []
             for dim, val in zip(split_dims, vals):
                 filename_parts.append(f"{dim}_{val}")
-            base_filename = "_".join(filename_parts)
+            
+            # Prefix with Y-axis name (replace dots with underscores for filename safety)
+            y_prefix = "_".join(y_cols).replace('.', '_')
+            base_filename = f"{y_prefix}_{'_'.join(filename_parts)}"
         else:
-            base_filename = "combined_plot"
+            y_prefix = "_".join(y_cols).replace('.', '_')
+            base_filename = f"{y_prefix}_combined_plot"
 
         print(f"Generatng plot: {base_filename}...")
         
@@ -385,7 +390,13 @@ def main():
                 
                 ax.set_xlabel(args.x)
                 ax.set_ylabel("Scaled Value") # Generic label
-                ax.set_ylabel(args.y)
+                # ax.set_ylabel(args.y) # This line was overwriting the previous one and causing an issue if args.y is a list.
+
+                if args.x_ticks_from_data:
+                    unique_x = sorted(sub_df[args.x].unique())
+                    ax.set_xticks(unique_x)
+                    ax.set_xticklabels(unique_x, rotation=90)
+
                 if global_ylim:
                     ax.set_ylim(global_ylim)
                 ax.grid(True, alpha=0.3)

@@ -30,7 +30,12 @@ def main():
     }
 
     current_line = ""
+    current_cache_section = None
     
+    # Cache section regex
+    # Matches l1-icache, l1-dcache, l2-ucache, l1-I/Dcaches etc.
+    cache_header_regex = re.compile(r"^l\d+-[a-zA-Z0-9/]+cache[s]?")
+
     try:
         lines = sys.stdin.readlines()
     except Exception as e:
@@ -42,50 +47,43 @@ def main():
         if not line:
             continue
             
-        # Parse matrix/table rows
-        for label in labels_of_interest:
-            if line.startswith(label):
-                # The rest of the line are the values.
-                # Remove the label from the line to parse the numbers
-                # Be careful if label is "Demand Fetches", we want to ensure we don't match "Demand Fetches Something else" if that existed
-                # specific check:
-                
-                # Check directly if the stripped line starts with the label
-                # Extract the numbers.
-                # "Demand Fetches" is 2 words. 
-                # "Demand miss rate" is 3 words.
-                
-                # Let's just find all numbers in the line.
-                # Assuming the label doesn't contain numbers.
-                # Scientific notation is possible? Dinero usually prints standard floats or integers.
-                
-                # Extract all numbers (int or float)
-                # regex for float or int: -?\d+(\.\d+)?
-                nums = re.findall(r"[-+]?\d*\.\d+|[-+]?\d+", line)
-                
-                # Map to columns: Total, Instrn, Data, Read, Write, Misc
-                if len(nums) >= 6:
-                    key = label.lower().replace(" ", "_")
-                    data[key] = {
-                        "total": float(nums[0]),
-                        "instrn": float(nums[1]),
-                        "data": float(nums[2]),
-                        "read": float(nums[3]),
-                        "write": float(nums[4]),
-                        "misc": float(nums[5])
-                    }
-        
-        # Parse single values
-        for label, key in single_value_labels.items():
-            if line.startswith(label):
-                # We expect one number at the end usually
-                # "Total Bytes r/w Mem         7006768"
-                nums = re.findall(r"[-+]?\d*\.\d+|[-+]?\d+", line)
-                if nums:
-                    # usually the last number is the value, or the first number after label?
-                    # "Bytes From Memory           5901152" -> 5901152
-                    # There is only one number usually.
-                    data[key] = float(nums[0])
+        # Check for cache section header
+        if cache_header_regex.match(line):
+            current_cache_section = line.split()[0]
+            if current_cache_section not in data:
+                data[current_cache_section] = {}
+            continue
+
+        # If we are inside a cache section
+        if current_cache_section:
+            target_dict = data[current_cache_section]
+            
+            # Parse matrix/table rows
+            for label in labels_of_interest:
+                if line.startswith(label):
+                    # Extract all numbers (int or float)
+                    # regex for float or int: -?\d+(\.\d+)?
+                    nums = re.findall(r"[-+]?\d*\.\d+|[-+]?\d+", line)
+                    
+                    # Map to columns: Total, Instrn, Data, Read, Write, Misc
+                    if len(nums) >= 6:
+                        key = label.lower().replace(" ", "_")
+                        target_dict[key] = {
+                            "total": float(nums[0]),
+                            "instrn": float(nums[1]),
+                            "data": float(nums[2]),
+                            "read": float(nums[3]),
+                            "write": float(nums[4]),
+                            "misc": float(nums[5])
+                        }
+            
+            # Parse single values
+            for label, key in single_value_labels.items():
+                if line.startswith(label):
+                    # We expect one number at the end usually
+                    nums = re.findall(r"[-+]?\d*\.\d+|[-+]?\d+", line)
+                    if nums:
+                        target_dict[key] = float(nums[0])
 
     print(json.dumps(data, indent=4))
 

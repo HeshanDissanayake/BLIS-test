@@ -5,7 +5,7 @@ python3 ../../Experiment_tools/run_tasks.py \
   --config config.json \
   --params MC NC KC MR \
   --script ../util/run_per_memtrace.sh \
-  --script_args "--MEMTRACE_PATH /home/heshds/working_dir/regsw_tests/BLIS-test/Experimants/spike-normal/experiment-2/memtraces" \
+  --script_args "--MEMTRACE_PATH /home/heshds/working_dir/regsw_tests/BLIS-test/Experimants/spike-normal/experiment-5/memtraces" \
   -p
 
 
@@ -19,14 +19,15 @@ python3 util/analyse_json.py --root /home/heshds/working_dir/regsw_tests/BLIS-te
                                 --output_dir /home/heshds/working_dir/regsw_tests/BLIS-test/Experimants/spike-normal/experiment-2/plots/misses \
                                 --global_scale 
 
-python3 util/analyse_json.py --root /home/heshds/working_dir/regsw_tests/BLIS-test/Experimants/spike-normal/experiment-2/analysed_data \
-                                --x KC \
-                                --y demand_misses.read \
+python3 ../util/analyse_json.py --root /home/heshds/working_dir/regsw_tests/BLIS-test/Experimants/spike-normal/experiment-4/analysed_data \
+                                --x MC \
+                                --y l1-I/Dcaches.demand_misses.total \
                                 --x_subplot MR \
                                 --y_subplot L1 \
-                                --neglect_dims MC NC \
-                                --output_dir /home/heshds/working_dir/regsw_tests/BLIS-test/Experimants/spike-normal/experiment-2/plots/misses_read \
-                                --global_scale 
+                                --output_dir /home/heshds/working_dir/regsw_tests/BLIS-test/Experimants/spike-normal/experiment-4/plots \
+                                --global_scale \
+                                --x_ticks_from_data \
+                                --list_params
 
 
 
