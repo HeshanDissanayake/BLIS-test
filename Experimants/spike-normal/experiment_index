@@ -1,7 +1,14 @@
 experiment -1: kernel V1(access B first)
 experiment -2: kernel V1(access B first)
 experiment -3: to show that just increasing the register tile does not scale up well
+
+# retire kernel V1
 experiment -4: kernel V2(access A first), to test behaviour of increasing Kc
 experiment -5: mr=4   kc =128(best for L1) used to see the sensitivity of mc for L2
 experiment -6: mr=8   kc =64 (best for L1) used to see the sensitivity of mc for L2
 experiment -7: mr=16  kc =32 (best for L1) used to see the sensitivity of mc for L2 wrong KC
+
+# restrict only to single matrix size 1024
+experiment -8:  mr=4  test Kc sensitivity
+experiment -9:  mr=8  test Kc sensitivity
+experiment -10: mr=16 test Kc sensitivity
