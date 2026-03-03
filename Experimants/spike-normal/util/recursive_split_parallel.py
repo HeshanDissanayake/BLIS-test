@@ -16,6 +16,15 @@ def signal_handler(sig, frame):
 # Register signal handler
 signal.signal(signal.SIGINT, signal_handler)
 
+def is_valid_line(line):
+    """
+    Validates that a line has exactly 3 space-separated values.
+    e.g. 'r 0x3fffc40ec8 8' is valid, 'w 0x3fffc4038' is not.
+    Empty/whitespace-only lines are also considered invalid.
+    """
+    parts = line.strip().split()
+    return len(parts) == 3
+
 def has_split_text(filepath, split_text):
     """
     Checks if the file contains the split_text.
@@ -75,6 +84,9 @@ def split_file_task(args):
         f_in = open(filepath, 'r', encoding='utf-8', errors='ignore')
         f_out = open(current_out_path, 'w', encoding='utf-8')
         
+        removed_lines = 0
+        total_lines = 0
+        
         for line in f_in:
             if split_text in line:
                 f_out.close()
@@ -82,17 +94,27 @@ def split_file_task(args):
                 current_out_path = os.path.join(dir_path, f"{name_part}_{part_num}{ext_part}")
                 f_out = open(current_out_path, 'w', encoding='utf-8')
             else:
-                f_out.write(line)
+                total_lines += 1
+                if is_valid_line(line):
+                    f_out.write(line)
+                else:
+                    removed_lines += 1
                 
         f_in.close()
         f_out.close()
 
-        os.remove(filepath)
+        if part_num > 1:
+            # Split happened, remove original
+            os.remove(filepath)
+        else:
+            # No split marker found, replace original with filtered version
+            os.remove(filepath)
+            os.rename(current_out_path, filepath)
         
-        return f"Done: {filename} -> {part_num} parts"
+        return (filename, part_num, removed_lines, total_lines)
 
     except Exception as e:
-        return f"Error: {filename}: {e}"
+        return (filename, 0, 0, 0, str(e))
 
 def scan_files(root_dir, split_text):
     print("[-] Scanning directory tree for files...")
@@ -104,15 +126,13 @@ def scan_files(root_dir, split_text):
             # Skip generated parts
             if "_" in filename and any(char.isdigit() for char in filename):
                 continue
-            print(f"\rScanning: {os.path.join(root, filename)}", end='')
             
             filepath = os.path.join(root, filename)
-            if has_split_text(filepath, split_text):
-                count += 1
-                file_list.append((filepath, split_text))
-                if count % 100 == 0:
-                    sys.stdout.write(f"\rFound {count} files...")
-                    sys.stdout.flush()
+            count += 1
+            file_list.append((filepath, split_text))
+            if count % 100 == 0:
+                sys.stdout.write(f"\rFound {count} files...")
+                sys.stdout.flush()
     
     print(f"\n[-] Total files to process: {len(file_list)}\n")
     return file_list
@@ -142,6 +162,7 @@ def main():
 
     completed = 0
     total = len(file_list)
+    summary = []
 
     try:
         # Use ProcessPoolExecutor for CPU-bound file processing (read/write/string search)
@@ -154,21 +175,44 @@ def main():
                 try:
                     result = future.result()
                     completed += 1
-                    # Progress update
                     percentage = (completed / total) * 100
-                    # Clear line and over-write
-                    sys.stdout.write(f"\r[{completed}/{total}] ({percentage:.1f}%) {os.path.basename(filepath)}")
-                    sys.stdout.flush()
+                    
+                    if isinstance(result, tuple):
+                        if len(result) == 5:
+                            # Error case
+                            fname, _, _, _, err = result
+                            summary.append((fname, 0, 0, 0, err))
+                            print(f"  [{completed}/{total}] ({percentage:5.1f}%) ERROR  {filepath}: {err}")
+                        else:
+                            fname, parts, removed, total_lines = result
+                            summary.append((fname, parts, removed, total_lines, None))
+                            split_info = f"{parts} parts" if parts > 1 else "no split"
+                            print(f"  [{completed}/{total}] ({percentage:5.1f}%) {filepath}  [{split_info}, {removed} removed / {total_lines} lines]")
                 except Exception as exc:
-                    print(f"\n[!] Generated exception for {filepath}: {exc}")
+                    print(f"  [!] Generated exception for {filepath}: {exc}")
 
     except KeyboardInterrupt:
         print("\n\n[!] Interrupted by user. Shutting down pool...")
-        # Executor context manager handles shutdown(wait=True) usually, 
-        # but force exiting might be needed if workers are stuck.
         sys.exit(1)
-        
-    print("\n\n[-] All processing complete.")
+    
+    # Print summary
+    print("\n\n" + "="*70)
+    print("FILTERING SUMMARY")
+    print("="*70)
+    total_removed = 0
+    total_all_lines = 0
+    for entry in summary:
+        fname, parts, removed, total_lines, err = entry
+        if err:
+            print(f"  {fname} -- ERROR: {err}")
+        else:
+            total_removed += removed
+            total_all_lines += total_lines
+            print(f"  {fname} -- {removed} illegal lines removed (out of {total_lines})")
+    print("-"*70)
+    print(f"  TOTAL: {total_removed} illegal lines removed (out of {total_all_lines})")
+    print("="*70)
+    print("\n[-] All processing complete.")
 
 if __name__ == "__main__":
     main()

@@ -12,3 +12,5 @@ experiment -7: mr=16  kc =32 (best for L1) used to see the sensitivity of mc for
 experiment -8:  mr=4  test Kc sensitivity
 experiment -9:  mr=8  test Kc sensitivity
 experiment -10: mr=16 test Kc sensitivity
+experiment -11: sum of 8, 9, 10
+
