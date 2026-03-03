@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
+#include <stdbool.h>
 #include "blis.h"
 
 #define CSR_MEM_DUMP 0x815
@@ -51,7 +53,7 @@ double now_seconds() {
 /* RISC-V cycle counter */
 static inline unsigned long long read_cycles(void) {
     unsigned long long cycles;
-    // asm volatile ("rdcycle %0" : "=r"(cycles));
+    asm volatile ("rdcycle %0" : "=r"(cycles));
     return cycles;
 }
 
@@ -59,7 +61,7 @@ static inline unsigned long long read_cycles(void) {
 static inline uint64_t read_instret(void)
 {
     uint64_t val;
-    // asm volatile ("rdinstret %0" : "=r"(val));
+    asm volatile ("rdinstret %0" : "=r"(val));
     return val;
 }
 
@@ -80,14 +82,39 @@ double checksum(double *buf, dim_t rows, dim_t cols) {
 int main(int argc, char **argv)
 {
     if (argc < 4) {
-        printf("Usage: %s <M> <K> <N>\n", argv[0]);
+        printf("Usage: %s <M> <K> <N> [-m]\n", argv[0]);
         printf("Computes: C(MxN) = A(MxK) * B(KxN)\n");
+        printf("  -m: Enable memory dump\n");
         return 1;
     }
 
-    unsigned long long M = atoi(argv[1]);
-    unsigned long long K = atoi(argv[2]);
-    unsigned long long N = atoi(argv[3]);
+    // Check for -m flag
+    bool enable_mem_dump = false;
+    for (int i = 1; i < argc; i++) {
+        if (strcmp(argv[i], "-m") == 0) {
+            enable_mem_dump = true;
+            break;
+        }
+    }
+
+    // Parse matrix dimensions, skipping the -m flag if present
+    int args_found = 0;
+    unsigned long long dims[3];
+    for (int i = 1; i < argc; i++) {
+        if (strcmp(argv[i], "-m") == 0) continue;
+        if (args_found < 3) {
+            dims[args_found++] = atoi(argv[i]);
+        }
+    }
+    
+    if (args_found < 3) {
+        printf("Error: Missing matrix dimensions.\n");
+        return 1;
+    }
+
+    unsigned long long M = dims[0];
+    unsigned long long K = dims[1];
+    unsigned long long N = dims[2];
     double flops = 2.0 * (double)M * (double)N * (double)K;
 
     /* Allocate matrices */
@@ -127,11 +154,18 @@ int main(int argc, char **argv)
     unsigned long long start_cycles = read_cycles();
     unsigned long long start_instret = read_instret();
 
-    csr_mem_dump_set_bits(1);
+    if (enable_mem_dump) {
+        csr_mem_dump_set_bits(1);
+    }
+    
     bli_gemm(&alpha, &a, &b, &beta, &c);
     printf("gemm end\n");
-    csr_mem_log_marker(0);
-    csr_mem_dump_set_bits(0);
+    
+    // Memory dump end marker
+    if (enable_mem_dump) {
+        csr_mem_log_marker(0);
+        csr_mem_dump_set_bits(0);
+    }
     
     unsigned long long end_cycles = read_cycles();
     unsigned long long end_instret = read_instret();
@@ -149,6 +183,7 @@ int main(int argc, char **argv)
     // double sum = checksum(C, M, N);
 
     printf("N,%ld,cycles,%llu,instret,%llu\n", (long)N, cycles, instret);
+    printf("done\n");
 
 
     /* Cleanup */
