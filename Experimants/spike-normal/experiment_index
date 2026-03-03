@@ -14,3 +14,7 @@ experiment -9:  mr=8  test Kc sensitivity
 experiment -10: mr=16 test Kc sensitivity
 experiment -11: sum of 8, 9, 10
 
+# restrict only to single matrix size 1024
+experiment -12:  mr=4  test Kc sensitivity with cycle count
+experiment -13:  mr=8  test Kc sensitivity with cycle count
+experiment -14: mr=16 test Kc sensitivity with cycle count

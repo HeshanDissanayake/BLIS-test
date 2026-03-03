@@ -4,15 +4,15 @@ shift
 
 if [[ "$1" == "-list" ]]; then
     python3 util/analyse_json.py \
-                        --root "$ROOT/$exp/analysed_data" \
+                        --root "$ROOT/$exp/cycles" \
                         --list_params
 else
     python3 util/analyse_json.py \
-                        --root "$ROOT/$exp/analysed_data" \
+                        --root "$ROOT/$exp/cycles" \
                         --x KC \
-                        --y l2-ucache.total_bytes_rw_mem \
+                        --y 1024 \
                         --x_subplot  MR \
-                        --y_subplot ASC \
+                        --y_subplot NC \
                         --output_dir "$ROOT/$exp/plots" \
                         --global_scale  \
                         --x_ticks_from_data

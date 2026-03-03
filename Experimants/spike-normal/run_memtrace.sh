@@ -20,7 +20,7 @@ cat config.json \
 | python3 ${EXP_TOOLS}/run_per_config.py  ${UTIL}/spike.expect  MC NC KC MR N_start N_end N_step -a "${SPIKE_DIR}" -a "${IMG_DIR}" 
 
      
-python3 ${ROOT}/util/recursive_split_parallel.py ${ROOT}/${exp_dir}/memtraces "LOG MARKER"
+# python3 ${ROOT}/util/recursive_split_parallel.py ${ROOT}/${exp_dir}/memtraces "LOG MARKER"
 
 
 
