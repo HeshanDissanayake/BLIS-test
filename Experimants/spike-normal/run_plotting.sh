@@ -7,17 +7,34 @@ if [[ "$1" == "-list" ]]; then
                         --root "$ROOT/$exp/cycles" \
                         --list_params
 else
+    # python3 util/analyse_json.py \
+    #                     --root "$ROOT/$exp/analysed_data" \
+    #                     --x KC \
+    #                     --y l1-i_dcaches.demand_misses.total \
+    #                     --y_label "Misses" \
+    #                     --x_subplot  MR \
+    #                     --y_subplot NC \
+    #                     --output_dir "$ROOT/$exp/plots" \
+    #                     --global_scale  \
+    #                     --x_ticks_from_data \
+    #                     --secondary_x_formula "(KC * MR)/512" \
+    #                     --secondary_x_label "CAr"
+
     python3 util/analyse_json.py \
                         --root "$ROOT/$exp/cycles" \
                         --x KC \
                         --y 1024 \
+                        --y_label "Instructions" \
                         --x_subplot  MR \
                         --y_subplot NC \
                         --output_dir "$ROOT/$exp/plots" \
                         --global_scale  \
-                        --x_ticks_from_data
+                        --x_ticks_from_data \
+                        --secondary_x_formula "(KC * MR)/512" \
+                        --secondary_x_label "CAr"
 fi
 
+# analysed_data
 
 #   - l1-i_dcaches.bytes_from_memory
 #   - l1-i_dcaches.bytes_to_memory

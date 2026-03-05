@@ -31,6 +31,9 @@ def parse_args():
     parser.add_argument("--preview", action="store_true", help="Show the first plot in a window.")
     parser.add_argument("--global_scale", action="store_true", help="Use the same Y-axis scale for all plots based on global min/max.")
     parser.add_argument("--x_ticks_from_data", action="store_true", help="Set X-axis ticks to match data points exactly.")
+    parser.add_argument("--y_label", help="Custom label for the Y-axis. Defaults to the metric name(s).")
+    parser.add_argument("--secondary_x_formula", help="Formula to compute secondary X-axis values from primary X values. Use 'x' as the variable (e.g., 'x*x*2').")
+    parser.add_argument("--secondary_x_label", default="Secondary X", help="Label for the secondary X-axis (default: 'Secondary X').")
     
     return parser.parse_args()
 
@@ -389,13 +392,40 @@ def main():
                     ax.plot(sub_df[args.x], sub_df[plot_y], marker='o')
                 
                 ax.set_xlabel(args.x)
-                ax.set_ylabel("Scaled Value") # Generic label
+                ax.set_ylabel(args.y_label if args.y_label else "Scaled Value")
                 # ax.set_ylabel(args.y) # This line was overwriting the previous one and causing an issue if args.y is a list.
 
                 if args.x_ticks_from_data:
                     unique_x = sorted(sub_df[args.x].unique())
                     ax.set_xticks(unique_x)
                     ax.set_xticklabels(unique_x, rotation=90)
+
+                if args.secondary_x_formula:
+                    unique_x = sorted(sub_df[args.x].unique())
+                    ax2 = ax.twiny()
+                    ax2.set_xlim(ax.get_xlim())
+                    ax2.set_xticks(unique_x)
+                    secondary_labels = []
+                    for xv in unique_x:
+                        # Get the first row matching this x value to extract all dimension values
+                        row = sub_df[sub_df[args.x] == xv].iloc[0]
+                        # Build eval context with all available dimensions
+                        eval_ctx = {"x": xv, "np": np}
+                        for col in sub_df.columns:
+                            if col != plot_y and col != 'Metric':
+                                try:
+                                    eval_ctx[col] = float(row[col]) if not isinstance(row[col], str) else row[col]
+                                except (ValueError, TypeError):
+                                    eval_ctx[col] = row[col]
+                        try:
+                            val = eval(args.secondary_x_formula, {"__builtins__": {}}, eval_ctx)
+                            if isinstance(val, float) and val == int(val):
+                                val = int(val)
+                            secondary_labels.append(str(val))
+                        except Exception as e:
+                            secondary_labels.append("?")
+                    ax2.set_xticklabels(secondary_labels, rotation=90, fontsize=7)
+                    ax2.set_xlabel(args.secondary_x_label, fontsize=9)
 
                 if global_ylim:
                     ax.set_ylim(global_ylim)
