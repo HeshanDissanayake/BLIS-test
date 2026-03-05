@@ -9,6 +9,7 @@ while [[ "$#" -gt 0 ]]; do
         --KC) KC="$2"; shift ;;
         --MR) MR="$2"; shift ;;
         --EXP_DIR) EXP_DIR="$2"; shift ;;
+        --*) shift ;;  # ignore unknown named args
         *) echo "Unknown parameter passed: $1"; exit 1 ;;
     esac
     shift

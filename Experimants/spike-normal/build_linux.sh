@@ -14,8 +14,8 @@ cd "${exp_dir}" || exit 1
 
 # build all the requried blis executables and copy to sdk and build linux and copy to a dir
 cat config.json \
-| python3 ../../Experiment_tools/expand_config.py -i MC,NC,KC\
-| python3 ../../Experiment_tools/run_per_config.py ../util/build_linux_per_config.sh MC NC KC || exit 1
+| python3 ../../Experiment_tools/expand_config.py -i L1_SIZE,L1_LW,L1_ASC,MC,NC,KC,MR,NR \
+| python3 ../../Experiment_tools/run_per_config.py ../util/build_linux_per_config.sh MC NC KC MR NR || exit 1
 
 
 
