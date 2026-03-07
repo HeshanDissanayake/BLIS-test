@@ -24,4 +24,6 @@ experiment -15: sum of 12, 13, 14
 experiment -16: mr=4  nr=4  test Kc sensitivity with cycle count
 
 # differetiating mr and nr for all 1,2,4,6,8,12,16
-experiment -17: mr=1  nr=1  test Kc sensitivity with cycle count & memtrace
+experiment -17:  test Kc sensitivity with cycle count & memtrace
+
+experiment -18:  same as experiment -17 changed L1 parameters

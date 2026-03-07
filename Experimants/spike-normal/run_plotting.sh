@@ -12,8 +12,7 @@ else
                         --x KC \
                         --y l1-i_dcaches.demand_misses.write \
                         --y_label "write misses" \
-                        --x_subplot  MR \
-                        --y_subplot NC \
+                        --neglect_dims L1_SIZE L1_LW L1_ASC MR NR\
                         --output_dir "$ROOT/$exp/plots" \
                         --global_scale  \
                         --x_ticks_from_data \
@@ -32,6 +31,25 @@ else
     #                     --x_ticks_from_data \
     #                     --secondary_x_formula "(KC * MR)/512" \
     #                     --secondary_x_label "CAr"
+
+    # python3 util/heatmap_json.py \
+    # --root experiment-17/analysed_data \
+    # --x MR --y NR \
+    # --value \
+    # l1-i_dcaches.total_bytes_rw_mem \
+    # --annotate --global_scale \
+    # --output_dir experiment-17/plots \
+    # --x_ticks_from_data 
+
+    # python3 util/heatmap_json.py \
+    # --root experiment-17/cycles \
+    # --x MR --y NR \
+    # --value \
+    # 512 \
+    # --annotate --global_scale \
+    # --output_dir experiment-17/plots \
+    # --x_ticks_from_data 
+
 fi
 
 # analysed_data
@@ -44,12 +62,14 @@ fi
 #   - l1-i_dcaches.demand_fetches.read
 #   - l1-i_dcaches.demand_fetches.total
 #   - l1-i_dcaches.demand_fetches.write
+
 #   - l1-i_dcaches.demand_miss_rate.data
 #   - l1-i_dcaches.demand_miss_rate.instrn
 #   - l1-i_dcaches.demand_miss_rate.misc
 #   - l1-i_dcaches.demand_miss_rate.read
 #   - l1-i_dcaches.demand_miss_rate.total
 #   - l1-i_dcaches.demand_miss_rate.write
+
 #   - l1-i_dcaches.demand_misses.data
 #   - l1-i_dcaches.demand_misses.instrn
 #   - l1-i_dcaches.demand_misses.misc
@@ -57,6 +77,7 @@ fi
 #   - l1-i_dcaches.demand_misses.total
 #   - l1-i_dcaches.demand_misses.write
 #   - l1-i_dcaches.total_bytes_rw_mem
+
 #   - l2-ucache.bytes_from_memory
 #   - l2-ucache.bytes_to_memory
 #   - l2-ucache.demand_fetches.data
@@ -78,3 +99,4 @@ fi
 #   - l2-ucache.demand_misses.total
 #   - l2-ucache.demand_misses.write
 #   - l2-ucache.total_bytes_rw_mem
+

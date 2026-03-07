@@ -27,12 +27,13 @@ def main():
     parser.add_argument("--NC", required=True, help="NC value")
     parser.add_argument("--KC", required=True, help="KC value")
     parser.add_argument("--MR", required=True, help="MR value")
+    parser.add_argument("--NR", required=True, help="NR value")
     parser.add_argument("--EXP_DIR", required=True, help="Experiment directory path")
 
-    args = parser.parse_args()
+    args, _ = parser.parse_known_args()
 
     # Input: cycle count log file
-    log_path = os.path.join(args.EXP_DIR, "memtraces", f"MC{args.MC}", f"KC{args.KC}", f"NC{args.NC}", f"MR{args.MR}", f"cycle_count_MR{args.MR}")
+    log_path = os.path.join(args.EXP_DIR, "memtraces", f"MC{args.MC}", f"KC{args.KC}", f"NC{args.NC}", f"MR{args.MR}", f"NR{args.NR}", f"cycle_count_{args.MR}x{args.NR}")
 
     if not os.path.isfile(log_path):
         print(f"Error: Log file not found: {log_path}")
@@ -45,7 +46,7 @@ def main():
         return
 
     # Output: JSON file
-    out_dir = os.path.join(args.EXP_DIR, "cycles", f"MC{args.MC}", f"KC{args.KC}", f"NC{args.NC}", f"MR{args.MR}")
+    out_dir = os.path.join(args.EXP_DIR, "cycles", f"MC{args.MC}", f"KC{args.KC}", f"NC{args.NC}", f"MR{args.MR}", f"NR{args.NR}")
     os.makedirs(out_dir, exist_ok=True)
     out_path = os.path.join(out_dir, "cycle.json")
 

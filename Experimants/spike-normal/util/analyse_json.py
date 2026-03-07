@@ -34,6 +34,9 @@ def parse_args():
     parser.add_argument("--y_label", help="Custom label for the Y-axis. Defaults to the metric name(s).")
     parser.add_argument("--secondary_x_formula", help="Formula to compute secondary X-axis values from primary X values. Use 'x' as the variable (e.g., 'x*x*2').")
     parser.add_argument("--secondary_x_label", default="Secondary X", help="Label for the secondary X-axis (default: 'Secondary X').")
+    parser.add_argument("--dump_csv", help="If set, dump the collected data as a CSV file to this path. X values become rows, Y metrics become columns.")
+    parser.add_argument("--value", help="JSON metric for 2D pivot CSV: --x = rows, --y = columns, --value = cell values. Requires --dump_csv.")
+    parser.add_argument("--label", help="Prefix for pivot CSV column names. E.g. --label misses → columns named misses_4, misses_8, etc.")
     
     return parser.parse_args()
 
@@ -185,6 +188,34 @@ def main():
         print("Error: Argument --y is required (unless using --list_params).")
         sys.exit(1)
 
+    # --- 2D Pivot CSV mode (--value given) ---
+    # In this mode: --x = row dim, --y = col dim (both directory dims), --value = JSON metric
+    if args.value:
+        if not args.dump_csv:
+            print("Error: --value requires --dump_csv to specify the output path.")
+            sys.exit(1)
+        y_dim = args.y[0] if isinstance(args.y, list) else args.y
+        raw = collect_data(args.root, target_y_key=args.value)
+        if not raw:
+            print("No data found.")
+            sys.exit(1)
+        pv_df = pd.DataFrame(raw)
+        pv_df[args.value] = pd.to_numeric(pv_df[args.value], errors='coerce')
+        pivot = pv_df.pivot_table(index=args.x, columns=y_dim, values=args.value, aggfunc='mean')
+        # Reindex so all combinations appear (empty → NaN)
+        all_x = sorted(pv_df[args.x].dropna().unique())
+        all_y = sorted(pv_df[y_dim].dropna().unique())
+        pivot = pivot.reindex(index=all_x, columns=all_y)
+        pivot.index.name = args.x
+        pivot.columns.name = y_dim
+        if args.label:
+            pivot.columns = [f"{args.label}_{int(c) if float(c).is_integer() else c}" for c in pivot.columns]
+            pivot.columns.name = None
+        os.makedirs(os.path.dirname(os.path.abspath(args.dump_csv)), exist_ok=True)
+        pivot.to_csv(args.dump_csv)
+        print(f"Pivot CSV ({args.x} x {y_dim}) dumped to: {args.dump_csv}")
+        return
+
     # --- Data Collection ---
     # Convert args.y to list if not already (it should be list due to nargs='+')
     y_cols = args.y if isinstance(args.y, list) else [args.y]
@@ -223,6 +254,27 @@ def main():
         # Group and Average
         # We only aggregate the Y columns. Other columns (dimensions) become the index.
         df = df.groupby(group_dims)[y_cols].mean().reset_index()
+
+    # --- CSV Dump ---
+    if args.dump_csv:
+        # Pivot: x as rows, each y metric (optionally combined with other dims) as columns
+        other_dims = [c for c in df.columns if c not in y_cols and c != args.x]
+        if other_dims:
+            # Multi-column: combine other dims + metric name as column label
+            records = []
+            for _, row in df.iterrows():
+                rec = {args.x: row[args.x]}
+                suffix = "_".join(str(row[d]) for d in other_dims)
+                for y_col in y_cols:
+                    rec[f"{y_col}[{suffix}]"] = row[y_col]
+                records.append(rec)
+            csv_df = pd.DataFrame(records)
+        else:
+            csv_df = df[[args.x] + y_cols].copy()
+        csv_df = csv_df.set_index(args.x).sort_index()
+        os.makedirs(os.path.dirname(os.path.abspath(args.dump_csv)), exist_ok=True)
+        csv_df.to_csv(args.dump_csv)
+        print(f"CSV dumped to: {args.dump_csv}")
 
     # --- Data Scaling & Melting ---
     # We want to normalize each Y column and melt them into a single column for plotting

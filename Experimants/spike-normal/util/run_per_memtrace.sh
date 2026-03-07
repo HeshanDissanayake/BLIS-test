@@ -8,6 +8,7 @@ while [[ "$#" -gt 0 ]]; do
         --NC) NC="$2"; shift ;;
         --KC) KC="$2"; shift ;;
         --MR) MR="$2"; shift ;;
+        --NR) NR="$2"; shift ;;
         --EXP_DIR) EXP_DIR="$2"; shift ;;
         --*) shift ;;  # ignore unknown named args
         *) echo "Unknown parameter passed: $1"; exit 1 ;;
@@ -16,8 +17,8 @@ while [[ "$#" -gt 0 ]]; do
 done
 
 # Check if all parameters are set
-if [ -z "$MC" ] || [ -z "$NC" ] || [ -z "$KC" ] || [ -z "$MR" ] || [ -z "$EXP_DIR" ]; then
-    echo "Error: Missing required arguments. Usage: $0 --MC <val> --NC <val> --KC <val> --MR <val> --EXP_DIR <path>"
+if [ -z "$MC" ] || [ -z "$NC" ] || [ -z "$KC" ] || [ -z "$MR" ] || [ -z "$NR" ] || [ -z "$EXP_DIR" ]; then
+    echo "Error: Missing required arguments. Usage: $0 --MC <val> --NC <val> --KC <val> --MR <val> --NR <val> --EXP_DIR <path>"
     exit 1
 fi
 
@@ -27,7 +28,7 @@ EXP_TOOLS=${ROOT}/../../Experiment_tools
 UTIL=${ROOT}/../util
 
 # Run dinero for all the cache Configurations
-CACHE_CONFIG="MC${MC}/KC${KC}/NC${NC}/MR${MR}"
+CACHE_CONFIG="MC${MC}/KC${KC}/NC${NC}/MR${MR}/NR${NR}/"
 
 cat config.json \
 | python3 ${EXP_TOOLS}/expand_config.py -i L1_SIZE,L1_LW,L1_ASC \

@@ -2,7 +2,8 @@
 exp_dir=$1
 
 ROOT=$(pwd)
-SPIKE_DIR=/home/heshds/working_dir/cva6-sdk/riscv-isa-sim/build/spike
+# SPIKE_DIR=/home/heshds/working_dir/cva6-sdk/riscv-isa-sim/build/spike
+SPIKE_DIR=spike
 EXP_TOOLS=${ROOT}/../Experiment_tools
 IMG_DIR=${ROOT}/images
 UTIL=${ROOT}/util
@@ -20,7 +21,7 @@ cat config.json \
 | python3 ${EXP_TOOLS}/run_per_config.py  ${UTIL}/spike.expect  MC NC KC MR NR N_start N_end N_step -a "${SPIKE_DIR}" -a "${IMG_DIR}" 
 
      
-# python3 ${ROOT}/util/recursive_split_parallel.py ${ROOT}/${exp_dir}/memtraces "LOG MARKER"
+python3 ${ROOT}/util/recursive_split_parallel.py ${ROOT}/${exp_dir}/memtraces "LOG MARKER"
 
 
 

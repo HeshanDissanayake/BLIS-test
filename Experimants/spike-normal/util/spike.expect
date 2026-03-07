@@ -23,12 +23,23 @@ cd "memtraces/MC${mc}/KC${kc}/NC${nc}/MR${mr}/NR${nr}"
 set spike [lindex $argv 8]
 set img_dir [lindex $argv 9]
 
+# Read FORCE_RUN from environment variable, default to false
+if {[info exists env(FORCE_RUN)]} {
+    set force_run $env(FORCE_RUN)
+} else {
+    set force_run "false"
+}
+
 
 set cache_profile "MC_${mc}_KC_${kc}_NC_${nc}"
 set reg_size "${mr}x${nr}"
 set img "${img_dir}/${cache_profile}_${reg_size}.spike"
 
-
+# If cycle_count file for this reg_size already exists and FORCE_RUN is not set, skip
+if {$force_run ne "true" && [file exists "${reg_size}"]} {
+    puts "${reg_size} already exists, skipping. (use FORCE_RUN=true to override)"
+    exit 0
+}
 
 spawn $spike --memtrace=${reg_size} $img
 
