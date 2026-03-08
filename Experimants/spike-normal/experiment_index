@@ -27,3 +27,5 @@ experiment -16: mr=4  nr=4  test Kc sensitivity with cycle count
 experiment -17:  test Kc sensitivity with cycle count & memtrace
 
 experiment -18:  same as experiment -17 changed L1 parameters
+
+experiment -19:  same as experiment -17 ,now the KC formula is changed to have CAr +CBr = WL1

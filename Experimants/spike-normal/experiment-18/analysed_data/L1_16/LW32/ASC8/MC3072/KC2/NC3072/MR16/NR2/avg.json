@@ -1,60 +1,60 @@
 {
     "l1-i_dcaches": {
         "demand_fetches": {
-            "total": 0.0,
+            "total": 186254632.5,
             "instrn": 0.0,
-            "data": 0.0,
-            "read": 0.0,
-            "write": 0.0,
+            "data": 186254632.5,
+            "read": 125261529.5,
+            "write": 60993103.0,
             "misc": 0.0
         },
         "demand_misses": {
-            "total": 0.0,
+            "total": 39149641.0,
             "instrn": 0.0,
-            "data": 0.0,
-            "read": 0.0,
-            "write": 0.0,
+            "data": 39149641.0,
+            "read": 22098165.0,
+            "write": 17051476.0,
             "misc": 0.0
         },
         "demand_miss_rate": {
-            "total": 0.0,
+            "total": 0.1051,
             "instrn": 0.0,
-            "data": 0.0,
-            "read": 0.0,
-            "write": 0.0,
+            "data": 0.1051,
+            "read": 0.0882,
+            "write": 0.1398,
             "misc": 0.0
         },
-        "bytes_from_memory": 0.0,
-        "bytes_to_memory": 0.0,
-        "total_bytes_rw_mem": 0.0
+        "bytes_from_memory": 1252788512.0,
+        "bytes_to_memory": 552615216.0,
+        "total_bytes_rw_mem": 1805403728.0
     },
     "l2-ucache": {
         "demand_fetches": {
-            "total": 0.0,
+            "total": 56418866.5,
             "instrn": 0.0,
-            "data": 0.0,
-            "read": 0.0,
-            "write": 0.0,
+            "data": 56418866.5,
+            "read": 39149641.0,
+            "write": 17269225.5,
             "misc": 0.0
         },
         "demand_misses": {
-            "total": 0.0,
+            "total": 19735049.0,
             "instrn": 0.0,
-            "data": 0.0,
-            "read": 0.0,
-            "write": 0.0,
+            "data": 19735049.0,
+            "read": 19674100.5,
+            "write": 60948.5,
             "misc": 0.0
         },
         "demand_miss_rate": {
-            "total": 0.0,
+            "total": 0.1749,
             "instrn": 0.0,
-            "data": 0.0,
-            "read": 0.0,
-            "write": 0.0,
+            "data": 0.1749,
+            "read": 0.25125,
+            "write": 0.00175,
             "misc": 0.0
         },
-        "bytes_from_memory": 0.0,
-        "bytes_to_memory": 0.0,
-        "total_bytes_rw_mem": 0.0
+        "bytes_from_memory": 1263043136.0,
+        "bytes_to_memory": 1089487328.0,
+        "total_bytes_rw_mem": 2352530464.0
     }
 }
