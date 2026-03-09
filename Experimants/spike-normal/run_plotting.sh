@@ -36,7 +36,7 @@ else
     --root $ROOT/$exp/analysed_data \
     --x MR --y NR \
     --value \
-    l1-i_dcaches.demand_misses.total \
+    "2**ceil(log(MR*NR+NR+MR, 2))" \
     --annotate --global_scale \
     --output_dir $ROOT/$exp/plots \
     --x_ticks_from_data 
