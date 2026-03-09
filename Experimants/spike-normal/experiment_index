@@ -30,8 +30,10 @@ experiment -18:  same as experiment -17 changed L1 parameters
 
 experiment -19:  same as experiment -17 ,now the KC formula is changed to have CAr +CBr = WL1
 
-#####################
+#!!!!!!!!!!!!!!!!!!!!!!!!
 retire experiment 16- 19 since KC equation is wrong.
 
-experiment -20: 
+# mrxnr comination for mat size 512 with corrected KC formula
+experiment -20: L1 size 32KB, LW1 = 16, ASC=8
 
+experiment -21: L1 size 32KB, LW1 = 32, ASC=16 ,  keep the same cache size as exp-20 but changing Lw and ASC
