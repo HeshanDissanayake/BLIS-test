@@ -37,3 +37,5 @@ retire experiment 16- 19 since KC equation is wrong.
 experiment -20: L1 size 32KB, LW1 = 16, ASC=8
 
 experiment -21: L1 size 32KB, LW1 = 32, ASC=16 ,  keep the same cache size as exp-20 but changing Lw and ASC
+
+experiment -22: testing fine changed mc and nc
