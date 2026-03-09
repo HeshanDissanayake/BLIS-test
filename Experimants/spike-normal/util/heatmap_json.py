@@ -21,6 +21,7 @@ import re
 import json
 import argparse
 import sys
+import math
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -64,6 +65,60 @@ def flatten_json(y):
     return out
 
 
+def is_formula(value_str):
+    """Check if the value string looks like a formula (contains operators or parentheses)."""
+    return any(op in value_str for op in ['+', '-', '*', '/', '(', ')'])
+
+
+def sanitize_filename(filename):
+    """Remove or replace characters invalid in filenames."""
+    # Replace problematic characters with underscores
+    invalid_chars = ['/', '\\', ':', '*', '?', '"', '<', '>', '|', '(', ')']
+    for char in invalid_chars:
+        filename = filename.replace(char, '_')
+    # Clean up multiple underscores
+    while '__' in filename:
+        filename = filename.replace('__', '_')
+    return filename
+
+
+def evaluate_formula(formula, record, json_data):
+    """
+    Evaluate a formula using directory dimensions and/or JSON values.
+    Supports math functions: floor, ceil, sqrt, sin, cos, log, etc.
+    Example: 'KC*2' or 'MC+KC' or 'floor(NR*MR+MR+NR)' or 'stats.miss_rate*100'
+    """
+    # Start with a copy of the record (directory dimensions)
+    context = record.copy()
+    
+    # Add flattened JSON values to context
+    if json_data:
+        flattened = flatten_json(json_data)
+        context.update(flattened)
+    
+    # Add math functions to context
+    context['floor'] = math.floor
+    context['ceil'] = math.ceil
+    context['sqrt'] = math.sqrt
+    context['sin'] = math.sin
+    context['cos'] = math.cos
+    context['tan'] = math.tan
+    context['log'] = math.log
+    context['log10'] = math.log10
+    context['exp'] = math.exp
+    context['abs'] = abs
+    context['pow'] = pow
+    context['round'] = round
+    
+    try:
+        # Use eval with restricted namespace for safety
+        result = eval(formula, {"__builtins__": {}}, context)
+        return result if result is not None else np.nan
+    except (KeyError, NameError, TypeError, ZeroDivisionError, ValueError) as e:
+        # Missing variable or calculation error
+        return np.nan
+
+
 def collect_data(root_dir, target_value_key=None, list_mode=False):
     data_records = []
 
@@ -103,7 +158,15 @@ def collect_data(root_dir, target_value_key=None, list_mode=False):
                     return list(record.keys()), list(flattened.keys())
 
                 if target_value_key:
-                    val = get_json_value(json_data, target_value_key)
+                    # Check if it's a formula
+                    if is_formula(target_value_key):
+                        val = evaluate_formula(target_value_key, record, json_data)
+                    # Check if it's a directory dimension
+                    elif target_value_key in record:
+                        val = record[target_value_key]
+                    else:
+                        # Try to get it from JSON
+                        val = get_json_value(json_data, target_value_key)
                     record[target_value_key] = val if val is not None else np.nan
 
                 data_records.append(record)
@@ -127,7 +190,7 @@ def parse_args():
     parser.add_argument("--root",    required=True, help="Base directory to scan.")
     parser.add_argument("--x",       help="Directory dimension mapped to heatmap columns.")
     parser.add_argument("--y",       help="Directory dimension mapped to heatmap rows.")
-    parser.add_argument("--value",   help="JSON metric used as heatmap cell color (dot notation supported, e.g. 'stats.miss_rate').")
+    parser.add_argument("--value",   help="Heatmap cell color value: directory dimension (e.g. 'KC'), JSON metric (e.g. 'stats.miss_rate'), or formula (e.g. 'KC*2', 'MC+KC/2').")
 
     # Subplot grid
     parser.add_argument("--x_subplot", help="Dimension to map to subplot columns.")
@@ -204,7 +267,7 @@ def main():
     os.makedirs(args.output_dir, exist_ok=True)
 
     value_label   = args.value_label if args.value_label else args.value
-    base_filename = f"heatmap_{args.value.replace('.', '_')}"
+    base_filename = f"heatmap_{sanitize_filename(args.value)}"
 
     print(f"Generating plot: {base_filename}...")
 
