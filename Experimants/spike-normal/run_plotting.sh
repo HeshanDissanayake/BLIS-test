@@ -12,7 +12,7 @@ else
     #                     --x KC \
     #                     --y l1-i_dcaches.demand_misses.write \
     #                     --y_label "write misses" \
-    #                     --neglect_dims L1_SIZE L1_LW L1_ASC MR NR\
+    #                     --neglect_dims L1_SIZE./ru     L1_LW L1_ASC MR NR\
     #                     --output_dir "$ROOT/$exp/plots" \
     #                     --global_scale  \
     #                     --x_ticks_from_data \
@@ -36,7 +36,7 @@ else
     --root $ROOT/$exp/analysed_data \
     --x MR --y NR \
     --value \
-    l1-i_dcaches.demand_fetches.read \
+    l1-i_dcaches.demand_misses.total \
     --annotate --global_scale \
     --output_dir $ROOT/$exp/plots \
     --x_ticks_from_data 
