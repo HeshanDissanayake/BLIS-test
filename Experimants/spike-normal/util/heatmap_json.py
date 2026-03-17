@@ -82,12 +82,21 @@ def sanitize_filename(filename):
     return filename
 
 
-def evaluate_formula(formula, record, json_data):
+def evaluate_formula(formula, record, json_data, allow_missing=False):
     """
     Evaluate a formula using directory dimensions and/or JSON values.
     Supports math functions: floor, ceil, sqrt, sin, cos, log, etc.
     Example: 'KC*2' or 'MC+KC' or 'floor(NR*MR+MR+NR)' or 'stats.miss_rate*100'
+    
+    Args:
+        formula: The formula string to evaluate
+        record: Dictionary of directory dimensions
+        json_data: Dictionary of JSON data
+        allow_missing: If False, raises error on missing variables. If True, returns np.nan
     """
+    import ast
+    import re
+    
     # Start with a copy of the record (directory dimensions)
     context = record.copy()
     
@@ -97,29 +106,53 @@ def evaluate_formula(formula, record, json_data):
         context.update(flattened)
     
     # Add math functions to context
-    context['floor'] = math.floor
-    context['ceil'] = math.ceil
-    context['sqrt'] = math.sqrt
-    context['sin'] = math.sin
-    context['cos'] = math.cos
-    context['tan'] = math.tan
-    context['log'] = math.log
-    context['log10'] = math.log10
-    context['exp'] = math.exp
-    context['abs'] = abs
-    context['pow'] = pow
-    context['round'] = round
+    math_funcs = {
+        'floor': math.floor,
+        'ceil': math.ceil,
+        'sqrt': math.sqrt,
+        'sin': math.sin,
+        'cos': math.cos,
+        'tan': math.tan,
+        'log': math.log,
+        'log10': math.log10,
+        'exp': math.exp,
+        'abs': abs,
+        'pow': pow,
+        'round': round,
+    }
+    context.update(math_funcs)
+    
+    # Extract variable names from formula (identifiers that aren't math functions)
+    # Handle both simple variables (KC, MR) and JSON paths with hyphens/dots (l1-i_dcaches.bytes_to_memory)
+    # Match: word chars OR word chars with embedded hyphens/dots if they contain at least one dot
+    variable_pattern = r'\b([a-zA-Z_][a-zA-Z0-9_.-]*(?:\.[a-zA-Z0-9_.-]+)*|[a-zA-Z_][a-zA-Z0-9_]*)\b'
+    all_identifiers = set(re.findall(variable_pattern, formula))
+    
+    # Filter to get only variables (not math functions)
+    required_vars = all_identifiers - set(math_funcs.keys())
+    
+    # Check for missing variables
+    missing_vars = required_vars - set(context.keys())
+    
+    if missing_vars and not allow_missing:
+        available_dir = set(record.keys())
+        available_json = set(flatten_json(json_data).keys()) if json_data else set()
+        raise ValueError(
+            f"Formula '{formula}' references undefined variable(s): {', '.join(sorted(missing_vars))}\n"
+            f"Available directory dimensions: {', '.join(sorted(available_dir)) or '(none)'}\n"
+            f"Available JSON metrics: {', '.join(sorted(available_json)) or '(none)'}"
+        )
     
     try:
         # Use eval with restricted namespace for safety
         result = eval(formula, {"__builtins__": {}}, context)
         return result if result is not None else np.nan
-    except (KeyError, NameError, TypeError, ZeroDivisionError, ValueError) as e:
-        # Missing variable or calculation error
-        return np.nan
+    except (TypeError, ZeroDivisionError, ValueError) as e:
+        # Calculation error (not missing variable)
+        raise ValueError(f"Error evaluating formula '{formula}': {e}")
 
 
-def collect_data(root_dir, target_value_key=None, list_mode=False):
+def collect_data(root_dir, target_value_key=None, target_formula=None, list_mode=False):
     data_records = []
 
     if not os.path.exists(root_dir):
@@ -157,17 +190,31 @@ def collect_data(root_dir, target_value_key=None, list_mode=False):
                     flattened = flatten_json(json_data)
                     return list(record.keys()), list(flattened.keys())
 
-                if target_value_key:
-                    # Check if it's a formula
-                    if is_formula(target_value_key):
-                        val = evaluate_formula(target_value_key, record, json_data)
-                    # Check if it's a directory dimension
-                    elif target_value_key in record:
-                        val = record[target_value_key]
+                # Determine what to store as the value
+                stored_value_key = target_formula if target_formula else target_value_key
+                
+                if stored_value_key:
+                    if target_formula:
+                        # Use formula
+                        try:
+                            val = evaluate_formula(target_formula, record, json_data, allow_missing=False)
+                        except ValueError as ve:
+                            print(f"Error: {ve}")
+                            sys.exit(1)
                     else:
-                        # Try to get it from JSON
-                        val = get_json_value(json_data, target_value_key)
-                    record[target_value_key] = val if val is not None else np.nan
+                        # Use simple value (directory dimension or JSON)
+                        if target_value_key in record:
+                            val = record[target_value_key]
+                        else:
+                            val = get_json_value(json_data, target_value_key)
+                            if val is None:
+                                available_dir = set(record.keys())
+                                available_json = set(flatten_json(json_data).keys()) if json_data else set()
+                                print(f"Error: Cannot resolve '{target_value_key}'")
+                                print(f"Available directory dimensions: {', '.join(sorted(available_dir)) or '(none)'}")
+                                print(f"Available JSON metrics: {', '.join(sorted(available_json)) or '(none)'}")
+                                sys.exit(1)
+                    record[stored_value_key] = val if val is not None else np.nan
 
                 data_records.append(record)
 
@@ -190,7 +237,8 @@ def parse_args():
     parser.add_argument("--root",    required=True, help="Base directory to scan.")
     parser.add_argument("--x",       help="Directory dimension mapped to heatmap columns.")
     parser.add_argument("--y",       help="Directory dimension mapped to heatmap rows.")
-    parser.add_argument("--value",   help="Heatmap cell color value: directory dimension (e.g. 'KC'), JSON metric (e.g. 'stats.miss_rate'), or formula (e.g. 'KC*2', 'MC+KC/2').")
+    parser.add_argument("--value",   help="Heatmap cell color value: directory dimension (e.g. 'KC') or JSON metric (e.g. 'stats.miss_rate').")
+    parser.add_argument("--formula", help="Formula to compute cell color from --value and other variables (e.g. 'KC*2', 'floor(value*MR)').")
 
     # Subplot grid
     parser.add_argument("--x_subplot", help="Dimension to map to subplot columns.")
@@ -248,26 +296,29 @@ def main():
             sys.exit(1)
 
     # ---- Collect ----
-    records = collect_data(args.root, target_value_key=args.value)
+    records = collect_data(args.root, target_value_key=args.value, target_formula=args.formula)
     if not records:
         print("No data found.")
         sys.exit(1)
 
     df = pd.DataFrame(records)
-    df[args.value] = pd.to_numeric(df[args.value], errors='coerce')
+    # Determine which key to use for the dataframe column
+    value_col = args.formula if args.formula else args.value
+    df[value_col] = pd.to_numeric(df[value_col], errors='coerce')
     print(f"Loaded {len(df)} records.")
 
     # ---- Global color scale ----
     global_vmin = global_vmax = None
     if args.global_scale:
-        global_vmin = df[args.value].min()
-        global_vmax = df[args.value].max()
+        global_vmin = df[value_col].min()
+        global_vmax = df[value_col].max()
         print(f"Global color scale: vmin={global_vmin:.4g}, vmax={global_vmax:.4g}")
 
     os.makedirs(args.output_dir, exist_ok=True)
 
-    value_label   = args.value_label if args.value_label else args.value
-    base_filename = f"heatmap_{sanitize_filename(args.value)}"
+    value_label   = args.value_label if args.value_label else (args.formula if args.formula else args.value)
+    base_filename_key = args.formula if args.formula else args.value
+    base_filename = f"heatmap_{sanitize_filename(base_filename_key)}"
 
     print(f"Generating plot: {base_filename}...")
 
@@ -308,7 +359,7 @@ def main():
             try:
                 pivot = sub.pivot_table(
                     index=args.y, columns=args.x,
-                    values=args.value, aggfunc='mean'
+                    values=value_col, aggfunc='mean'
                 )
                 # Reindex to ALL unique x/y values so fully-empty rows/cols aren't dropped
                 all_x = sorted(sub[args.x].dropna().unique())

@@ -36,11 +36,13 @@ else
     --root $ROOT/$exp/analysed_data \
     --x MR --y NR \
     --value \
-    "2**ceil(log(MR*NR+NR+MR, 2))" \
+    l1-i_dcaches.demand_misses.total \
     --annotate --global_scale \
     --output_dir $ROOT/$exp/plots \
     --x_ticks_from_data 
 
+
+# "2**ceil(log(MR*NR+NR+MR, 2))"
     # python3 util/heatmap_json.py \
     # --root $ROOT/$exp/cycles \
     # --x MR --y NR \
