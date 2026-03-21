@@ -36,7 +36,8 @@ else
     --root $ROOT/$exp/analysed_data \
     --x MR --y NR \
     --value \
-    l1-i_dcaches.demand_misses.total \
+    l1-i_dcaches.demand_fetches.total \
+     \
     --annotate --global_scale \
     --output_dir $ROOT/$exp/plots \
     --x_ticks_from_data 
