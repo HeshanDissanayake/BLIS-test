@@ -1,0 +1,73 @@
+spawn screen /dev/ttyUSB0 115200
+[!p[?3;4l[4l>[?1049h[22;0;0t[4l[?1h=[0m(B[1;32r[H[2J[31B[7mCannot open line '/dev/ttyUSB0' for R/W: Device or resource busy[27m  [65C[1K[H[31B[7mSorry, could not find a PTY or TTY.[27m  [36C[1K[H[?1l>[32;1H
+[?1049l[23;0;0t[screen is terminating]
+spawn screen /dev/ttyUSB0 115200
+
+[!p[?3;4l[4l>[?1049h[22;0;0t[4l[?1h=[0m(B[1;32r[H[2J[H[2J
+# wget http://10.65.196.56:8000/MC_3072_KC_1024_NC_3072/gemm_blis_2x2 -O MC_3072
+_KC_1024_NC_3072_gemm_blis_2x2
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'MC_3072_KC_1024_NC_3072_gemm_blis_2x2'
+'MC_3072_KC_1024_NC_3072_gemm_blis_2x2' saved
+# chmod +x MC_3072_KC_1024_NC_3072_gemm_blis_2x2
+# ./MC_3072_KC_1024_NC_3072_gemm_blis_2x2 128 128 128
+inited
+obj_created
+gemm end
+N,128,cycles,43792774,instret,12685967
+done
+wget http://10.65.196.56:8000/MC_3072_KC_512_NC_3072/gemm_blis_2x4 -O MC_3072_KC_512_NC_3072_gemm_blis_2x4
+# wget http://10.65.196.56:8000/MC_3072_KC_512_NC_3072/gemm_blis_2x4 -O MC_3072_
+KC_512_NC_3072_gemm_blis_2x4
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'MC_3072_KC_512_NC_3072_gemm_blis_2x4'
+'MC_3072_KC_512_NC_3072_gemm_blis_2x4' saved
+# chmod +x MC_3072_KC_512_NC_3072_gemm_blis_2x4
+# ./MC_3072_KC_512_NC_3072_gemm_blis_2x4 128 128 128
+inited
+obj_created
+gemm end
+N,128,cycles,31638300,instret,9189913
+done
+wget http://10.65.196.56:8000/MC_3072_KC_512_NC_3072/gemm_blis_2x6 -O MC_3072_KC# wget http://10.65.196.56:8000/MC_3072_KC_512_NC_3072/gemm_blis_2x6 -O MC_3072_
+KC_512_NC_3072_gemm_blis_2x6
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'MC_3072_KC_512_NC_3072_gemm_blis_2x6'
+'MC_3072_KC_512_NC_3072_gemm_blis_2x6' saved
+# chmod +x MC_3072_KC_512_NC_3072_gemm_blis_2x6
+# ./MC_3072_KC_512_NC_3072_gemm_blis_2x6 128 128 128
+inited
+obj_created
+gemm end
+N,128,cycles,29007294,instret,8546667
+done
+wget http://10.65.196.56:8000/MC_3072_KC_256_NC_3072/gemm_blis_2x8 -O MC_3# wget http://10.65.196.56:8000/MC_3072_KC_256_NC_3072/gemm_blis_2x8 -O MC_3072_
+KC_256_NC_3072_gemm_blis_2x8
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'MC_3072_KC_256_NC_3072_gemm_blis_2x8'
+'MC_3072_KC_256_NC_3072_gemm_blis_2x8' saved
+# chmod +x MC_3072_KC_256_NC_3072_gemm_blis_2x8
+# ./MC_3072_KC_256_NC_3072_gemm_blis_2x8 128 128 128
+inited
+obj_created
+gemm end
+N,128,cycles,26336944,instret,7653886
+done
+wget http://10.65.196.56:8000/MC_3072_KC_256_NC_3072/gemm_blis_2x12 -O MC_3072_KC_256_NC_3072_gemm_blis_2x12
+# wget http://10.65.196.56:8000/MC_3072_KC_256_NC_3072/gemm_blis_2x12 -O MC_3072
+_KC_256_NC_3072_gemm_blis_2x12
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'MC_3072_KC_256_NC_3072_gemm_blis_2x12'
+'MC_3072_KC_256_NC_3072_gemm_blis_2x12' saved
+# chmod +x MC_3072_KC_256_NC_3072_gemm_blis_2x12
+# ./MC_3072_KC_256_NC_3072_gemm_blis_2x12 128 128 128
+inited
+obj_created
+gemm end
+N,128,cycles,26457713,instret,7680398
+done
+wget http://10.65.196.56:8000/MC_3072_KC_16_NC_3072/gemm_blis_2x16 -O MC_3072_KC_16_NC_3072_gemm_blis_2x16
+# wget http://10.65.196.56:8000/MC_3072_KC_16_NC_3072/gemm_blis_2x16 -O MC_3072_
+KC_16_NC_3072_gemm_blis_2x16
+Connecting to 10.65.196.56:8000 (10.65.196.56:8000)
+saving to 'MC_3072_KC_16_NC_3072_gemm_blis_2x16'

@@ -2,6 +2,7 @@ spike/install64
 Experimants/spike-flexicas/prebuilt_spikes
 Experimants/spike-flexicas/experiment-1
 Experimants/spike-normal/.venv
+Experimants/*/.venv
 
 Experimants/spike-normal/experiment-*/memtraces
 Experimants/spike-normal/experiment-*/install64

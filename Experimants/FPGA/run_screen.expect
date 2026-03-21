@@ -1,0 +1,102 @@
+#!/usr/bin/expect
+# Set timeout (in seconds)
+set timeout -1
+
+# Check arguments
+if {$argc != 1} {
+    puts "Usage: $argv0 <directory>"
+    exit 1
+}
+
+set work_dir [lindex $argv 0]
+
+# Enable logging
+
+# Define variables for the wget command
+set host "10.65.196.56:8000"
+set exp_tools "../Experiment_tools"
+set parser_script "./parse_config_for_expect.py"
+set config_file "$work_dir/config.json"
+set mat_size 512
+log_file -noappend "$work_dir/screen_session_$mat_size.log"
+
+# Check if config.json exists
+if {![file exists $config_file]} {
+    puts "Error: $config_file not found."
+    exit 1
+}
+
+# Run the command pipeline to generate the file list
+# Note: Using catch to handle potential execution errors
+if {[catch {exec sh -c "cat $config_file | python3 $exp_tools/expand_config.py -i L1_SIZE,L1_LW,L1_ASC,MC,NC,KC,MR,NR,N_start,N_end,N_step | python3 $parser_script"} file_list]} {
+    puts "Error generating file list: $file_list"
+    exit 1
+}
+
+# Spawn the screen command
+spawn screen /dev/ttyUSB0 115200
+
+# check if screen spawn failed
+expect {
+    -re "\[Ss]creen is terminating" {
+        puts "Screen failed to start. Killing process using /dev/ttyUSB0..."
+        # Use fuser to get ID and kill process
+        catch {exec fuser -k /dev/ttyUSB0}
+        sleep 1
+        # Retry spawning
+        spawn screen /dev/ttyUSB0 115200
+    }
+    timeout {
+        # If no error within timeout, assume success
+    }
+}
+
+# Send a newline to ensure prompt is active
+send "\r"
+expect "#"
+
+# Loop through the list of files to download
+foreach line [split $file_list "\n"] {
+    if {[string length $line] == 0} { continue }
+    
+    set parts [split $line " "]
+    set filename [lindex $parts 0]
+    set outfile [lindex $parts 1]
+    
+    puts "Downloading $filename -> $outfile"
+    
+    # Send the wget command to the screen session
+    send "wget http://$host/$filename -O $outfile\r"
+    
+    # Wait for download to complete
+    expect {
+        "saved" { puts "Download successful" }
+        timeout { puts "Download timed out"; exit 1 }
+    }
+    expect "#"
+
+    # Start power measurement via HTTP request
+    set curl_filename [string map {/ _} $filename]
+    catch {exec curl -s "http://10.17.71.8:8000/start/start_power/$curl_filename"}
+
+    # Make executable and run
+    send "chmod +x $outfile\r"
+    expect "#"
+    send "./$outfile $mat_size $mat_size $mat_size\r"
+    
+    # Wait for execution to finish
+    expect "done"
+    expect "#"
+
+    # Stop power measurement
+    catch {exec curl -s "http://10.17.71.8:8000/stop/start_power/"}
+}
+
+send "echo All files downloaded\r"
+expect "#"
+
+send "done"
+
+
+# Interact with the process (hand over control to the user)
+interact
