@@ -36,12 +36,14 @@ else
     --root $ROOT/$exp/analysed_data \
     --x MR --y NR \
     --value KC \
-    --formula "(max(1,ceil((8*MR)/(MR+NR)))*256*16)/(MR*8)" \
-    --int_annotate \
     --annotate --global_scale \
     --output_dir $ROOT/$exp/plots \
-    --x_ticks_from_data 
+    --x_ticks_from_data \
+    --int_annotate
 
+    #  \
+
+    # --formula "(max(1,ceil((8*MR)/(MR+NR)))*256*16)/(MR*8)" \
 # --formula "max(0,ceil((MR*NR+NR+MR)/32))*32" \
 #  --formula "2**ceil(log(MR*NR+NR+MR, 2))" \
 
