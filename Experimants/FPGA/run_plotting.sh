@@ -32,14 +32,16 @@ else
     #                     --secondary_x_formula "(KC * MR)/512" \
     #                     --secondary_x_label "CAr"
 
-    python3 util/heatmap_json.py \
+    python3 ../spike-normal/util/heatmap_json.py \
     --root $ROOT/$exp/analysed_data \
     --x MR --y NR \
-    --value \
-    energy.0x44 \
+    --value energy.0x45\
+    --formula ""
     --annotate --global_scale \
     --output_dir $ROOT/$exp/plots \
-    --x_ticks_from_data 
+    --x_ticks_from_data \
+    --one_decimal \
+    --tens_scale
 
     # python3 util/3D_heatmap_json.py \
     # --root $ROOT/$exp/analysed_data \

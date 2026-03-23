@@ -119,6 +119,8 @@ def evaluate_formula(formula, record, json_data, allow_missing=False):
         'abs': abs,
         'pow': pow,
         'round': round,
+        'min': min,  # Supported built-in
+        'max': max,  # Supported built-in
     }
     context.update(math_funcs)
     
@@ -143,13 +145,38 @@ def evaluate_formula(formula, record, json_data, allow_missing=False):
             f"Available JSON metrics: {', '.join(sorted(available_json)) or '(none)'}"
         )
     
+    # Prepare formula for eval() by replacing special keys (with dots/hyphens) with safe identifiers
+    # We strip out variables that are just math functions or not in context (if allow_missing=True)
+    eval_context = context.copy()
+    eval_formula = formula
+
+    # Sort variables by length (descending) so we replace longer matches first 
+    # (e.g. replace 'stats.miss_rate' before 'mr' if both exist)
+    sorted_vars = sorted(required_vars, key=len, reverse=True)
+    
+    for var in sorted_vars:
+        if var in context:
+            # Generate a safe Python identifier
+            # Hex digest is safest to avoid collisions with existing vars or other replacements
+            import hashlib
+            safe_id = "v_" + hashlib.md5(var.encode()).hexdigest()
+            
+            # Map the safe ID to the actual value in the context
+            eval_context[safe_id] = context[var]
+            
+            # Replace the variable in the formula with the safe ID
+            # Use lookbehind/lookahead to ensure we match whole 'words' as defined by our loose variable pattern
+            # Note: We must escape the var string because it contains dots/special chars
+            pattern = r'(?<![a-zA-Z0-9_.-])' + re.escape(var) + r'(?![a-zA-Z0-9_.-])'
+            eval_formula = re.sub(pattern, safe_id, eval_formula)
+
     try:
         # Use eval with restricted namespace for safety
-        result = eval(formula, {"__builtins__": {}}, context)
+        result = eval(eval_formula, {"__builtins__": {}}, eval_context)
         return result if result is not None else np.nan
-    except (TypeError, ZeroDivisionError, ValueError) as e:
+    except (TypeError, ZeroDivisionError, ValueError, SyntaxError) as e:
         # Calculation error (not missing variable)
-        raise ValueError(f"Error evaluating formula '{formula}': {e}")
+        raise ValueError(f"Error evaluating formula '{formula}' (mapped to '{eval_formula}'): {e}")
 
 
 def collect_data(root_dir, target_value_key=None, target_formula=None, list_mode=False):
@@ -260,6 +287,12 @@ def parse_args():
                         help="Matplotlib colormap name (default: 'viridis').")
     parser.add_argument("--annotate",     action="store_true",
                         help="Annotate each heatmap cell with its numeric value.")
+    parser.add_argument("--int_annotate", action="store_true",
+                        help="Annotate each heatmap cell with its integer value.")
+    parser.add_argument("--one_decimal", action="store_true",
+                        help="Annotate each heatmap cell with one decimal place.")
+    parser.add_argument("--tens_scale", action="store_true",
+                        help="Scale values to be displayed in tens (XX.Y) by reducing the exponent by 1.")
     parser.add_argument("--fmt",          default=".2f",
                         help="Python format string for cell annotations (default: '.2f').")
     parser.add_argument("--x_ticks_from_data", action="store_true",
@@ -290,10 +323,15 @@ def main():
         return
 
     # ---- Validation ----
-    for flag, name in [("--x", args.x), ("--y", args.y), ("--value", args.value)]:
-        if not name:
-            print(f"Error: {flag} is required (unless using --list_params).")
-            sys.exit(1)
+    if not args.x:
+        print("Error: --x is required.")
+        sys.exit(1)
+    if not args.y:
+        print("Error: --y is required.")
+        sys.exit(1)
+    if not args.value and not args.formula:
+        print("Error: Either --value or --formula is required.")
+        sys.exit(1)
 
     # ---- Collect ----
     records = collect_data(args.root, target_value_key=args.value, target_formula=args.formula)
@@ -330,12 +368,12 @@ def main():
 
     fig, axes = plt.subplots(
         nrows=nrows, ncols=ncols,
-        figsize=(5 * ncols + 2, 4 * nrows + 1),
+        figsize=(8 * ncols + 2, 6 * nrows + 1),
         squeeze=False
     )
     fig.suptitle(
         f"{value_label}  |  rows={args.y}  cols={args.x}\n({base_filename})",
-        fontsize=10
+        fontsize=14
     )
 
     im_list = []
@@ -392,8 +430,14 @@ def main():
 
             # Compute a shared scale factor from the max value (e.g. 2.0e7 → 1e7)
             abs_max = max(abs(vmin), abs(vmax)) if vmax != vmin else abs(vmax)
-            if abs_max > 0:
+            # If int_annotate is on, force scale to 1 (x10^0)
+            if args.int_annotate:
+                exp = 0
+                scale = 1
+            elif abs_max > 0:
                 exp = int(np.floor(np.log10(abs_max)))
+                if args.tens_scale:
+                    exp -= 1
                 scale = 10 ** exp
             else:
                 exp, scale = 0, 1
@@ -411,11 +455,11 @@ def main():
 
             # Axis ticks
             ax.set_xticks(range(len(pivot.columns)))
-            ax.set_xticklabels([int(v) for v in pivot.columns], rotation=45, ha='right', fontsize=8)
+            ax.set_xticklabels([int(v) for v in pivot.columns], rotation=45, ha='right', fontsize=12)
             ax.set_yticks(range(len(pivot.index)))
-            ax.set_yticklabels([int(v) for v in pivot.index], fontsize=8)
-            ax.set_xlabel(args.x, fontsize=9)
-            ax.set_ylabel(args.y, fontsize=9)
+            ax.set_yticklabels([int(v) for v in pivot.index], fontsize=12)
+            ax.set_xlabel(args.x, fontsize=14)
+            ax.set_ylabel(args.y, fontsize=14)
 
             # Subplot title
             title_parts = []
@@ -423,24 +467,33 @@ def main():
                 title_parts.append(f"{args.y_subplot}={r_val}")
             if args.x_subplot:
                 title_parts.append(f"{args.x_subplot}={c_val}")
-            ax.set_title(", ".join(title_parts), fontsize=9)
+            ax.set_title(", ".join(title_parts), fontsize=14)
 
             # Cell annotations: scaled and rounded
-            if args.annotate:
+            if args.annotate or args.int_annotate or args.one_decimal:
                 for ri in range(pivot.shape[0]):
                     for ci in range(pivot.shape[1]):
                         cell_val = data[ri, ci]
                         if missing_mask[ri, ci]:
                             ax.text(ci, ri, "N/A",
                                     ha='center', va='center',
-                                    fontsize=7, color='dimgray')
+                                    fontsize=16, color='dimgray')
                         else:
                             scaled_val = cell_val / scale
                             norm_val = (cell_val - vmin) / (vmax - vmin) if vmax != vmin else 0.5
                             text_color = 'white' if norm_val < 0.5 else 'black'
-                            ax.text(ci, ri, f"{scaled_val:.2f}",
+                            
+                            val_text = ""
+                            if args.int_annotate:
+                                val_text = f"{int(scaled_val)}"
+                            elif args.one_decimal:
+                                val_text = f"{scaled_val:.1f}"
+                            else:
+                                val_text = f"{scaled_val:.2f}" 
+
+                            ax.text(ci, ri, val_text,
                                     ha='center', va='center',
-                                    fontsize=7, color=text_color)
+                                    fontsize=16, color=text_color)
 
     # Shared colorbar on the right — use scale from last valid plot
     if im_list:
@@ -449,7 +502,8 @@ def main():
         cbar_ax = fig.add_axes([0.91, 0.1, 0.02, 0.8])
         cbar = fig.colorbar(last_im, cax=cbar_ax)
         cbar_lbl = value_label + (f" (×10^{last_exp})" if last_exp != 0 else "")
-        cbar.set_label(cbar_lbl, fontsize=10)
+        cbar.set_label(cbar_lbl, fontsize=16)
+        cbar.ax.tick_params(labelsize=16)
 
     plt.tight_layout(rect=[0, 0, 0.90, 0.95])
 
@@ -457,11 +511,23 @@ def main():
         print(f"Previewing: {base_filename}")
         plt.show()
 
-    out_path = os.path.join(args.output_dir, f"{base_filename}.png")
-    plt.savefig(out_path, dpi=150)
-    plt.close(fig)
-    print(f"  Saved → {out_path}")
+    # Ensure subdirectories exist
+    png_dir = os.path.join(args.output_dir, "png")
+    pdf_dir = os.path.join(args.output_dir, "pdf")
+    os.makedirs(png_dir, exist_ok=True)
+    os.makedirs(pdf_dir, exist_ok=True)
 
+    # Save PNG
+    png_path = os.path.join(png_dir, f"{base_filename}.png")
+    plt.savefig(png_path, dpi=150)
+    print(f"  Saved → {png_path}")
+
+    # Save PDF
+    pdf_path = os.path.join(pdf_dir, f"{base_filename}.pdf")
+    plt.savefig(pdf_path, format="pdf", dpi=150)
+    print(f"  Saved → {pdf_path}")
+
+    plt.close(fig)
     print(f"\nDone. Plots saved to '{args.output_dir}'.")
 
 
