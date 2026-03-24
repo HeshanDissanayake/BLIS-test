@@ -477,7 +477,7 @@ def main():
                         if missing_mask[ri, ci]:
                             ax.text(ci, ri, "N/A",
                                     ha='center', va='center',
-                                    fontsize=16, color='dimgray')
+                                    fontsize=8, color='dimgray')
                         else:
                             scaled_val = cell_val / scale
                             norm_val = (cell_val - vmin) / (vmax - vmin) if vmax != vmin else 0.5
@@ -493,7 +493,7 @@ def main():
 
                             ax.text(ci, ri, val_text,
                                     ha='center', va='center',
-                                    fontsize=16, color=text_color)
+                                    fontsize=8, color=text_color)
 
     # Shared colorbar on the right — use scale from last valid plot
     if im_list:
