@@ -60,7 +60,6 @@ experiment -29: has full MR NR, used for the linux builds
 experiment -35: has full MR NR, used for the linux builds
     experiment -36: all MR:18,20;  NR:all
     experiment -37: all MR:22,24;  NR:all
-    experiment -38: all MR:26,28;  NR:all
-    experiment -39: all MR:30,32;  NR:all
+    experiment -38: all MR:26;  NR:all
 
-    experiment -40: sum of 36-39
+    experiment -39: sum of 36-38
