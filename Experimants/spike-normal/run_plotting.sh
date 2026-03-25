@@ -35,13 +35,14 @@ else
     python3 util/heatmap_json.py \
     --root $ROOT/$exp/analysed_data \
     --x MR --y NR \
-    --value l1-i_dcaches.demand_fetches.total \
-    --formula "(max(1,ceil((8*MR)/(MR+NR)))*256*16)/(MR*8)" \
+    --value KC\
     --annotate --global_scale \
     --output_dir $ROOT/$exp/plots \
-    --x_ticks_from_data 
-    # --int_annotate
+    --x_ticks_from_data \
+    --int_annotate
 
+    # --formula "max(0,ceil((MR*NR+NR+MR)/32))*32" \
+    # --formula "(max(1,ceil((8*MR)/(MR+NR)))*256*16)/(MR*8)" \
     #  \
 
     # --formula "(max(1,ceil((8*MR)/(MR+NR)))*256*16)/(MR*8)" \

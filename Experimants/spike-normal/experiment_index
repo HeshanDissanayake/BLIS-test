@@ -46,11 +46,21 @@ experiment -23: has full 2 -16, used for the linux builds
     experiment -25: all MR;  NR:6,8
     experiment -26: all MR;  NR:10,12
     experiment -27: all MR;  NR:14,16
+    
+    experiment-28 sum of 24-27
 
-experiment-28 sum of 24-27
+experiment -29: has full MR NR, used for the linux builds
+    experiment -30: all MR;  NR:18,20
+    experiment -31: all MR;  NR:22,24
+    experiment -32: all MR;  NR:26,28
+    experiment -33: all MR;  NR:30,32
 
-experiment -29: has full 2 -16, used for the linux builds
-    experiment -24: all MR;  NR:18,20
-    experiment -25: all MR;  NR:22,24
-    experiment -26: all MR;  NR:26,28
-    experiment -27: all MR;  NR:30,32
+    experiment -34: sum of 30-33
+
+experiment -35: has full MR NR, used for the linux builds
+    experiment -36: all MR:18,20;  NR:all
+    experiment -37: all MR:22,24;  NR:all
+    experiment -38: all MR:26,28;  NR:all
+    experiment -39: all MR:30,32;  NR:all
+
+    experiment -40: sum of 36-39

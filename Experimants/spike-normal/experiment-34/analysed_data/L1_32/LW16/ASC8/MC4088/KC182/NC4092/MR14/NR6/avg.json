@@ -1,0 +1,60 @@
+{
+    "l1-i_dcaches": {
+        "demand_fetches": {
+            "total": 18847716.5,
+            "instrn": 0.0,
+            "data": 18847716.5,
+            "read": 17562544.5,
+            "write": 1285172.0,
+            "misc": 0.0
+        },
+        "demand_misses": {
+            "total": 8208221.0,
+            "instrn": 0.0,
+            "data": 8208221.0,
+            "read": 7730188.5,
+            "write": 478032.5,
+            "misc": 0.0
+        },
+        "demand_miss_rate": {
+            "total": 0.21775,
+            "instrn": 0.0,
+            "data": 0.21775,
+            "read": 0.2201,
+            "write": 0.186,
+            "misc": 0.0
+        },
+        "bytes_from_memory": 131331536.0,
+        "bytes_to_memory": 8078832.0,
+        "total_bytes_rw_mem": 139410368.0
+    },
+    "l2-ucache": {
+        "demand_fetches": {
+            "total": 8713148.0,
+            "instrn": 0.0,
+            "data": 8713148.0,
+            "read": 8208221.0,
+            "write": 504927.0,
+            "misc": 0.0
+        },
+        "demand_misses": {
+            "total": 1943841.5,
+            "instrn": 0.0,
+            "data": 1943841.5,
+            "read": 1942573.5,
+            "write": 1268.0,
+            "misc": 0.0
+        },
+        "demand_miss_rate": {
+            "total": 0.11155,
+            "instrn": 0.0,
+            "data": 0.11155,
+            "read": 0.11835,
+            "write": 0.00125,
+            "misc": 0.0
+        },
+        "bytes_from_memory": 124405856.0,
+        "bytes_to_memory": 11425088.0,
+        "total_bytes_rw_mem": 135830944.0
+    }
+}
