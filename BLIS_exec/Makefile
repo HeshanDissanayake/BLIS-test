@@ -24,7 +24,7 @@ BUILD_DIR = build/$(CACHE_PROFILE)
 BIN   = $(BUILD_DIR)/gemm_blis_$(REG_SIZE)
 PARAM = $(BUILD_DIR)/print_params_$(REG_SIZE)
 
-all: clean $(BIN)
+all:  $(BIN)
 
 # Ensure build directory exists
 $(BUILD_DIR):
