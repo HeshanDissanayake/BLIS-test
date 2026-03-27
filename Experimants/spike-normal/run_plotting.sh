@@ -36,11 +36,18 @@ else
     --root $ROOT/$exp/analysed_data \
     --x MR --y NR \
     --value KC\
+    --formula "MR+NR+MR*NR" \
     --annotate --global_scale \
     --output_dir $ROOT/$exp/plots \
     --x_ticks_from_data \
+    --tens_scale \
     --int_annotate
-
+ 
+    # --formula "((KC*NR)/512 + (KC*MR)/512)" \
+    # --formula "(floor((8*MR)/(MR+NR)) * KC) / 512" \
+    # --formula "floor((8*MR)/(MR+NR))" \
+    # --formula "((8*MR)/(MR+NR))//1  - ((8*MR)/(MR+NR))" \
+    # --formula "max(0,ceil((MR*NR+NR+MR)/32))*32" \
     # --formula "max(0,ceil((MR*NR+NR+MR)/32))*32" \
     # --formula "(max(1,ceil((8*MR)/(MR+NR)))*256*16)/(MR*8)" \
     #  \
