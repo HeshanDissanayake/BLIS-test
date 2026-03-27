@@ -63,3 +63,12 @@ experiment -35: has full MR NR, used for the linux builds
     experiment -38: all MR:26;  NR:all
 
     experiment -39: sum of 36-38
+
+
+experiment -40: has  MR:16-26 NR:16:32, used for the linux builds
+    experiment -40:  MR:all;  NR:18,20
+    experiment -41:  MR:all;  NR:22,24
+    experiment -42:  MR:all;  NR:28,30
+    experiment -43:  MR:all;  NR:30,32
+
+    experiment -44: sum of 40-43
