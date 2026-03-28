@@ -66,9 +66,26 @@ experiment -35: has full MR NR, used for the linux builds
 
 
 experiment -40: has  MR:16-26 NR:16:32, used for the linux builds
-    experiment -40:  MR:all;  NR:18,20
-    experiment -41:  MR:all;  NR:22,24
-    experiment -42:  MR:all;  NR:28,30
-    experiment -43:  MR:all;  NR:30,32
+    experiment -41:  MR:all;  NR:18,20
+    experiment -42:  MR:all;  NR:22,24
+    experiment -43:  MR:all;  NR:28,30
+    experiment -44:  MR:all;  NR:30,32
 
-    experiment -44: sum of 40-43
+    experiment -45: sum of 40-43
+
+
+experiment -46: has  MR:2-16 NR: 34:48, used for the linux builds
+    experiment -47  MR:all;  NR:34,36
+    experiment -48:  MR:all;  NR:38,40
+    experiment -49:  MR:all;  NR:42,44
+    experiment -50:  MR:all;  NR:46,48
+
+    experiment -51: sum of 46-50
+
+experiment -52: has  MR:16-26 NR: 34:48, used for the linux builds
+    experiment -53:  MR:16-26;  NR:34,36
+    experiment -54:  MR:16-26;  NR:38,40
+    experiment -55:  MR:16-26;  NR:42,44
+    experiment -56:  MR:16-26;  NR:46,48
+
+    experiment -57: sum of 53-56
